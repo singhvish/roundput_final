@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Name_of_the_initiative: MyString
+  Initiative_description: MyString
+  Leading_organization: MyString
+  Organization_sector: MyString
+  Organization_type: MyString
+  Website: MyString
+  Primary_strategy: MyString
+  Region: MyString
+  Country: MyString
+  City: MyString
+
+two:
+  Name_of_the_initiative: MyString
+  Initiative_description: MyString
+  Leading_organization: MyString
+  Organization_sector: MyString
+  Organization_type: MyString
+  Website: MyString
+  Primary_strategy: MyString
+  Region: MyString
+  Country: MyString
+  City: MyString

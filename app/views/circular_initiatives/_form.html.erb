@@ -1,0 +1,67 @@
+<%= form_with(model: circular_initiative, local: true) do |form| %>
+  <% if circular_initiative.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(circular_initiative.errors.count, "error") %> prohibited this circular_initiative from being saved:</h2>
+
+      <ul>
+      <% circular_initiative.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :Name_of_the_initiative %>
+    <%= form.text_field :Name_of_the_initiative, class: "form-control", id: :circular_initiative_Name_of_the_initiative %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :Initiative_description %>
+    <%= form.text_field :Initiative_description, class: "form-control", id: :circular_initiative_Initiative_description %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :Leading_organization %>
+    <%= form.text_field :Leading_organization, class: "form-control", id: :circular_initiative_Leading_organization %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :Organization_sector %>
+    <%= form.text_field :Organization_sector, class: "form-control", id: :circular_initiative_Organization_sector %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :Organization_type %>
+    <%= form.text_field :Organization_type, class: "form-control", id: :circular_initiative_Organization_type %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :Website %>
+    <%= form.text_field :Website, class: "form-control", id: :circular_initiative_Website %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :Primary_strategy %>
+    <%= form.text_field :Primary_strategy, class: "form-control", id: :circular_initiative_Primary_strategy %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :Region %>
+    <%= form.text_field :Region, class: "form-control", id: :circular_initiative_Region %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :Country %>
+    <%= form.text_field :Country, class: "form-control", id: :circular_initiative_Country %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :City %>
+    <%= form.text_field :City, class: "form-control", id: :circular_initiative_City %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

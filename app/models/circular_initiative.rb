@@ -1,0 +1,2 @@
+class CircularInitiative < ApplicationRecord
+end

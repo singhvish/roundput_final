@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name of the initiative:</strong>
+  <%= @circular_initiative.Name_of_the_initiative %>
+</p>
+
+<p>
+  <strong>Initiative description:</strong>
+  <%= @circular_initiative.Initiative_description %>
+</p>
+
+<p>
+  <strong>Leading organization:</strong>
+  <%= @circular_initiative.Leading_organization %>
+</p>
+
+<p>
+  <strong>Organization sector:</strong>
+  <%= @circular_initiative.Organization_sector %>
+</p>
+
+<p>
+  <strong>Organization type:</strong>
+  <%= @circular_initiative.Organization_type %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @circular_initiative.Website %>
+</p>
+
+<p>
+  <strong>Primary strategy:</strong>
+  <%= @circular_initiative.Primary_strategy %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @circular_initiative.Region %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @circular_initiative.Country %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @circular_initiative.City %>
+</p>
+
+<%= link_to 'Edit', edit_circular_initiative_path(@circular_initiative), class: "btn btn-link" %> |
+<%= link_to 'Back', circular_initiatives_path, class: "btn btn-link" %>

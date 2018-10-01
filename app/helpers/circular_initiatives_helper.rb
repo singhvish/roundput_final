@@ -1,0 +1,2 @@
+module CircularInitiativesHelper
+end
