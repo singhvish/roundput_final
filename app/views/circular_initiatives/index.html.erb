@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Circular Initiatives</h1>
+<div class="jumbotron">
+  <h2><center>Roundput is an online database of circular economy initiatives.</center></h2>
+  <h3><center>We make it easy for you to explore, review and share new circular economy initiatives in your community!</center></h3> <br>
+  </div>
 
-<table class="table table-hover table-condensed">
+<table class="table table-hover table-condensed table-responsive">
   <thead>
     <tr>
       <th>Name of the initiative</th>
@@ -27,7 +30,7 @@
         <td><%= circular_initiative.Leading_organization %></td>
         <td><%= circular_initiative.Organization_sector %></td>
         <td><%= circular_initiative.Organization_type %></td>
-        <td><%= circular_initiative.Website %></td>
+        <td><%= link_to circular_initiative.Website, circular_initiative.Website %></td>
         <td><%= circular_initiative.Primary_strategy %></td>
         <td><%= circular_initiative.Region %></td>
         <td><%= circular_initiative.Country %></td>
@@ -42,4 +45,21 @@
 
 <br>
 
-<%= link_to 'New Circular Initiative', new_circular_initiative_path, class: "btn btn-link" %>
+<%= link_to 'New Circular Initiative', new_circular_initiative_path, class: "btn btn-success" %>
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="/circular_initiatives" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="/circular_initiatives?page=1">1</a></li>
+    <li class="page-item"><a class="page-link" href="/circular_initiatives?page=2">2</a></li>
+    <li class="page-item"><a class="page-link" href="/circular_initiatives?page=3">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="/circular_initiatives?page=4">Next</a>
+    </li>
+  </ul>
+</nav>
+
+
+  
+

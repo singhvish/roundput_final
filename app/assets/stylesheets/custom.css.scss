@@ -1,0 +1,35 @@
+.jumbotron {
+	background-color: #2ACCA6;
+	h2 {
+	font-weight: bold;
+	}
+}
+
+nav ul {
+    padding:0;
+    display: flex;
+    justify-content: space-around;
+    color: #ffffff;
+    }   
+
+nav ul li {
+    border-left:1px;
+    list-style-type:none;
+    padding:10px;
+    }
+
+.nav a {
+	color: white;
+	font-size: 16px;
+	}
+
+.navbar-brand {
+	font-size: 30px;
+	font-weight: bold;
+	color: #28A745;
+}
+
+.container-fluid{
+	padding: 0px 50px;
+}
+

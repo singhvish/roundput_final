@@ -4,7 +4,7 @@ class CircularInitiativesController < ApplicationController
   # GET /circular_initiatives
   # GET /circular_initiatives.json
   def index
-    @circular_initiatives = CircularInitiative.all
+    @circular_initiatives = CircularInitiative.all.paginate(:page =>params[:page], :per_page =>6)
   end
 
   # GET /circular_initiatives/1
