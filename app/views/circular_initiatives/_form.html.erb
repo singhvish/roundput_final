@@ -1,19 +1,26 @@
 <%= form_with(model: circular_initiative, local: true) do |form| %>
   <% if circular_initiative.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(circular_initiative.errors.count, "error") %> prohibited this circular_initiative from being saved:</h2>
-
-      <ul>
-      <% circular_initiative.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <div id="error_explanation" class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h2><%= pluralize(circular_initiative.errors.count, "error") %> prohibited this circular initiative from being saved:</h2>
+        <ul>
+          <% circular_initiative.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
     </div>
   <% end %>
 
   <div class="form-group">
     <%= form.label :Name_of_the_initiative %>
     <%= form.text_field :Name_of_the_initiative, class: "form-control", id: :circular_initiative_Name_of_the_initiative %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :sector_id %><br>
+    <%= form.collection_select :sector_id, Sector.all, :id, :name, {prompt: "Choose a sector"}, {class: "btn-btn-default dropdown-toggle"} %>
   </div>
 
   <div class="form-group">
@@ -24,11 +31,6 @@
   <div class="form-group">
     <%= form.label :Leading_organization %>
     <%= form.text_field :Leading_organization, class: "form-control", id: :circular_initiative_Leading_organization %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :Organization_sector %>
-    <%= form.text_field :Organization_sector, class: "form-control", id: :circular_initiative_Organization_sector %>
   </div>
 
   <div class="form-group">

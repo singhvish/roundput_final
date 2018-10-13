@@ -1,0 +1,37 @@
+<table class="table table-hover table-condensed table-responsive">
+  <thead>
+    <tr>
+      <th>Name of the initiative</th>
+      <th>Initiative description</th>
+      <th>Leading organization</th>
+      <th>Organization sector</th>
+      <th>Organization type</th>
+      <th>Website</th>
+      <th>Primary strategy</th>
+      <th>Region</th>
+      <th>Country</th>
+      <th>City</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @circular_initiatives.each do |circular_initiative| %>
+      <tr>
+        <td><%= circular_initiative.Name_of_the_initiative %></td>
+        <td><%= circular_initiative.Initiative_description %></td>
+        <td><%= circular_initiative.Leading_organization %></td>
+        <td><%= circular_initiative.sector.name %></td>
+        <td><%= circular_initiative.Organization_type %></td>
+        <td><%= link_to circular_initiative.Website, circular_initiative.Website %></td>
+        <td><%= circular_initiative.Primary_strategy %></td>
+        <td><%= circular_initiative.Region %></td>
+        <td><%= circular_initiative.Country %></td>
+        <td><%= circular_initiative.City %></td>
+        <td><%= link_to 'Show', circular_initiative, class: "btn btn-link" %></td>
+        <td><%= link_to 'Edit', edit_circular_initiative_path(circular_initiative), class: "btn btn-link" %></td>
+        <td><%= link_to 'Destroy', circular_initiative, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

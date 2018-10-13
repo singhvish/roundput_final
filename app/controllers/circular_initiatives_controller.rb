@@ -1,10 +1,27 @@
 class CircularInitiativesController < ApplicationController
   before_action :set_circular_initiative, only: [:show, :edit, :update, :destroy]
+  # before_action :authenticate_user, except: [:show, :index, :search]
+
+def home
+end
+
+def search
+  if params[:search].present?
+    @circular_initiatives = CircularInitiative.search(params[:search])
+  else
+    @circular_initiatives = CircularInitiative.all
+  end
+end
 
   # GET /circular_initiatives
   # GET /circular_initiatives.json
   def index
-    @circular_initiatives = CircularInitiative.all.paginate(:page =>params[:page], :per_page =>6)
+    @circular_initiatives = CircularInitiative.all.paginate(:page =>params[:page], :per_page =>7)
+    @circular_initiatives = @circular_initiatives.where(Region: params["Region"]) if params["Region"].present?
+    @circular_initiatives = @circular_initiatives.where(Country: params["Country"]) if params["Country"].present?
+    @circular_initiatives = @circular_initiatives.where(Organization_type: params["Organization_type"]) if params["Organization_type"].present?
+    @circular_initiatives = @circular_initiatives.where(sector_id: params["sector_id"]) if params["sector_id"].present?
+    
   end
 
   # GET /circular_initiatives/1
@@ -69,6 +86,6 @@ class CircularInitiativesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def circular_initiative_params
-      params.require(:circular_initiative).permit(:Name_of_the_initiative, :Initiative_description, :Leading_organization, :Organization_sector, :Organization_type, :Website, :Primary_strategy, :Region, :Country, :City)
+      params.require(:circular_initiative).permit(:Name_of_the_initiative, :sector_id, :Initiative_description, :Leading_organization, :Organization_type, :Website, :Primary_strategy, :Region, :Country, :City)
     end
 end

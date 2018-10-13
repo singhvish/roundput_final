@@ -1,9 +1,13 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Name of the initiative:</strong>
   <%= @circular_initiative.Name_of_the_initiative %>
 </p>
+
+<p>
+  <strong>Sector:</strong>
+  <%= @circular_initiative.sector.name %>
+</p>
+
 
 <p>
   <strong>Initiative description:</strong>
@@ -13,11 +17,6 @@
 <p>
   <strong>Leading organization:</strong>
   <%= @circular_initiative.Leading_organization %>
-</p>
-
-<p>
-  <strong>Organization sector:</strong>
-  <%= @circular_initiative.Organization_sector %>
 </p>
 
 <p>

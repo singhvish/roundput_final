@@ -1,35 +1,86 @@
-.jumbotron {
-	background-color: #2ACCA6;
+.jumbotron-fluid {
+	background-image: url(https://images.unsplash.com/photo-1422118956051-420a81c79553?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=32d5ed7aa61ed60ae979a1b15656588f&auto=format&fit=crop&w=967&q=80);
+	h1{
+	font-weight: bold;
+	color:#fff;
+	text-shadow: 0px 2px 3px #555;
+	}
+
 	h2 {
 	font-weight: bold;
+	color:#fff;
+	text-shadow: 0px 2px 3px #555;
 	}
+	height: 400px;
+	}
+
+.jumbotron-index{
+	height: 200px;
+	background-color: 2ACCA5;
 }
 
-nav ul {
-    padding:0;
-    display: flex;
-    justify-content: space-around;
-    color: #ffffff;
-    }   
+body {
+	background-color: #f9fdfa;
+}
+
+.navbar{
+	height: 70px;
+}
 
 nav ul li {
-    border-left:1px;
     list-style-type:none;
-    padding:10px;
+    padding:5px;
+    color: #ffffff;
     }
 
-.nav a {
-	color: white;
-	font-size: 16px;
-	}
+nav a {
+	font-size:16px;
+	color: #ffffff !important;
+}
 
 .navbar-brand {
 	font-size: 30px;
 	font-weight: bold;
-	color: #28A745;
 }
 
-.container-fluid{
-	padding: 0px 50px;
+.form-inline {
+    padding-top: 15px;
+  }
+
+
+.table-hover tbody tr:hover {
+	background-color: #dbf5de;
+}
+
+.center {
+	text-align: center;
+}
+
+.alert-danger {
+    display: inline-block;
+    width: 100%;
+ }
+
+.btn-default{
+	background-color:#11182A;
+	color:#FFF;
+}
+
+
+.card-deck {
+	padding-top: 20px;
+}
+
+.footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
 }
 
