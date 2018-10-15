@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
 .jumbotron-fluid {
 	background-image: url(https://images.unsplash.com/photo-1422118956051-420a81c79553?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=32d5ed7aa61ed60ae979a1b15656588f&auto=format&fit=crop&w=967&q=80);
 	h1{
@@ -18,6 +20,16 @@
 	height: 200px;
 	background-color: 2ACCA5;
 }
+
+.page-footer{
+	background-color: #11182A;
+	color:#fff;
+	position:absolute;
+	left: 0;
+	bottom: 0;
+    width: 100%;
+    overflow: hidden;
+	}
 
 body {
 	background-color: #f9fdfa;
@@ -78,15 +90,7 @@ nav a {
 }
 
 
-.page-footer{
-	background-color: #11182A;
-	color:#fff;
-	position:absolute;
-	left: 0;
-	bottom: 0;
-    width: 100%;
-    overflow: hidden;
-	}
+
 
 .page-footer a {
 	font-size:16px;

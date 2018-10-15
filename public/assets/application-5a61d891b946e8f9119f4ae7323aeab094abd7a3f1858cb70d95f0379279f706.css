@@ -1,0 +1,130 @@
+/* line 1, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.jumbotron-fluid {
+  background-image: url(https://images.unsplash.com/photo-1422118956051-420a81c79553?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=32d5ed7aa61ed60ae979a1b15656588f&auto=format&fit=crop&w=967&q=80);
+  height: 400px;
+}
+/* line 3, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.jumbotron-fluid h1 {
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0px 2px 3px #555;
+}
+/* line 9, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.jumbotron-fluid h2 {
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0px 2px 3px #555;
+}
+
+/* line 17, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.jumbotron-index {
+  height: 200px;
+  background-color: 2ACCA5;
+}
+
+/* line 22, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+body {
+  background-color: #f9fdfa;
+}
+
+/* line 26, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar {
+  height: 70px;
+}
+
+/* line 30, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+nav ul li {
+  list-style-type: none;
+  padding: 5px;
+  color: #ffffff;
+}
+
+/* line 36, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+nav a {
+  font-size: 16px;
+  color: #ffffff !important;
+}
+
+/* line 41, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar-brand {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* line 46, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.form-inline {
+  padding-top: 15px;
+}
+
+/* line 51, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.table-hover tbody tr:hover {
+  background-color: #dbf5de;
+}
+
+/* line 55, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.center {
+  text-align: center;
+}
+
+/* line 59, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.alert-danger {
+  display: inline-block;
+  width: 100%;
+}
+
+/* line 64, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.btn-default {
+  background-color: #11182A;
+  color: #FFF;
+}
+
+/* line 70, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.card-deck {
+  padding-top: 20px;
+}
+
+/* line 74, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.card-img-top {
+  width: 100%;
+  height: 10vw;
+  object-fit: cover;
+}
+
+/* line 81, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.page-footer {
+  background-color: #11182A;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 91, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.page-footer a {
+  font-size: 16px;
+  color: #ffffff !important;
+}
+
+/* line 96, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+html {
+  position: relative;
+  min-height: 100%;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
