@@ -1,6 +1,5 @@
 <h1>Editing Review</h1>
 
-<%= render 'form' %>
+<%= render 'form', review: @review %>
 
-<%= link_to 'Show', '#' %> |
-<%= link_to 'Back', '#' %>
+<%= link_to 'Back', circular_initiative_path(@circular_initiative) %>
