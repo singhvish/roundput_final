@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-7">
 
 
         <div class="row row-header justify-content-center">
@@ -135,22 +135,52 @@
           </p>
         </div>
       </div>
-
-      <%= link_to "Write a Review", new_circular_initiative_review_path(@circular_initiative), class: "btn btn-primary" %>
   </div>
-  <div class="col-md-6">
+  
+  <div class="col-md-5">
     <% if @reviews.blank? %>
-      <h3>No reviews yet. Be the first to write one!</h3>
+        <div class="row row-reviews justify-content-center">
+          <h3>
+            No reviews yet. Be the first to write one!
+          </h3>
+        </div>
+        <center>
+        <%= link_to "Write a Review", new_circular_initiative_review_path(@circular_initiative), class: "btn btn-primary" %>
+        </center>
+        <center>
+        <%= link_to 'Edit', edit_circular_initiative_path(@circular_initiative), class: "btn btn-link" %> |
+        <%= link_to 'Back', circular_initiatives_path, class: "btn btn-link" %>
+        </center>
+        
     <% else %>
-      <h3>Reviews</h3>
-      <% @reviews.each do |review| %>
-        <p><%= review.rating %></p>
-        <p><%= review.comment %></p>
-      <% end %>
+      <div class="row row-reviews justify-content-center">
+          <h3>
+            Reviews!
+          </h3>
+        </div>
+      <div class="row">
+        <div class="col-12 col-md-3">
+          <% @reviews.each do |review| %>
+          <p><%= "#{review.user.name.capitalize}" %>
+          <p><%= review.created_at.strftime("%-m/%-d/%y") %></p>
+          <% end %>
+        </div>
+        <div class="col-12 col-md-9">
+          <% @reviews.each do |review| %>
+            <p><%= review.rating %></p>
+            <p><%= review.comment %></p>
+          <% end %>
+        </div>
+      </div>
+      <center>
+        <%= link_to "Write a Review", new_circular_initiative_review_path(@circular_initiative), class: "btn btn-primary" %>
+        </center>
+        <center>
+        <%= link_to 'Edit', edit_circular_initiative_path(@circular_initiative), class: "btn btn-link" %> |
+        <%= link_to 'Back', circular_initiatives_path, class: "btn btn-link" %>
+        </center>
     <% end %>
   </div>
-  <%= link_to 'Edit', edit_circular_initiative_path(@circular_initiative), class: "btn btn-link" %> |
-  <%= link_to 'Back', circular_initiatives_path, class: "btn btn-link" %>
 </div>
 
 
