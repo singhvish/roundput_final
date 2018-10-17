@@ -27,6 +27,7 @@ end
   # GET /circular_initiatives/1
   # GET /circular_initiatives/1.json
   def show
+    @reviews = Review.where(circular_initiative_id: @circular_initiative.id)
   end
 
   # GET /circular_initiatives/new

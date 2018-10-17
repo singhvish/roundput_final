@@ -1,146 +1,158 @@
-<div class ="jumbotron-show">
-<div class="container center">
-  <div class="row row-header justify-content-center">
- <strong><h2>
-  <%= @circular_initiative.Leading_organization %>
-  </strong></h2>
+<div class="row">
+  <div class="col-md-6">
+
+
+        <div class="row row-header justify-content-center">
+          <h2>
+            <%= @circular_initiative.Leading_organization %>
+          </h2>
+        </div>
+
+
+      <div class ="row row-content align-items-center">
+        <div class=" col-12 col-sm-3 col-md-3">
+          <p>
+            <strong>Name of the initiative</strong> 
+          </p>
+        </div>
+
+        <div class=" col-12 col-sm-9 col-md-9 ">
+          <p>
+            <%= @circular_initiative.Name_of_the_initiative %>
+          </p>
+        </div>
+      </div>
+
+      <div class ="row row-content align-items-center">
+        <div class=" col-12 col-sm-3 col-md-3">
+          <p>
+            <strong>Sector</strong>
+          </p>
+        </div>
+
+        <div class=" col-12 col-sm-9 col-md-9 ">
+          <p>
+            <%= @circular_initiative.sector.name %>
+          </p>
+        </div>
+      </div>
+
+      <div class ="row row-content align-items-center">
+        <div class=" col-12 col-sm-3 col-md-3">
+          <p>
+            <strong>Initiative description</strong>
+          </p>
+        </div>
+
+        <div class=" col-12 col-sm-9 col-md-9 ">
+          <p>
+            <%= @circular_initiative.Initiative_description %>
+          </p>
+        </div>
+      </div>
+
+      <div class ="row row-content align-items-center">
+        <div class=" col-12 col-sm-3 col-md-3">
+          <p>
+            <strong>Organization type</strong>
+          </p>
+        </div>
+
+        <div class=" col-12 col-sm-9 col-md-9">
+          <p>
+            <%= @circular_initiative.Organization_type %>
+          </p>
+        </div>
+      </div>
+
+      <div class ="row row-content align-items-center">
+        <div class=" col-12 col-sm-3 col-md-3">
+          <p>
+            <strong>Website</strong>
+          </p>
+        </div>
+
+        <div class=" col-12 col-sm-9 col-md-9">
+          <p>
+            <%= link_to @circular_initiative.Website %>
+          </p>
+        </div>
+      </div>
+
+      <div class ="row row-content align-items-center">
+        <div class=" col-12 col-sm-3 col-md-3">
+          <p>
+            <strong>Primary strategy</strong>
+          </p>
+        </div>
+
+        <div class=" col-12 col-sm-9 col-md-9">
+          <p>
+            <%= @circular_initiative.Primary_strategy %>
+          </p>
+        </div>
+      </div>
+
+      <div class ="row row-content align-items-center">
+        <div class=" col-12 col-sm-3 col-md-3">
+          <p>
+            <strong>Region</strong>
+          </p>
+        </div>
+
+        <div class=" col-12 col-sm-9 col-md-9">
+          <p>
+            <%= @circular_initiative.Region %>
+          </p>
+        </div>
+      </div>
+
+
+      <div class ="row row-content align-items-center">
+        <div class=" col-12 col-sm-3 col-md-3">
+          <p>
+            <strong>Country</strong>
+          </p>
+        </div>
+
+        <div class=" col-12 col-sm-9 col-md-9">
+          <p>
+            <%= @circular_initiative.Country %>
+          </p>
+        </div>
+      </div>
+
+      <div class ="row row-content align-items-center">
+        <div class=" col-12 col-sm-3 col-md-3">
+          <p>
+            <strong>City</strong>
+          </p>
+        </div>
+
+        <div class=" col-12 col-sm-9 col-md-9">
+          <p>
+            <%= @circular_initiative.City %>
+          </p>
+        </div>
+      </div>
+
+      <%= link_to "Write a Review", new_circular_initiative_review_path(@circular_initiative), class: "btn btn-primary" %>
+  </div>
+  <div class="col-md-6">
+    <% if @reviews.blank? %>
+      <h3>No reviews yet. Be the first to write one!</h3>
+    <% else %>
+      <h3>Reviews</h3>
+      <% @reviews.each do |review| %>
+        <p><%= review.rating %></p>
+        <p><%= review.comment %></p>
+      <% end %>
+    <% end %>
+  </div>
+  <%= link_to 'Edit', edit_circular_initiative_path(@circular_initiative), class: "btn btn-link" %> |
+  <%= link_to 'Back', circular_initiatives_path, class: "btn btn-link" %>
 </div>
-</div>
-</div>
-
-<div class ="container">
-  <div class ="row row-content align-items-center">
-    <div class=" col-12 col-sm-3 col-md-3">
-      <p>
-        <strong>Name of the initiative</strong> 
-      </p>
-    </div>
-
-    <div class=" col-12 col-sm-9 col-md-9 ">
-      <p>
-        <%= @circular_initiative.Name_of_the_initiative %>
-      </p>
-    </div>
-  </div>
-
-  <div class ="row row-content align-items-center">
-    <div class=" col-12 col-sm-3 col-md-3">
-      <p>
-        <strong>Sector</strong>
-      </p>
-    </div>
-
-    <div class=" col-12 col-sm-9 col-md-9 ">
-      <p>
-        <%= @circular_initiative.sector.name %>
-      </p>
-    </div>
-  </div>
-
-  <div class ="row row-content align-items-center">
-    <div class=" col-12 col-sm-3 col-md-3">
-      <p>
-        <strong>Initiative description</strong>
-      </p>
-    </div>
-
-    <div class=" col-12 col-sm-9 col-md-9 ">
-      <p>
-        <%= @circular_initiative.Initiative_description %>
-      </p>
-    </div>
-  </div>
-
-  <div class ="row row-content align-items-center">
-    <div class=" col-12 col-sm-3 col-md-3">
-      <p>
-        <strong>Organization type</strong>
-      </p>
-    </div>
-
-    <div class=" col-12 col-sm-9 col-md-9">
-      <p>
-        <%= @circular_initiative.Organization_type %>
-      </p>
-    </div>
-  </div>
-
-  <div class ="row row-content align-items-center">
-    <div class=" col-12 col-sm-3 col-md-3">
-      <p>
-        <strong>Website</strong>
-      </p>
-    </div>
-
-    <div class=" col-12 col-sm-9 col-md-9">
-      <p>
-        <%= link_to @circular_initiative.Website %>
-      </p>
-    </div>
-  </div>
-
-  <div class ="row row-content align-items-center">
-    <div class=" col-12 col-sm-3 col-md-3">
-      <p>
-        <strong>Primary strategy</strong>
-      </p>
-    </div>
-
-    <div class=" col-12 col-sm-9 col-md-9">
-      <p>
-        <%= @circular_initiative.Primary_strategy %>
-      </p>
-    </div>
-  </div>
-
-  <div class ="row row-content align-items-center">
-    <div class=" col-12 col-sm-3 col-md-3">
-      <p>
-        <strong>Region</strong>
-      </p>
-    </div>
-
-    <div class=" col-12 col-sm-9 col-md-9">
-      <p>
-        <%= @circular_initiative.Region %>
-      </p>
-    </div>
-  </div>
 
 
-  <div class ="row row-content align-items-center">
-    <div class=" col-12 col-sm-3 col-md-3">
-      <p>
-        <strong>Country</strong>
-      </p>
-    </div>
 
-    <div class=" col-12 col-sm-9 col-md-9">
-      <p>
-        <%= @circular_initiative.Country %>
-      </p>
-    </div>
-  </div>
 
-<div class ="row row-content align-items-center">
-  <div class=" col-12 col-sm-3 col-md-3">
-    <p>
-      <strong>City</strong>
-    </p>
-  </div>
-
-  <div class=" col-12 col-sm-9 col-md-9">
-    <p>
-      <%= @circular_initiative.City %>
-    </p>
-  </div>
-</div>
-
-<%= link_to "Write a Review", new_circular_initiative_review_path(@circular_initiative), class: "btn btn-primary" %>
-
-<%= link_to 'Edit', edit_circular_initiative_path(@circular_initiative), class: "btn btn-link" %> |
-<%= link_to 'Back', circular_initiatives_path, class: "btn btn-link" %>
-
-</div>
-</div>
-</div>
