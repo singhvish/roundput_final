@@ -155,13 +155,13 @@
     <% else %>
       <div class="row row-reviews justify-content-center">
           <h3>
-            Reviews!
+            Reviews
           </h3>
         </div>
       <div class="row">
         <div class="col-12 col-md-3">
           <% @reviews.each do |review| %>
-          <p><%= "#{review.user.name.capitalize}" %>
+          <p><%= "#{review.user.first_name.capitalize} #{review.user.last_name.capitalize[0]}." %>
           <p><%= review.created_at.strftime("%-m/%-d/%y") %></p>
           <% end %>
         </div>
