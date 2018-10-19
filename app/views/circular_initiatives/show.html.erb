@@ -1,6 +1,6 @@
 <div class ="container">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 basic-info">
       <div class="row row-header justify-content-center">
         <h2>
           <%= @circular_initiative.Leading_organization %>
@@ -58,27 +58,29 @@
         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAUyUpRBMU9SZSISGgM8FyloppZ1Sh2mtc 
         &q=<%= @circular_initiative.City.parameterize %>&region" allowfullscreen>
       </iframe>
+  
 
       <br>
       <p>
         <center>
-          <%= link_to 'Edit', edit_circular_initiative_path(@circular_initiative), class: "btn btn-primary btn-sm-block" %> |
-          <%= link_to 'Back', circular_initiatives_path, class: "btn btn-primary btn-sm-block" %>
+          <%= link_to 'Edit', edit_circular_initiative_path(@circular_initiative), class: "btn btn-default btn-sm-block" %> |
+          <%= link_to 'Back', circular_initiatives_path, class: "btn btn-default btn-sm-block" %>
         </center>
       </p>
     </div>
 
     <div class="col-md-8">
+      <div class="initiative-info">
       <div class="row row-header justify-content-center">
-        <h2>
+        <h4>
           Innovation Description
-        </h2>
+        </h4>
       </div>
 
       <div class="row row-content align-items-center">
         <div class="col-12 col-sm-3 col-md-3">
           <p>
-            <strong>Name of the initiative</strong> 
+            Name of the initiative
           </p>
         </div>
         <div class="col-12 col-sm-3 col-md-9">
@@ -91,7 +93,7 @@
       <div class ="row row-content align-items-center">
         <div class=" col-12 col-sm-3 col-md-3">
           <p>
-            <strong>Initiative description</strong>
+            Initiative description
           </p>
         </div>
         <div class=" col-12 col-sm-9 col-md-9 ">
@@ -104,7 +106,7 @@
       <div class ="row row-content align-items-center">
         <div class=" col-12 col-sm-3 col-md-3">
           <p>
-            <strong>Primary strategy</strong>
+            Primary strategy
           </p>
         </div>
 
@@ -114,6 +116,9 @@
           </p>
         </div>
       </div>
+    </div>
+
+    <div class="reviews">
 
         <% if @reviews.blank? %>
           <div class="row row-reviews justify-content-center">
@@ -124,14 +129,14 @@
           </p>
           </div>
           <center>
-            <%= link_to "Write a Review", new_circular_initiative_review_path(@circular_initiative), class: "btn btn-primary" %>
+            <%= link_to "Write a Review", new_circular_initiative_review_path(@circular_initiative), class: "btn btn-default" %>
           </center>
         
         <% else %>
           <div class="row row-header justify-content-center">
-            <h3>
-              Reviews
-            </h3>
+            <h6>
+              Reviews and Comments
+            </h6>
           </div>
           <div class="row row-reviews align-items-center">
             <div class="col-12 col-md-3">
@@ -154,10 +159,11 @@
             </div>
           </div>
       <center>
-        <%= link_to "Write a Review", new_circular_initiative_review_path(@circular_initiative), class: "btn btn-primary" %>
+        <%= link_to "Write a Review", new_circular_initiative_review_path(@circular_initiative), class: "btn btn-default" %>
       </center>
     <% end %>
     <br>
+  </div>
   </div>
 </div>
 

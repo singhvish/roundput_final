@@ -19,13 +19,11 @@
 <table class="table table-hover table-condensed table-responsive">
   <thead>
     <tr>
-      <th class="center">Name of the initiative</th>
-      <th class="center">Initiative description</th>
-      <th class="center">Leading organization</th>
-      <th class="center">Organization sector</th>
-      <th class="center">Organization type</th>
+      <th class="center">Innovation</th>
+      <th class="center">Organization</th>
+      <th class="center">Sector</th>
+      <th class="center">Org Type</th>
       <th class="center">Website</th>
-      <th class="center">Primary strategy</th>
       <th class="center">Region</th>
       <th class="center">Country</th>
       <th class="center">City</th>
@@ -36,27 +34,21 @@
   <tbody>
     <% @circular_initiatives.each do |circular_initiative| %>
       <tr>
-        <td ><%= circular_initiative.Name_of_the_initiative %></td>
-        <td class="center" ><%= circular_initiative.Initiative_description %></td>
+        <td ><%= link_to circular_initiative.Name_of_the_initiative, circular_initiative %></td>
         <td class="center" ><%= circular_initiative.Leading_organization %></td>
         <td class="center" ><%= circular_initiative.sector.name %></td>
         <td class="center" ><%= circular_initiative.Organization_type %></td>
         <td class="center" ><%= link_to circular_initiative.Website, circular_initiative.Website %></td>
-        <td class="center" ><%= circular_initiative.Primary_strategy %></td>
         <td class="center" ><%= circular_initiative.Region %></td>
         <td class="center" ><%= circular_initiative.Country %></td>
         <td class="center" ><%= circular_initiative.City %></td>
-        <td class="center" ><%= link_to 'Show', circular_initiative, class: "btn btn-link" %></td>
-        <td class="center" ><%= link_to 'Edit', edit_circular_initiative_path(circular_initiative), class: "btn btn-link" %></td>
-        <td class="center" ><%= link_to 'Destroy', circular_initiative, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
+        <td class="center" ><%= link_to 'Learn more', circular_initiative, class: "btn btn-default" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<ul class="pagination justify-content-center">
-  <%= will_paginate @circular_initiatives, renderer: BootstrapPagination::Rails %>
-</ul>
+<%= will_paginate @circular_initiatives %>
 
 <%= link_to new_circular_initiative_path, class: "btn btn-success", data: {no_turbolink: true} do %>
   <span class="glyphicon glyphicon-plus"></span> New Circular Initiative
