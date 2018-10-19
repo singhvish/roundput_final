@@ -1,6 +1,7 @@
 class CircularInitiativesController < ApplicationController
   before_action :set_circular_initiative, only: [:show, :edit, :update, :destroy]
-  # before_action :authenticate_user, except: [:show, :index, :search]
+  #before_action :authenticate_user!, except: [:create,:show, :index, :search]
+  #before_action :check_user, except: [:index, :show, :create, :search]
 
 def home
 end
@@ -84,6 +85,13 @@ end
     def set_circular_initiative
       @circular_initiative = CircularInitiative.find(params[:id])
     end
+
+   # def check_user
+    #  unless current_user.admin?
+    #    redirect_to root_url, alert: "Sorry, only admins can do that!"
+   #   end
+   # end
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def circular_initiative_params

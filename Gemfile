@@ -54,3 +54,4 @@ gem 'searchkick'
 gem 'will_paginate-bootstrap'
 gem 'countries'
 gem 'pg', group: :production
+gem 'carrierwave'

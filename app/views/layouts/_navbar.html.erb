@@ -1,16 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-dark" style= "background-color: #11182A;">
   <%= link_to "Roundput", root_path, class: "navbar-brand" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <span class="navbar-toggler-icon"></span>
   </button>
+  
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="nav navbar-nav">
       <li><%= link_to "About", pages_about_path %></li>
       <li><%= link_to "Contact", pages_contact_path %></li> 
     </ul>
-  </div>
 
-  <div class="d-flex flex-row-reverse bd-highlight">
     <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
         <li><%= link_to "Edit Profile", edit_user_registration_path %></li>

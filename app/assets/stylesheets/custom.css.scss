@@ -34,6 +34,16 @@ body {
 
 .navbar{
 	height: 70px;
+	 text-decoration: none;
+}
+
+.navbar-nav a:hover{
+	background: #11182A;
+	
+}
+
+.navbar a:hover, .navbar a:focus {
+	text-decoration: none;
 }
 
 nav ul li {
@@ -121,4 +131,7 @@ html {
 
 .row-reviews{
 	padding: 25px 0px 25px 0px;
+	margin: 0px auto;
+	border-botton: 1px;
 }
+
