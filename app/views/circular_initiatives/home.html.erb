@@ -4,14 +4,14 @@
       <Br>
       <Br>
       <Br>
-      <h1 class="display-4">An online circular economy database</h1><Br>
-      <h2 class="lead">Explore, review and share circular economy initiatives in your community</h2><Br>
+      <h1 class="display-4">Roundput</h1><Br>
+      <h2 class="lead">Find, review and learn more about circular economy innovations in your city</h2><Br>
     </div>
  
     <div class = "form-inline justify-content-center">
       <%= form_tag search_circular_initiatives_path, method: :get do %>
         <p>
-          <%= text_field_tag :search, params[:search], size:60, placeholder:'Search for organizations or initiatives...', class: "form-control" %>
+          <%= text_field_tag :search, params[:search], size:60, placeholder:'Search for organizations or innovations...', class: "form-control" %>
           <%= submit_tag "Search", name: nil, class: "btn btn-default" %>
         </p>
       <% end %>
@@ -24,7 +24,7 @@
 
 <div class="container">
  <h4>Popular Sectors</h4>
-  <h6> Discover organizations and initiatives by popular sectors <h6>
+  <h6> Discover organizations or innovations by popular sectors <h6>
     <div class = "card-deck center">
       <a href= "/circular_initiatives?utf8=✓&Region=&Country=&Organization_type=&sector_id=1">
         <div class="card" style="width:15rem;">
@@ -70,7 +70,7 @@
 
   <div class = "container">  
   <h4>Leading countries</h4>
-  <h6> Discover organizations and initiatives by leading countries <h6>
+  <h6> Discover organizations or innovations by leading countries <h6>
 
  <div class = "card-deck center">
     <a href= "/circular_initiatives?utf8=%E2%9C%93&Region=&Country=United+Kingdom+of+Great+Britain+and+Northern+Ireland&Organization_type=&sector_id=">

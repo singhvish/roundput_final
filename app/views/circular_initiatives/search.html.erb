@@ -1,3 +1,21 @@
+<div class="container">
+  <div class="filter">
+  <%= form_tag circular_initiatives_path, method: :get do %>
+    <%= label_tag :Region %>
+    <%= select_tag "Region", "<option>Africa</option> <option>Asia & Oz</option> <option>Europe</option> <option>Latin America</option> <option>North America</option> <option>Global</option>".html_safe, include_blank: true, multiple:false %>
+
+    <%= label_tag :Country %>
+    <%= select_tag(:Country, options_from_collection_for_select(ISO3166::Country.countries.sort_by(&:name), :name, :name, params[:Country]), {include_blank:true})  %>
+  
+    <%= label_tag :Organization_type %>
+    <%= select_tag "Organization_type", "<option>Multinational Corporate</option> <option>National Corporate</option> <option>SME</option> <option>Startup</option> <option>Private sector (undefined)</option> <option>Education</option>".html_safe, include_blank: true, multiple:false %>
+
+    <%= label_tag :sector %>
+    <%= select_tag(:sector_id, options_from_collection_for_select(Sector.all, :id, :name, params[:sector_id]), {include_blank:true})  %>
+  
+    <%= submit_tag "Search", name: nil %>
+  <% end %>
+</div>
 <table class="table table-hover table-condensed table-responsive">
   <thead>
     <tr>
@@ -30,4 +48,6 @@
 </table>
 
 <%= will_paginate @circular_initiatives %>
+<br>
 
+</div>

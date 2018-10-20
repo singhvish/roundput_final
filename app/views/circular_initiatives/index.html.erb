@@ -1,3 +1,4 @@
+<div class="container">
 <div class="filter">
   <%= form_tag circular_initiatives_path, method: :get do %>
     <%= label_tag :Region %>
@@ -48,11 +49,16 @@
   </tbody>
 </table>
 
+
+
 <%= will_paginate @circular_initiatives %>
+<br>
+
 
 <%= link_to new_circular_initiative_path, class: "btn btn-success", data: {no_turbolink: true} do %>
   <span class="glyphicon glyphicon-plus"></span> New Circular Initiative
 <% end %>
 <Br>
 <Br>
+</div>
 </div>

@@ -31,6 +31,7 @@
 
 body {
 	background-color: #f9fdfa;
+	color: #18450A;
 }
 
 .navbar{
@@ -64,7 +65,7 @@ nav a {
 }
 
 .form-inline {
-    padding-top: 15px;
+    padding-top: 10px;
   }
 
 
@@ -143,6 +144,7 @@ html {
 	padding: 20px;
 	margin: 30px 0px;
 	font-size: 14px;
+	color: #18450A;
 }
 
 .basic-info {
@@ -151,6 +153,7 @@ html {
 	border-radius: 5px;
 	padding: 20px;
 	margin: 30px 0px;
+	color: #18450A;
 }
 
 .reviews {
@@ -160,4 +163,34 @@ html {
 	padding: 20px;
 	margin: 30px 0px;
 	font-size: 13px;
+	color: #18450A;
 }
+
+.pagination {
+ 	text-align: center;
+  	cursor: default; 
+    font-size: 16px;
+}
+.pagination a, .pagination span, .pagination em {
+    padding: 0.2em 0.5em;
+}
+.pagination .disabled {
+    color: #aaaaaa; 
+}
+.pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    color: #11182A; 
+}
+.pagination a {
+    border: 1px solid #dddddd;
+    color: green;
+    text-decoration: none; 
+}
+.pagination a:hover, .pagination a:focus {
+    border-color: #003366;
+    background: #0063dc;
+    color: white; 
+}
+ 
+  
