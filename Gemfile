@@ -54,3 +54,5 @@ gem 'searchkick'
 gem 'countries'
 gem 'pg', group: :production
 gem 'carrierwave'
+gem "fog-aws"
+gem "figaro"

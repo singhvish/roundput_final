@@ -1,8 +1,8 @@
 .jumbotron-fluid {
-	background-image: url(https://images.unsplash.com/photo-1422118956051-420a81c79553?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=32d5ed7aa61ed60ae979a1b15656588f&auto=format&fit=crop&w=967&q=80);
+	background-image: url(https://www.fairobserver.com/wp-content/uploads/2018/02/circular-economy-news-938x450.jpg);
 	h1{
 	font-weight: bold;
-	color:#fff;
+	color:#134F3C;
 	text-shadow: 0px 2px 3px #555;
 	font-family: Ryman Eco;
 	}
@@ -21,8 +21,8 @@
 }
 
 .page-footer{
-	background-color: #11182A;
-	color:#fff;
+	background-color: #FAFAFA;
+	color:#dark gray;
 	position:relative;
 	left: 0;
 	bottom: 0;
@@ -30,18 +30,22 @@
 	}
 
 body {
-	background-color: #f9fdfa;
-	color: #18450A;
+	background-color: #FAFAFA;
+	color: dark gray;
 }
+
+
 
 .navbar{
 	height: 70px;
 	 text-decoration: none;
 }
 
-.navbar-nav a:hover{
-	background: #11182A;
-	
+
+.navbar-nav a:hover, .navbar-nav a:focus {
+    border-color: #003366;
+    background: #3F882E;
+    color: white; 
 }
 
 .navbar a:hover, .navbar a:focus {
@@ -51,17 +55,27 @@ body {
 nav ul li {
     list-style-type:none;
     padding:5px;
-    color: #ffffff;
     }
+
+.navbar .navbar-brand {
+    color: #3F882E !important;
+}
+
+a {
+	color: #118AEC;
+}
 
 nav a {
 	font-size:16px;
-	color: #ffffff !important;
+	color: #3F882E;
+	font-weight: bold;
 }
 
 .navbar-brand {
-	font-size: 30px;
+	font-size: 32px;
 	font-weight: bold;
+	
+	
 }
 
 .form-inline {
@@ -70,7 +84,7 @@ nav a {
 
 
 .table-hover tbody tr:hover {
-	background-color: #dbf5de;
+	background-color: #e3e3e3;
 }
 
 .center {
@@ -83,7 +97,7 @@ nav a {
  }
 
 .btn-default{
-	background-color:#11182A;
+	background-color:#118AEC;
 	color:#FFF;
 }
 
@@ -100,8 +114,9 @@ nav a {
 
 
 .jumbotron {
-	background-color: #2ACCA5; 
-	height: 400px;
+	background-color: #3F882E; 
+	height: 200px;
+	margin: 20px;
 	h2 {
 	font-weight: bold;
 	color:#fff;
@@ -111,7 +126,7 @@ nav a {
 
 .page-footer a {
 	font-size:16px;
-	color: #ffffff !important;
+	color: #3F882E;
 }
 
 html {
@@ -138,32 +153,46 @@ html {
 }
 
 .initiative-info {
-	background-color: #cdeed5;
-	border: 2px solid #bee9c9;
+	background-color: #FFFFFF;
+	border: 1px solid #D8D8D8;
 	border-radius: 5px;
 	padding: 20px;
 	margin: 30px 0px;
-	font-size: 14px;
+	font-size: 16px;
 	color: #18450A;
+	h4{
+	color: #118AEC;
+	}
+	.topic{
+	color: #999999;
+	}
+
 }
 
 .basic-info {
-	background-color: #cdeed5;
-	border: 2px solid #bee9c9;
+	background-color: #FFFFFF;
+	border: 1px solid #D8D8D8;
 	border-radius: 5px;
 	padding: 20px;
 	margin: 30px 0px;
 	color: #18450A;
+	h2{
+	color: #118AEC;
+	}
+	
 }
 
 .reviews {
-	background-color: #cdeed5;
-	border: 2px solid #bee9c9;
+	background-color: #FFFFFF;
+	border: 1px solid #D8D8D8;
 	border-radius: 5px;
 	padding: 20px;
 	margin: 30px 0px;
 	font-size: 13px;
 	color: #18450A;
+	h6{
+	color: #118AEC;
+	}
 }
 
 .pagination {
@@ -180,17 +209,16 @@ html {
 .pagination .current {
     font-style: normal;
     font-weight: bold;
-    color: #11182A; 
+    color: #1E313E; 
 }
 .pagination a {
     border: 1px solid #dddddd;
-    color: green;
+    color: #3F882E;
     text-decoration: none; 
 }
 .pagination a:hover, .pagination a:focus {
     border-color: #003366;
-    background: #0063dc;
+    background: #3F882E;
     color: white; 
 }
  
-  

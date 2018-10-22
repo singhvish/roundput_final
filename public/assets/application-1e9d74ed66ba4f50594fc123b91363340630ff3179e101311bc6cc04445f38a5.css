@@ -1,0 +1,274 @@
+/* line 1, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.jumbotron-fluid {
+  background-image: url(https://www.fairobserver.com/wp-content/uploads/2018/02/circular-economy-news-938x450.jpg);
+  height: 400px;
+}
+/* line 3, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.jumbotron-fluid h1 {
+  font-weight: bold;
+  color: #134F3C;
+  text-shadow: 0px 2px 3px #555;
+  font-family: Ryman Eco;
+}
+/* line 10, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.jumbotron-fluid h2 {
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0px 2px 3px #555;
+}
+
+/* line 18, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.jumbotron-index {
+  height: 200px;
+  background-color: #2ACCA5;
+}
+
+/* line 23, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.page-footer {
+  background-color: #FAFAFA;
+  color: #dark gray;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* line 32, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+body {
+  background-color: #FAFAFA;
+  color: dark gray;
+}
+
+/* line 39, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar {
+  height: 70px;
+  text-decoration: none;
+}
+
+/* line 45, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar-nav a:hover, .navbar-nav a:focus {
+  border-color: #003366;
+  background: #3F882E;
+  color: white;
+}
+
+/* line 51, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar a:hover, .navbar a:focus {
+  text-decoration: none;
+}
+
+/* line 55, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+nav ul li {
+  list-style-type: none;
+  padding: 5px;
+}
+
+/* line 60, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar .navbar-brand {
+  color: #3F882E !important;
+}
+
+/* line 64, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+a {
+  color: #118AEC;
+}
+
+/* line 68, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+nav a {
+  font-size: 16px;
+  color: #3F882E;
+  font-weight: bold;
+}
+
+/* line 74, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar-brand {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* line 81, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.form-inline {
+  padding-top: 10px;
+}
+
+/* line 86, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.table-hover tbody tr:hover {
+  background-color: #e3e3e3;
+}
+
+/* line 90, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.center {
+  text-align: center;
+}
+
+/* line 94, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.alert-danger {
+  display: inline-block;
+  width: 100%;
+}
+
+/* line 99, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.btn-default {
+  background-color: #118AEC;
+  color: #FFF;
+}
+
+/* line 105, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.card-deck {
+  padding-top: 20px;
+}
+
+/* line 109, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.card-img-top {
+  width: 100%;
+  height: 10vw;
+  object-fit: cover;
+}
+
+/* line 116, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.jumbotron {
+  background-color: #3F882E;
+  height: 200px;
+  margin: 20px;
+}
+/* line 120, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.jumbotron h2 {
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0px 2px 3px #555;
+}
+
+/* line 127, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.page-footer a {
+  font-size: 16px;
+  color: #3F882E;
+}
+
+/* line 132, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* line 137, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-content {
+  margin: 0px auto;
+  padding: 10px 0px 10px 0px;
+  border-bottom: 1px ridge;
+}
+
+/* line 143, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-header {
+  margin: 0px auto;
+  padding: 25px 0px 25px 0px;
+  border-bottom: 1px ridge;
+}
+
+/* line 149, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-reviews {
+  padding: 25px 0px 25px 0px;
+  margin: 0px auto;
+  border-botton: 1px;
+}
+
+/* line 155, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.initiative-info {
+  background-color: #FFFFFF;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 30px 0px;
+  font-size: 16px;
+  color: #18450A;
+}
+/* line 163, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.initiative-info h4 {
+  color: #118AEC;
+}
+/* line 166, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.initiative-info .topic {
+  color: #999999;
+}
+
+/* line 172, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.basic-info {
+  background-color: #FFFFFF;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 30px 0px;
+  color: #18450A;
+}
+/* line 179, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.basic-info h2 {
+  color: #118AEC;
+}
+
+/* line 185, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.reviews {
+  background-color: #FFFFFF;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 30px 0px;
+  font-size: 13px;
+  color: #18450A;
+}
+/* line 193, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.reviews h6 {
+  color: #118AEC;
+}
+
+/* line 198, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination {
+  text-align: center;
+  cursor: default;
+  font-size: 16px;
+}
+
+/* line 203, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination a, .pagination span, .pagination em {
+  padding: 0.2em 0.5em;
+}
+
+/* line 206, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination .disabled {
+  color: #aaaaaa;
+}
+
+/* line 209, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  color: #1E313E;
+}
+
+/* line 214, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination a {
+  border: 1px solid #dddddd;
+  color: #3F882E;
+  text-decoration: none;
+}
+
+/* line 219, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination a:hover, .pagination a:focus {
+  border-color: #003366;
+  background: #3F882E;
+  color: white;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+

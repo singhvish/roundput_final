@@ -1,0 +1,245 @@
+/* line 1, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.jumbotron-fluid {
+  background-image: url(https://images.unsplash.com/photo-1422118956051-420a81c79553?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=32d5ed7aa61ed60ae979a1b15656588f&auto=format&fit=crop&w=967&q=80);
+  height: 400px;
+}
+/* line 3, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.jumbotron-fluid h1 {
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0px 2px 3px #555;
+  font-family: Ryman Eco;
+}
+/* line 10, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.jumbotron-fluid h2 {
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0px 2px 3px #555;
+}
+
+/* line 18, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.jumbotron-index {
+  height: 200px;
+  background-color: #2ACCA5;
+}
+
+/* line 23, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.page-footer {
+  background-color: #11182A;
+  color: #fff;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* line 32, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+body {
+  background-color: #f9fdfa;
+  color: #18450A;
+}
+
+/* line 37, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar {
+  height: 70px;
+  text-decoration: none;
+}
+
+/* line 42, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar-nav a:hover {
+  background: #11182A;
+}
+
+/* line 47, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar a:hover, .navbar a:focus {
+  text-decoration: none;
+}
+
+/* line 51, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+nav ul li {
+  list-style-type: none;
+  padding: 5px;
+  color: #ffffff;
+}
+
+/* line 57, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+nav a {
+  font-size: 16px;
+  color: #ffffff !important;
+}
+
+/* line 62, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar-brand {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* line 67, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.form-inline {
+  padding-top: 10px;
+}
+
+/* line 72, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.table-hover tbody tr:hover {
+  background-color: #dbf5de;
+}
+
+/* line 76, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.center {
+  text-align: center;
+}
+
+/* line 80, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.alert-danger {
+  display: inline-block;
+  width: 100%;
+}
+
+/* line 85, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.btn-default {
+  background-color: #11182A;
+  color: #FFF;
+}
+
+/* line 91, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.card-deck {
+  padding-top: 20px;
+}
+
+/* line 95, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.card-img-top {
+  width: 100%;
+  height: 10vw;
+  object-fit: cover;
+}
+
+/* line 102, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.jumbotron {
+  background-color: #2ACCA5;
+  height: 400px;
+}
+/* line 105, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.jumbotron h2 {
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0px 2px 3px #555;
+}
+
+/* line 112, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.page-footer a {
+  font-size: 16px;
+  color: #ffffff !important;
+}
+
+/* line 117, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* line 122, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-content {
+  margin: 0px auto;
+  padding: 10px 0px 10px 0px;
+  border-bottom: 1px ridge;
+}
+
+/* line 128, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-header {
+  margin: 0px auto;
+  padding: 25px 0px 25px 0px;
+  border-bottom: 1px ridge;
+}
+
+/* line 134, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-reviews {
+  padding: 25px 0px 25px 0px;
+  margin: 0px auto;
+  border-botton: 1px;
+}
+
+/* line 140, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.initiative-info {
+  background-color: #cdeed5;
+  border: 2px solid #bee9c9;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 30px 0px;
+  font-size: 14px;
+  color: #18450A;
+}
+
+/* line 150, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.basic-info {
+  background-color: #cdeed5;
+  border: 2px solid #bee9c9;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 30px 0px;
+  color: #18450A;
+}
+
+/* line 159, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.reviews {
+  background-color: #cdeed5;
+  border: 2px solid #bee9c9;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 30px 0px;
+  font-size: 13px;
+  color: #18450A;
+}
+
+/* line 169, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination {
+  text-align: center;
+  cursor: default;
+  font-size: 16px;
+}
+
+/* line 174, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination a, .pagination span, .pagination em {
+  padding: 0.2em 0.5em;
+}
+
+/* line 177, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination .disabled {
+  color: #aaaaaa;
+}
+
+/* line 180, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  color: #11182A;
+}
+
+/* line 185, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination a {
+  border: 1px solid #dddddd;
+  color: green;
+  text-decoration: none;
+}
+
+/* line 190, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination a:hover, .pagination a:focus {
+  border-color: #003366;
+  background: #0063dc;
+  color: white;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
