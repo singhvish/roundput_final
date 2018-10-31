@@ -50,17 +50,30 @@
         </div>
       </div>
 
-      <br>
+      <div class ="row row-content align-items-center">
+        <div class=" col-12 col-sm-3 col-md-3">
+          <p>
+            <strong>Address</strong>
+          </p>
+        </div>
 
+        <div class=" col-12 col-sm-9 col-md-9">
+          <p>
+            <%= @circular_initiative.address %>
+          </p>
+        </div>
+      </div>
+
+      
+      <div class="map-responsive">
       <iframe
-        width="350"
-        height="300" frameborder="0" style="border:0"
+         frameborder="0" style="border:0"
         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAUyUpRBMU9SZSISGgM8FyloppZ1Sh2mtc 
         &q=<%= @circular_initiative.City.parameterize %>&region" allowfullscreen>
       </iframe>
   
 
-      <br>
+      </div>
       <p>
         <center>
           <%= link_to 'Edit', edit_circular_initiative_path(@circular_initiative), class: "btn btn-default btn-sm-block" %> |
@@ -69,7 +82,7 @@
       </p>
     </div>
 
-    <div class="col-md-8">
+    <div class="col-md-7">
       <div class="initiative-info">
       <div class="row row-header justify-content-center">
         <h4>
@@ -134,9 +147,9 @@
         
         <% else %>
           <div class="row row-header justify-content-center">
-            <h6>
+            <h5>
               Reviews and Comments
-            </h6>
+            </h5>
           </div>
           <div class="row row-reviews align-items-center">
             <div class="col-12 col-md-3">
@@ -147,7 +160,7 @@
             </div>
             <div class="col-12 col-md-9">
               <% @reviews.each do |review| %>
-                <p><%= review.rating %></p>
+                <div class="star-rating" data-score=<%= review.rating %> ></div>
                 <p><%= review.comment %></p>
               <% if user_signed_in? %>
                 <% if (review.user == current_user) || (current_user.admin?) %>
@@ -166,6 +179,5 @@
   </div>
   </div>
 </div>
-
 
 

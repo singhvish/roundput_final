@@ -1,113 +1,108 @@
-<div class="jumbotron-fluid">
-  <div class ="container">
-    <div class="center">
-      <Br>
-      <Br>
-      <Br>
-      <h1 class="display-4">Roundput</h1><Br>
-      <h2 class="lead">Find, review and learn more about circular economy innovations in your city</h2><Br>
-    </div>
+<div class="jumbotron-home">
+  <div class="jumbotron-home-text">
+    <h1> Roundput </h1>
+    <h2> Find, review and learn more about circular economy innovations in your city </h2>
+  </div>
  
-    <div class = "form-inline justify-content-center">
-      <%= form_tag search_circular_initiatives_path, method: :get do %>
-        <p>
-          <%= text_field_tag :search, params[:search], size:60, placeholder:'Search for organizations or innovations...', class: "form-control" %>
-          <%= submit_tag "Search", name: nil, class: "btn btn-default" %>
-        </p>
-      <% end %>
-    </div>
+  <div class="form-inline justify-content-center">
+    <%= form_tag search_circular_initiatives_path, method: :get do %>
+      <%= text_field_tag :search, params[:search], size:60, placeholder:'Search for organizations or innovations...', class: "form-control" %>
+      <%= submit_tag "Search", name: nil, class: "btn btn-default" %>
+    <% end %>
   </div>
 </div>
 
-<br>
-<br>
+
 <div class="container">
- <h4>Popular Sectors</h4>
-  <h6> Discover organizations or innovations by popular sectors <h6>
-    <div class = "card-deck center">
-      <a href= "/circular_initiatives?utf8=✓&Region=&Country=&Organization_type=&sector_id=1">
-        <div class="card" style="width:15rem;">
-          <img class="card-img-top" src="https://images.pexels.com/photos/358502/pexels-photo-358502.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Card image cap">
+  <div class="row row-home-sectors">
+    <div class="col-12 sectors">
+      <h3> Popular Sectors </h3>
+      <h4> Discover organizations or innovations by popular sectors </h4>
+
+
+      <div class="card-deck">
+        <a href="/circular_initiatives?utf8=✓&Region=&Country=&Organization_type=&sector_id=1">
+          <div class="card" style="width:15rem;">
+            <img class="card-img-top" src="https://images.pexels.com/photos/358502/pexels-photo-358502.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Cities</h5>
             </div>
-        </div>
-      </a>
+          </div>
+        </a>
 
-      <a href= "/circular_initiatives?utf8=✓&Region=&Country=&Organization_type=&sector_id=4">
-        <div class="card" style="width:15rem;">
-          <img class="card-img-top" src="https://images.pexels.com/photos/196643/pexels-photo-196643.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Card image cap">
+        <a href="/circular_initiatives?utf8=✓&Region=&Country=&Organization_type=&sector_id=4">
+          <div class="card" style="width:15rem;">
+            <img class="card-img-top" src="https://images.pexels.com/photos/196643/pexels-photo-196643.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Food and Beverages</h5>
             </div>
-        </div>
-      </a>
-  
-      <a href= "/circular_initiatives?utf8=✓&Region=&Country=&Organization_type=&sector_id=2"> 
-        <div class="card" style="width:15rem;">
-          <img class="card-img-top" src="https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Card image cap">
+          </div>
+        </a>
+      
+        <a href="/circular_initiatives?utf8=✓&Region=&Country=&Organization_type=&sector_id=2"> 
+          <div class="card" style="width:15rem;">
+            <img class="card-img-top" src="https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Consumer Products</h5>
             </div>
-        </div>
-      </a>
+          </div>
+        </a>
 
-      <a href= "/circular_initiatives?utf8=✓&Region=&Country=&Organization_type=&sector_id=3">
-        <div class="card" style="width:15rem;">
-          <img class="card-img-top" src="https://images.pexels.com/photos/322207/pexels-photo-322207.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Card image cap">
+        <a href="/circular_initiatives?utf8=✓&Region=&Country=&Organization_type=&sector_id=3">
+          <div class="card" style="width:15rem;">
+            <img class="card-img-top" src="https://images.pexels.com/photos/322207/pexels-photo-322207.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Fashion</h5>
             </div>
-        </div>
-      </a>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 
 
-<Br>
-<Br>
+  <div class="row row-home-countries">
+    <div class="col-12 countries">
+      <h3> Leading countries </h3>
+      <h4> Discover organizations or innovations by leading countries </h4>
 
-  <div class = "container">  
-  <h4>Leading countries</h4>
-  <h6> Discover organizations or innovations by leading countries <h6>
+      <div class ="card-deck">
+        <a href="/circular_initiatives?utf8=%E2%9C%93&Region=&Country=United+Kingdom+of+Great+Britain+and+Northern+Ireland&Organization_type=&sector_id=">
+          <div class="card" style="width:15rem;">
+            <img class="card-img-top" src="https://images.pexels.com/photos/575362/pexels-photo-575362.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">United Kingdom</h5>
+            </div>
+          </div>
+        </a>
 
- <div class = "card-deck center">
-    <a href= "/circular_initiatives?utf8=%E2%9C%93&Region=&Country=United+Kingdom+of+Great+Britain+and+Northern+Ireland&Organization_type=&sector_id=">
-      <div class="card" style="width:15rem;">
-        <img class="card-img-top" src="https://images.pexels.com/photos/575362/pexels-photo-575362.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">United Kingdom</h5>
+        <a href="/circular_initiatives?utf8=%E2%9C%93&Region=&Country=Sweden&Organization_type=&sector_id=">
+          <div class="card" style="width:15rem;">
+            <img class="card-img-top" src="https://cdn.pixabay.com/photo/2016/11/14/19/20/stockholm-1824368__340.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Sweden</h5>
+            </div>
           </div>
-      </div>
-    </a>
+        </a>
+    
+        <a href="/circular_initiatives?utf8=%E2%9C%93&Region=&Country=Germany&Organization_type=&sector_id="> 
+          <div class="card" style="width:15rem;">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1467539656147-5273a1d3fd2f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9f8d4d7aba1babbc6ff47031a61dbc70&auto=format&fit=crop&w=500&q=60" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Germany</h5>
+            </div>
+          </div>
+        </a>
 
-    <a href= "/circular_initiatives?utf8=%E2%9C%93&Region=&Country=Sweden&Organization_type=&sector_id=">
-      <div class="card" style="width:15rem;">
-        <img class="card-img-top" src="https://cdn.pixabay.com/photo/2016/11/14/19/20/stockholm-1824368__340.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Sweden</h5>
+        <a href= "/circular_initiatives?utf8=%E2%9C%93&Region=&Country=Canada&Organization_type=&sector_id=">
+          <div class="card" style="width:15rem;">
+            <img class="card-img-top" src="https://images.pexels.com/photos/935474/toronto-beauty-clouds-skyline-935474.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Canada</h5>
+            </div>
           </div>
+        </a>
       </div>
-    </a>
-  
-    <a href= "/circular_initiatives?utf8=%E2%9C%93&Region=&Country=Germany&Organization_type=&sector_id="> 
-      <div class="card" style="width:15rem;">
-        <img class="card-img-top" src="https://images.unsplash.com/photo-1467539656147-5273a1d3fd2f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9f8d4d7aba1babbc6ff47031a61dbc70&auto=format&fit=crop&w=500&q=60" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Germany</h5>
-          </div>
-      </div>
-    </a>
-
-    <a href= "/circular_initiatives?utf8=%E2%9C%93&Region=&Country=Canada&Organization_type=&sector_id=">
-      <div class="card" style="width:15rem;">
-        <img class="card-img-top" src="https://images.pexels.com/photos/935474/toronto-beauty-clouds-skyline-935474.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Canada</h5>
-          </div>
-      </div>
-    </a>
+    </div>
   </div>
 </div>
-<br>
-<br>

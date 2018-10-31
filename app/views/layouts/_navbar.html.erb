@@ -1,23 +1,47 @@
-<nav class="navbar navbar-expand-lg navbar-dark" style= "background-color: #FAFAFA ;">
-  <%= link_to "Roundput", root_path, class: "navbar-brand" %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-  </button>
-  
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="nav navbar-nav">
-      <li><%= link_to "About Us", pages_about_path %></li>
-      <li><%= link_to "Contact", pages_contact_path %></li> 
-    </ul>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="/assets/images/Roundput_fake.png" width="30" height="30" class="d-inline-block align-top" alt="Logo-Image">Roundput
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <ul class="nav navbar-nav navbar-right">
-      <% if user_signed_in? %>
-        <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-      <% else %> 
-        <li><%= link_to "Sign Up", new_user_registration_path %></li>
-        <li><%= link_to "Sign In", new_user_session_path %></li>
-      <% end %>
-    </ul>
-  </div>
-</nav>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/about">About Us<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              What is Circular Economy?
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Definition</a>
+              <a class="dropdown-item" href="#">Strategies</a>
+              <a class="dropdown-item" href="#">How can you contribute?</a>
+            </div>
+          </li>
+        </ul>
+        <% if user_signed_in? %>
+          <ul class="navbar-nav right">
+            <li class="nav-item">
+              <%= link_to "Edit Profile", edit_user_registration_path,class: "btn btn-sm" %>           
+            </li>
+            <li class="nav-item"> 
+              <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-sm" %>
+            </li>
+          <% else %> 
+            <li class="nav-item"> 
+              <%= link_to "Log In", new_user_session_path, class: "btn btn-link login" %>
+            </li>
+            <li class="nav-item"> 
+              <%= link_to "Add an Innovation", new_user_registration_path, class: "btn btn-outline-success" %>
+            </li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </nav>
+</header>

@@ -1,19 +1,157 @@
-.jumbotron-fluid {
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.navbar-brand {
+	color: #3F882E !important;
+    font-family: Ryman Eco;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar button.navbar-toggler {
+	border: 1px solid #3F882E;
+}
+
+.navbar-nav a:hover, .navbar-nav a:focus {
+    background: #3F882E;
+    color: white; 
+    border-color: #387929;
+    text-decoration: none;
+}
+
+.navbar-nav a {
+	color: #3F882E;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #3F882E;
+}
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+   background: #3F882E;
+   color: white; 
+   border-color: #387929;
+   text-decoration: none;
+}
+
+li.nav-item {
+	list-style: none;
+}
+
+.btn-link {
+	color: #3F882E;
+	text-decoration: none;
+}
+
+.nav-item .btn-link:hover {
+	color: #020401;
+	text-decoration: none;
+}
+
+.jumbotron-home {
 	background-image: url(https://www.fairobserver.com/wp-content/uploads/2018/02/circular-economy-news-938x450.jpg);
-	h1{
+	height: 400px;
+	padding: 75px 0 75px 0;
+		h1 {
 	font-weight: bold;
-	color:#134F3C;
+	color: #134F3C;
 	text-shadow: 0px 2px 3px #555;
 	font-family: Ryman Eco;
+	font-size: 4rem;
+	text-align: center;
 	}
 
-	h2 {
+		h2 {
 	font-weight: bold;
-	color:#fff;
+	color: #FFF;
 	text-shadow: 0px 2px 3px #555;
+	font-size: 1.5rem;
+	text-align: center;
 	}
-	height: 400px;
+}
+
+.btn-default {
+	background-color: #118AEC;
+	color: #FFF !important;
+}
+
+.form-inline {
+    padding-top: 10px;
+ }
+
+.row-home-sectors {
+	padding: 60px 0px 0px 0px;
+	background-color: #F8F9FA;
+}
+
+.row-home-countries {
+	padding: 60px 0px 60px 0px;
+	background-color: #F8F9FA;
+}
+
+.row-home-sectors {
+	h3	{
+	line-height: 1.2;
+	font-weight: 500;
+	font-color: dark-gray;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-size: 1.5rem;
 	}
+	h4	{
+	font-weight: 400;
+	font-color: light-gray;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-size: 1rem;
+	line-height: 1.2;
+	}
+}
+
+.row-home-countries {
+	h3	{
+	line-height: 1.2;
+	font-weight: 500;
+	font-color: dark-gray;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-size: 1.5rem;
+	}
+	h4	{
+	font-weight: 400;
+	font-color: light-gray;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-size: 1rem;
+	line-height: 1.2;
+	}
+}
+
+.card-deck {
+	padding-top: 10px;
+	text-align: center;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.card {
+	margin: 15px;
+}
+
+
+input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    float: left;
+
+}
+
 
 .jumbotron-index{
 	height: 200px;
@@ -21,67 +159,32 @@
 }
 
 .page-footer{
-	background-color: #FAFAFA;
+	background-color: #F8F9FA;
 	color:#dark gray;
-	position:relative;
-	left: 0;
-	bottom: 0;
-    width: 100%;
 	}
 
+#row-footer {
+	padding-left: 30px;
+}
+
 body {
-	background-color: #FAFAFA;
+	background-color: #F8F9FA;
 	color: dark gray;
+	margin: 0;
+	body: 0;
 }
 
-
-
-.navbar{
-	height: 70px;
-	 text-decoration: none;
+body .form-inline {
+	text-align: center;
 }
 
-
-.navbar-nav a:hover, .navbar-nav a:focus {
-    border-color: #003366;
-    background: #3F882E;
-    color: white; 
-}
-
-.navbar a:hover, .navbar a:focus {
-	text-decoration: none;
-}
-
-nav ul li {
-    list-style-type:none;
-    padding:5px;
-    }
-
-.navbar .navbar-brand {
-    color: #3F882E !important;
+iframe {
+	overflow: hidden;
 }
 
 a {
 	color: #118AEC;
 }
-
-nav a {
-	font-size:16px;
-	color: #3F882E;
-	font-weight: bold;
-}
-
-.navbar-brand {
-	font-size: 32px;
-	font-weight: bold;
-	
-	
-}
-
-.form-inline {
-    padding-top: 10px;
-  }
-
 
 .table-hover tbody tr:hover {
 	background-color: #e3e3e3;
@@ -96,15 +199,7 @@ nav a {
     width: 100%;
  }
 
-.btn-default{
-	background-color:#118AEC;
-	color:#FFF;
-}
 
-
-.card-deck {
-	padding-top: 20px;
-}
 
 .card-img-top {
     width: 100%;
@@ -112,15 +207,60 @@ nav a {
     object-fit: cover;
 }
 
-
-.jumbotron {
-	background-color: #3F882E; 
-	height: 200px;
-	margin: 20px;
-	h2 {
+#jumbotron-about {
+	background-color: #3F882E;
+	height: 250px;
+	border-radius: 0;
+	border: 0;
+	margin-bottom: 0;
+	h1 {
 	font-weight: bold;
-	color:#fff;
+	color: #fff;
 	text-shadow: 0px 2px 3px #555;
+	padding-top: 35px;
+	padding-bottom: 35px;
+	}
+}
+
+#container-about {
+	padding-top: 55px;
+	padding-bottom: 20px;
+	background-color: #F8F9FA;
+	font-size: 1.1rem;
+	line-height: 1.1;
+	font-weight: 400;
+}
+
+#row-contact-us {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	h1 {
+	text-align: center;
+	font-weight: 420;
+	line-height: 1.2;
+	font-size: 1.5rem;
+	}
+}
+
+#new-circular-initiative {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	h1 {
+	text-align: center;
+	font-weight: 420;
+	line-height: 1.2;
+	font-size: 1.5rem;
+	}
+}
+
+#edit-circular-initiative {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	h1 {
+	text-align: center;
+	font-weight: 420;
+	line-height: 1.2;
+	font-size: 1.5rem;
 	}
 }
 
@@ -157,9 +297,11 @@ html {
 	border: 1px solid #D8D8D8;
 	border-radius: 5px;
 	padding: 20px;
-	margin: 30px 0px;
+	margin: 30px 0;
 	font-size: 16px;
 	color: #18450A;
+	line-height: 1.4m;
+	overflow: hidden;
 	h4{
 	color: #118AEC;
 	}
@@ -174,21 +316,37 @@ html {
 	border: 1px solid #D8D8D8;
 	border-radius: 5px;
 	padding: 20px;
-	margin: 30px 0px;
+	margin: 30px;
 	color: #18450A;
 	h2{
 	color: #118AEC;
+	font-weight: bold;
+	
 	}
+	
 	
 }
 
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:50%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
 .reviews {
 	background-color: #FFFFFF;
 	border: 1px solid #D8D8D8;
 	border-radius: 5px;
 	padding: 20px;
 	margin: 30px 0px;
-	font-size: 13px;
+	font-size: 14px;
 	color: #18450A;
 	h6{
 	color: #118AEC;
@@ -221,4 +379,97 @@ html {
     background: #3F882E;
     color: white; 
 }
- 
+
+
+.card-title {
+	color: #118AEC !important;
+}
+  
+
+
+@media (min-width: 1200px) {
+	.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+	float: left;
+	}
+	.col-lg-1 {
+	width: 8.33%;
+	}
+	.col-lg-2 {
+	width: 16.66%;
+	}
+	.col-lg-3 {
+	width: 25%;
+	}
+	.col-lg-4 {
+	width: 33%;
+	}
+	.col-lg-5 {
+	width: 41.66%;
+	}
+	.col-lg-6 {
+	width: 50%;
+	}
+	.col-lg-7 {
+	width: 58.33%;
+	}
+	.col-lg-8 {
+	width: 66.66%;
+	}
+	.col-lg-9 {
+	width: 74.99%;
+	}
+	.col-lg-10 {
+	width: 83.33%;
+	}
+	.col-lg-11 {
+	width: 91.66%;
+	}
+	.col-lg-12 {
+	width: 100%;
+	}
+}
+
+
+/********* Medium Devices Only ***********/
+
+@media (min-width: 950px) and (max-width: 1199px) {
+	.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+	float: left;
+	}
+	.col-md-1 {
+	width: 8.33%;
+	}
+	.col-md-2 {
+	width: 16.66%;
+	}
+	.col-md-3 {
+	width: 25%;
+	}
+	.col-md-4 {
+	width: 33%;
+	}
+	.col-md-5 {
+	width: 41.66%;
+	}
+	.col-md-6 {
+	width: 50%;
+	}
+	.col-md-7 {
+	width: 58.33%;
+	}
+	.col-md-8 {
+	width: 66.66%;
+	}
+	.col-md-9 {
+	width: 74.99%;
+	}
+	.col-md-10 {
+	width: 83.33%;
+	}
+	.col-md-11 {
+	width: 91.66%;
+	}
+	.col-md-12 {
+	width: 100%;
+	}
+}

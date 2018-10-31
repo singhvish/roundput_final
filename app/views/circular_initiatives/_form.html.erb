@@ -19,8 +19,8 @@
   </div>
 
   <div class="form-group">
-    <%= form.label :Sector %><br>
-    <%= form.collection_select :sector, Sector.all, :id, :name, {prompt: "Choose a sector"}, {class: "btn-btn-default dropdown-toggle"} %>
+    <%= form.label :sector_id %><br>
+    <%= form.collection_select :sector_id, Sector.all, :id, :name, {prompt: "Choose a sector"}, {class: "btn-btn-default dropdown-toggle"} %>
   </div>
 
   <div class="form-group">
@@ -61,6 +61,11 @@
   <div class="form-group">
     <%= form.label :City %>
     <%= form.text_field :City, class: "form-control", id: :circular_initiative_City %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :address %>
+    <%= form.text_field :address, class: "form-control", id: :circular_initiative_address %>
   </div>
 
   <div class="actions">

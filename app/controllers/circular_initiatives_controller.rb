@@ -8,7 +8,7 @@ end
 
 def search
   if params[:search].present?
-    @circular_initiatives = CircularInitiative.search(params[:search])
+    @circular_initiatives = CircularInitiative.search(params[:search], page: params[:page], per_page: 10)
   else
     @circular_initiatives = CircularInitiative.all.paginate(:page =>params[:page], :per_page =>10)
   end
@@ -95,6 +95,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def circular_initiative_params
-      params.require(:circular_initiative).permit(:Name_of_the_initiative, :sector_id, :Initiative_description, :Leading_organization, :Organization_type, :Website, :Primary_strategy, :Region, :Country, :City)
+      params.require(:circular_initiative).permit(:Name_of_the_initiative, :sector_id, :Initiative_description, :Leading_organization, :Organization_type, :Website, :Primary_strategy, :Region, :Country, :City, :address)
     end
 end

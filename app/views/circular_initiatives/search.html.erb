@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="filter">
+<div class="filter">
   <%= form_tag circular_initiatives_path, method: :get do %>
     <%= label_tag :Region %>
     <%= select_tag "Region", "<option>Africa</option> <option>Asia & Oz</option> <option>Europe</option> <option>Latin America</option> <option>North America</option> <option>Global</option>".html_safe, include_blank: true, multiple:false %>
@@ -49,5 +49,4 @@
 
 <%= will_paginate @circular_initiatives %>
 <br>
-
 </div>

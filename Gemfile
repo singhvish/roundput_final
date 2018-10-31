@@ -56,3 +56,6 @@ gem 'pg', group: :production
 gem 'carrierwave'
 gem "fog-aws"
 gem "figaro"
+gem 'jquery-rails'
+gem 'rails-ujs'
+gem 'coffee-script-source', '~> 1.12', '>= 1.12.2'

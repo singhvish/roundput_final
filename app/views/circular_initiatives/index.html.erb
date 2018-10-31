@@ -1,21 +1,99 @@
 <div class="container">
-<div class="filter">
+<div class ="jumbotron">
+  <div class = "container justify content center">
+    <h2><B>Search for organizations or innovations below</B><h2>
+  </div>
+</div>
+
+<div class = "row">
+<div class="filter col-sm-3">
   <%= form_tag circular_initiatives_path, method: :get do %>
-    <%= label_tag :Region %>
-    <%= select_tag "Region", "<option>Africa</option> <option>Asia & Oz</option> <option>Europe</option> <option>Latin America</option> <option>North America</option> <option>Global</option>".html_safe, include_blank: true, multiple:false %>
+    
 
-    <%= label_tag :Country %>
-    <%= select_tag(:Country, options_from_collection_for_select(ISO3166::Country.countries.sort_by(&:name), :name, :name, params[:Country]), {include_blank:true})  %>
+    <B>Region</B>
+    <Br>
+    <%= label_tag :Africa, "Africa" %>
+    <%= check_box_tag :Africa, "Yes", params[:Africa] %>
+    <Br>
+
+    <%= label_tag :Asia %>
+    <%= check_box_tag :Asia, "Yes", params[:Asia] %>
+    <Br>
+
+    <%= label_tag :Europe %>
+    <%= check_box_tag :Europe, "Yes", params[:Europe] %>
+    <Br>
+
+    <%= label_tag :LatinAmerica, "Latin America" %>
+    <%= check_box_tag :LatinAmerica, "Yes", params[:LatinAmerica] %>
+    <Br>
+
+    <%= label_tag :NorthAmerica, "North America" %>
+    <%= check_box_tag :NorthAmerica, "Yes", params[:NorthAmerica] %>
+    <Br>
+
+    <%= label_tag :Global %>
+    <%= check_box_tag :Global, "Yes", params[:Global] %>
+    <Br>
   
-    <%= label_tag :Organization_type %>
-    <%= select_tag "Organization_type", "<option>Multinational Corporate</option> <option>National Corporate</option> <option>SME</option> <option>Startup</option> <option>Private sector (undefined)</option> <option>Education</option>".html_safe, include_blank: true, multiple:false %>
+    <B>Org Type</B>
+    <Br>
+    <%= label_tag :SME, "SME" %>
+    <%= check_box_tag :SME, "Yes", params[:SME] %>
+    <Br>
 
-    <%= label_tag :sector %>
-    <%= select_tag(:sector_id, options_from_collection_for_select(Sector.all, :id, :name, params[:sector_id]), {include_blank:true})  %>
+    <%= label_tag :Startup %>
+    <%= check_box_tag :Startup, "Yes", params[:Startup] %>
+    <Br>
+
+    <%= label_tag :Education %>
+    <%= check_box_tag :Education, "Yes", params[:Education] %>
+    <Br>
+
+    <%= label_tag :NationalCorporate, "National Corporate" %>
+    <%= check_box_tag :NationalCorporate, "Yes", params[:NationalCorporate] %>
+    <Br>
+
+    <%= label_tag :MultinationalCorporate, "Multinational Corporate" %>
+    <%= check_box_tag :MultinationalCorporate, "Yes", params[:MultinationalCorporate] %>
+    <Br>
+
+    <%= label_tag :PrivateSector, "Private Sector (undefined)" %>
+    <%= check_box_tag :PrivateSector, "Yes", params[:PrivateSector] %>
+    <Br>
+
+    <B>Sector</B>
+    <Br>
+    <%= label_tag :Cities, "Cities" %>
+    <%= check_box_tag :Cities, "Yes", params[:Cities] %>
+    <Br>
+
+    <%= label_tag :ConsumerProductsAndElectronics, "Consumer Products" %>
+    <%= check_box_tag :ConsumerProductsAndElectronics, "Yes", params[:ConsumerProductsAndElectronics] %>
+    <Br>
+
+    <%= label_tag :FoodandBeverages, "Food and Beverages" %>
+    <%= check_box_tag :FoodandBeverages, "Yes", params[:FoodandBeverages] %>
+    <Br>
+
+    <%= label_tag :Fashion %>
+    <%= check_box_tag :Fashion, "Yes", params[:Fashion] %>
+    <Br>
+
+    <%= label_tag :Manufacturing, "Manufacturing" %>
+    <%= check_box_tag :Manufacturing, "Yes", params[:Manufacturing] %>
+    <Br>
+
+    <%= label_tag :Others, "Others" %>
+    <%= check_box_tag :Others, "Yes", params[:Others] %>
+    <Br>
+    
   
     <%= submit_tag "Search", name: nil %>
   <% end %>
 </div>
+
+<div class="index col-sm-9">
 
 <table class="table table-hover table-condensed table-responsive">
   <thead>
@@ -43,13 +121,14 @@
         <td class="center" ><%= circular_initiative.Region %></td>
         <td class="center" ><%= circular_initiative.Country %></td>
         <td class="center" ><%= circular_initiative.City %></td>
-        <td class="center" ><%= link_to 'Learn more', circular_initiative, class: "btn btn-default" %></td>
+        <td class="center" ><%= link_to 'Learn more', circular_initiative %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-
+</div>
+</div>
 
 <%= will_paginate @circular_initiatives %>
 <br>
@@ -61,4 +140,6 @@
 <Br>
 <Br>
 </div>
+
 </div>
+
