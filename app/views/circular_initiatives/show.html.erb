@@ -160,7 +160,7 @@
             </div>
             <div class="col-12 col-md-9">
               <% @reviews.each do |review| %>
-                <div class="star-rating" data-score=<%= review.rating %> ></div>
+                <p><div class="star-rating" data-score=<%= review.rating %> ></div></p>
                 <p><%= review.comment %></p>
               <% if user_signed_in? %>
                 <% if (review.user == current_user) || (current_user.admin?) %>
