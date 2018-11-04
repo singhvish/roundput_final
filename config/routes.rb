@@ -4,9 +4,6 @@ Rails.application.routes.draw do
   devise_for :users
   resources :circular_initiatives do
     resources :reviews, except: [:show, :index]
-  	collection do
-  		get 'search'
-  	end
   end
 
   get 'pages/about'

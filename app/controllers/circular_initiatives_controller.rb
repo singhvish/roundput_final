@@ -6,23 +6,18 @@ class CircularInitiativesController < ApplicationController
 def home
 end
 
-def search
-  if params[:search].present?
-    @circular_initiatives = CircularInitiative.search(params[:search], page: params[:page], per_page: 10)
-  else
-    @circular_initiatives = CircularInitiative.all.paginate(:page =>params[:page], :per_page =>10)
-  end
-end
+
 
   # GET /circular_initiatives
   # GET /circular_initiatives.json
   def index
-    @circular_initiatives = CircularInitiative.all.paginate(:page =>params[:page], :per_page =>10)
-    @circular_initiatives = @circular_initiatives.where(Region: params["Region"]) if params["Region"].present?
-    @circular_initiatives = @circular_initiatives.where(Country: params["Country"]) if params["Country"].present?
-    @circular_initiatives = @circular_initiatives.where(Organization_type: params["Organization_type"]) if params["Organization_type"].present?
-    @circular_initiatives = @circular_initiatives.where(sector_id: params["sector_id"]) if params["sector_id"].present?
-    
+      query = params[:search].presence || "*"
+      args = {}
+      args[:Region] = params[:Region] if params[:Region].present?
+      args[:Country] = params[:Country] if params[:Country].present?
+      args[:Organization_type] = params[:Organization_type] if params[:Organization_type].present?
+      args[:sector_id] = params[:sector_id] if params[:sector_id].present?
+      @circular_initiatives = CircularInitiative.search query, where: args, aggs: {Region: {}, Country: {}, Organization_type: {}, sector_id: {} }
   end
 
   # GET /circular_initiatives/1

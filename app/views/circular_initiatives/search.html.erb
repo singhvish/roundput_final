@@ -1,52 +1,35 @@
 <div class="container">
-<div class="filter">
-  <%= form_tag circular_initiatives_path, method: :get do %>
-    <%= label_tag :Region %>
-    <%= select_tag "Region", "<option>Africa</option> <option>Asia & Oz</option> <option>Europe</option> <option>Latin America</option> <option>North America</option> <option>Global</option>".html_safe, include_blank: true, multiple:false %>
+      <table class="table table-hover table-condensed table-responsive">
+        <thead>
+          <tr>
+            <th>Innovation</th>
+            <th>Organization</th>
+            <th>Sector</th>
+            <th>Org Type</th>
+            <th>Website</th>
+            <th>Region</th>
+            <th>Country</th>
+            <th>City</th>
+          </tr>
+        </thead>
 
-    <%= label_tag :Country %>
-    <%= select_tag(:Country, options_from_collection_for_select(ISO3166::Country.countries.sort_by(&:name), :name, :name, params[:Country]), {include_blank:true})  %>
-  
-    <%= label_tag :Organization_type %>
-    <%= select_tag "Organization_type", "<option>Multinational Corporate</option> <option>National Corporate</option> <option>SME</option> <option>Startup</option> <option>Private sector (undefined)</option> <option>Education</option>".html_safe, include_blank: true, multiple:false %>
-
-    <%= label_tag :sector %>
-    <%= select_tag(:sector_id, options_from_collection_for_select(Sector.all, :id, :name, params[:sector_id]), {include_blank:true})  %>
-  
-    <%= submit_tag "Search", name: nil %>
-  <% end %>
+        <tbody>
+          <% @circular_initiatives.each do |circular_initiative| %>
+            <tr>
+              <td><%= link_to circular_initiative.Name_of_the_initiative, circular_initiative %></td>
+              <td><%= circular_initiative.Leading_organization %></td>
+              <td><%= circular_initiative.sector.name %></td>
+              <td><%= circular_initiative.Organization_type %></td>
+              <td><%= link_to circular_initiative.Website, circular_initiative.Website, target: :_blank %></td>
+              <td><%= circular_initiative.Region %></td>
+              <td><%= circular_initiative.Country %></td>
+              <td><%= circular_initiative.City %></td>
+              <td><%= link_to 'Learn more', circular_initiative, class: "btn btn-default" %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
-<table class="table table-hover table-condensed table-responsive">
-  <thead>
-    <tr>
-      <th>Innovation</th>
-      <th>Organization</th>
-      <th>Sector</th>
-      <th>Org Type</th>
-      <th>Website</th>
-      <th>Region</th>
-      <th>Country</th>
-      <th>City</th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @circular_initiatives.each do |circular_initiative| %>
-      <tr>
-        <td><%= link_to circular_initiative.Name_of_the_initiative, circular_initiative %></td>
-        <td><%= circular_initiative.Leading_organization %></td>
-        <td><%= circular_initiative.sector.name %></td>
-        <td><%= circular_initiative.Organization_type %></td>
-        <td><%= link_to circular_initiative.Website, circular_initiative.Website %></td>
-        <td><%= circular_initiative.Region %></td>
-        <td><%= circular_initiative.Country %></td>
-        <td><%= circular_initiative.City %></td>
-        <td><%= link_to 'Learn more', circular_initiative, class: "btn btn-default" %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<%= will_paginate @circular_initiatives %>
-<br>
-</div>

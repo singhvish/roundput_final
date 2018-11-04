@@ -6,92 +6,57 @@
 </div>
 
 <div class = "row">
-<div class="filter col-sm-3">
-  <%= form_tag circular_initiatives_path, method: :get do %>
-    
+  <div class="filter col-sm-3">
+    <h6> Region </h6>
+    <% @circular_initiatives.aggs["Region"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
+      <div>
+        <% if params[:Region] == bucket["key"].to_s %>
+          <strong><%= link_to bucket["key"], request.params.except(:Region) %></strong>
+        <% else %>
+          <%= link_to bucket["key"], request.params.merge(Region: bucket["key"]) %>
+        <% end %>
+        (<%= bucket["doc_count"] %>)
+      </div>
+    <% end %>
 
-    <B>Region</B>
-    <Br>
-    <%= label_tag :Africa, "Africa" %>
-    <%= check_box_tag :Africa, "Yes", params[:Africa] %>
-    <Br>
+    <h6> Organization Type </h6>
+    <% @circular_initiatives.aggs["Organization_type"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
+      <div>
+        <% if params[:Organization_type] == bucket["key"].to_s %>
+          <strong><%= link_to bucket["key"], request.params.except(:Organization_type) %></strong>
+        <% else %>
+          <%= link_to bucket["key"], request.params.merge(Organization_type: bucket["key"]) %>
+        <% end %>
+        (<%= bucket["doc_count"] %>)
+      </div>
+    <% end %>
 
-    <%= label_tag :Asia %>
-    <%= check_box_tag :Asia, "Yes", params[:Asia] %>
-    <Br>
+    <h6> Sector </h6>
+    <% @circular_initiatives.aggs["sector_id"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
+      <div>
+        <% if params[:sector_id] == bucket["key"].to_s %>
+          <strong><%= link_to bucket["key"], request.params.except(:sector_id) %></strong>
+        <% else %>
+          <%= link_to bucket["key"], request.params.merge(sector_id: bucket["key"]) %>
+        <% end %>
+        (<%= bucket["doc_count"] %>)
+      </div>
+    <% end %>
 
-    <%= label_tag :Europe %>
-    <%= check_box_tag :Europe, "Yes", params[:Europe] %>
-    <Br>
+    <h6> Country </h6>
+    <% @circular_initiatives.aggs["Country"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
+      <div>
+        <% if params[:Country] == bucket["key"].to_s %>
+          <strong><%= link_to bucket["key"], request.params.except(:Country) %></strong>
+        <% else %>
+          <%= link_to bucket["key"], request.params.merge(Country: bucket["key"]) %>
+        <% end %>
+        (<%= bucket["doc_count"] %>)
+      </div>
+    <% end %>
+  </div>
 
-    <%= label_tag :LatinAmerica, "Latin America" %>
-    <%= check_box_tag :LatinAmerica, "Yes", params[:LatinAmerica] %>
-    <Br>
 
-    <%= label_tag :NorthAmerica, "North America" %>
-    <%= check_box_tag :NorthAmerica, "Yes", params[:NorthAmerica] %>
-    <Br>
-
-    <%= label_tag :Global %>
-    <%= check_box_tag :Global, "Yes", params[:Global] %>
-    <Br>
-  
-    <B>Org Type</B>
-    <Br>
-    <%= label_tag :SME, "SME" %>
-    <%= check_box_tag :SME, "Yes", params[:SME] %>
-    <Br>
-
-    <%= label_tag :Startup %>
-    <%= check_box_tag :Startup, "Yes", params[:Startup] %>
-    <Br>
-
-    <%= label_tag :Education %>
-    <%= check_box_tag :Education, "Yes", params[:Education] %>
-    <Br>
-
-    <%= label_tag :NationalCorporate, "National Corporate" %>
-    <%= check_box_tag :NationalCorporate, "Yes", params[:NationalCorporate] %>
-    <Br>
-
-    <%= label_tag :MultinationalCorporate, "Multinational Corporate" %>
-    <%= check_box_tag :MultinationalCorporate, "Yes", params[:MultinationalCorporate] %>
-    <Br>
-
-    <%= label_tag :PrivateSector, "Private Sector (undefined)" %>
-    <%= check_box_tag :PrivateSector, "Yes", params[:PrivateSector] %>
-    <Br>
-
-    <B>Sector</B>
-    <Br>
-    <%= label_tag :Cities, "Cities" %>
-    <%= check_box_tag :Cities, "Yes", params[:Cities] %>
-    <Br>
-
-    <%= label_tag :ConsumerProductsAndElectronics, "Consumer Products" %>
-    <%= check_box_tag :ConsumerProductsAndElectronics, "Yes", params[:ConsumerProductsAndElectronics] %>
-    <Br>
-
-    <%= label_tag :FoodandBeverages, "Food and Beverages" %>
-    <%= check_box_tag :FoodandBeverages, "Yes", params[:FoodandBeverages] %>
-    <Br>
-
-    <%= label_tag :Fashion %>
-    <%= check_box_tag :Fashion, "Yes", params[:Fashion] %>
-    <Br>
-
-    <%= label_tag :Manufacturing, "Manufacturing" %>
-    <%= check_box_tag :Manufacturing, "Yes", params[:Manufacturing] %>
-    <Br>
-
-    <%= label_tag :Others, "Others" %>
-    <%= check_box_tag :Others, "Yes", params[:Others] %>
-    <Br>
-    
-  
-    <%= submit_tag "Search", name: nil %>
-  <% end %>
-</div>
 
 <div class="index col-sm-9">
 
@@ -117,7 +82,7 @@
         <td class="center" ><%= circular_initiative.Leading_organization %></td>
         <td class="center" ><%= circular_initiative.sector.name %></td>
         <td class="center" ><%= circular_initiative.Organization_type %></td>
-        <td class="center" ><%= link_to circular_initiative.Website, circular_initiative.Website %></td>
+        <td class="center" ><%= link_to circular_initiative.Website, circular_initiative.Website, target: :_blank %></td>
         <td class="center" ><%= circular_initiative.Region %></td>
         <td class="center" ><%= circular_initiative.Country %></td>
         <td class="center" ><%= circular_initiative.City %></td>
