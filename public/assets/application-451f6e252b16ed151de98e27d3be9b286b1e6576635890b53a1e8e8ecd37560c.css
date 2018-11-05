@@ -1,0 +1,593 @@
+/* line 1, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 7, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar-brand {
+  color: #3F882E !important;
+  font-family: Ryman Eco;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* line 14, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar button.navbar-toggler {
+  border: 1px solid #3F882E;
+}
+
+/* line 18, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar-nav a:hover, .navbar-nav a:focus {
+  background: #3F882E;
+  color: white;
+  border-color: #387929;
+  text-decoration: none;
+}
+
+/* line 25, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar-nav a {
+  color: #3F882E;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+/* line 31, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar-light .navbar-nav .nav-link {
+  color: #3F882E;
+}
+
+/* line 35, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+  background: #3F882E;
+  color: white;
+  border-color: #387929;
+  text-decoration: none;
+}
+
+/* line 42, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+li.nav-item {
+  list-style: none;
+}
+
+/* line 46, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.btn-link {
+  color: #3F882E;
+  text-decoration: none;
+}
+
+/* line 51, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.nav-item .btn-link:hover {
+  color: #020401;
+  text-decoration: none;
+}
+
+/* line 56, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.jumbotron-home {
+  background-color: #9F9F9D;
+  height: 400px;
+  padding: 75px 0 75px 0;
+}
+/* line 60, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.jumbotron-home h1 {
+  font-weight: bold;
+  color: #134F3C;
+  text-shadow: 0px 2px 3px #555;
+  font-family: Ryman Eco;
+  font-size: 4rem;
+  text-align: center;
+}
+/* line 69, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.jumbotron-home h2 {
+  font-weight: bold;
+  color: #FFF;
+  text-shadow: 0px 2px 3px #555;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* line 78, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.btn-default {
+  background-color: #118AEC;
+  color: #FFF !important;
+}
+
+/* line 83, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.form-inline {
+  padding-top: 10px;
+}
+
+/* line 87, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-home-sectors {
+  padding: 60px 0px 0px 0px;
+  background-color: #F8F9FA;
+}
+
+/* line 92, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-home-countries {
+  padding: 60px 0px 60px 0px;
+  background-color: #F8F9FA;
+}
+
+/* line 98, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-home-sectors h3 {
+  line-height: 1.2;
+  font-weight: 500;
+  font-color: dark-gray;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 1.5rem;
+}
+/* line 106, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-home-sectors h4 {
+  font-weight: 400;
+  font-color: light-gray;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+/* line 117, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-home-countries h3 {
+  line-height: 1.2;
+  font-weight: 500;
+  font-color: dark-gray;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 1.5rem;
+}
+/* line 125, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-home-countries h4 {
+  font-weight: 400;
+  font-color: light-gray;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+/* line 135, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.card-deck {
+  padding-top: 10px;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* line 142, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.card {
+  margin: 15px;
+}
+
+/* line 147, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  float: left;
+}
+
+/* line 156, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.jumbotron-index {
+  height: 200px;
+  background-color: #2ACCA5;
+}
+
+/* line 161, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.page-footer {
+  background-color: #F8F9FA;
+  color: #dark gray;
+}
+
+/* line 166, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#row-footer {
+  padding-left: 30px;
+}
+
+/* line 170, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+body {
+  background-color: #F8F9FA;
+  color: dark gray;
+  margin: 0;
+  body: 0;
+}
+
+/* line 177, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+body .form-inline {
+  text-align: center;
+}
+
+/* line 181, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+iframe {
+  overflow: hidden;
+}
+
+/* line 185, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+a {
+  color: #118AEC;
+}
+
+/* line 189, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.table-hover tbody tr:hover {
+  background-color: #e3e3e3;
+}
+
+/* line 193, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.center {
+  text-align: center;
+}
+
+/* line 197, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.alert-danger {
+  display: inline-block;
+  width: 100%;
+}
+
+/* line 204, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.card-img-top {
+  width: 100%;
+  height: 10vw;
+  object-fit: cover;
+}
+
+/* line 210, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#jumbotron-about {
+  background-color: #3F882E;
+  height: 250px;
+  border-radius: 0;
+  border: 0;
+  margin-bottom: 0;
+}
+/* line 216, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#jumbotron-about h1 {
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0px 2px 3px #555;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+/* line 225, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#container-about {
+  padding-top: 55px;
+  padding-bottom: 20px;
+  background-color: #F8F9FA;
+  font-size: 1.1rem;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+/* line 234, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#row-contact-us {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/* line 237, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#row-contact-us h1 {
+  text-align: center;
+  font-weight: 420;
+  line-height: 1.2;
+  font-size: 1.5rem;
+}
+
+/* line 245, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#new-circular-initiative {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/* line 248, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#new-circular-initiative h1 {
+  text-align: center;
+  font-weight: 420;
+  line-height: 1.2;
+  font-size: 1.5rem;
+}
+
+/* line 256, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#edit-circular-initiative {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/* line 259, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#edit-circular-initiative h1 {
+  text-align: center;
+  font-weight: 420;
+  line-height: 1.2;
+  font-size: 1.5rem;
+}
+
+/* line 267, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.page-footer a {
+  font-size: 16px;
+  color: #3F882E;
+}
+
+/* line 272, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* line 277, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-content {
+  margin: 0px auto;
+  padding: 10px 0px 10px 0px;
+  border-bottom: 1px ridge;
+}
+
+/* line 283, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-header {
+  margin: 0px auto;
+  padding: 25px 0px 25px 0px;
+  border-bottom: 1px ridge;
+}
+
+/* line 289, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-reviews {
+  padding: 25px 0px 25px 0px;
+  margin: 0px auto;
+  border-botton: 1px;
+}
+
+/* line 295, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.initiative-info {
+  background-color: #FFFFFF;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 30px 0;
+  font-size: 16px;
+  color: #18450A;
+  line-height: 1.4m;
+  overflow: hidden;
+}
+/* line 305, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.initiative-info h4 {
+  color: #118AEC;
+}
+/* line 308, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.initiative-info .topic {
+  color: #999999;
+}
+
+/* line 314, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.basic-info {
+  background-color: #FFFFFF;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 30px;
+  color: #18450A;
+}
+/* line 321, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.basic-info h2 {
+  color: #118AEC;
+  font-weight: bold;
+}
+
+/* line 330, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 50%;
+  position: relative;
+  height: 0;
+}
+
+/* line 336, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* line 343, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.reviews {
+  background-color: #FFFFFF;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 30px 0px;
+  font-size: 14px;
+  color: #18450A;
+}
+/* line 351, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.reviews h6 {
+  color: #118AEC;
+}
+
+/* line 356, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination {
+  text-align: center;
+  cursor: default;
+  font-size: 16px;
+}
+
+/* line 361, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination a, .pagination span, .pagination em {
+  padding: 0.2em 0.5em;
+}
+
+/* line 364, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination .disabled {
+  color: #aaaaaa;
+}
+
+/* line 367, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  color: #1E313E;
+}
+
+/* line 372, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination a {
+  border: 1px solid #dddddd;
+  color: #3F882E;
+  text-decoration: none;
+}
+
+/* line 377, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination a:hover, .pagination a:focus {
+  border-color: #003366;
+  background: #3F882E;
+  color: white;
+}
+
+/* line 384, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.card-title {
+  color: #118AEC !important;
+}
+
+@media (min-width: 1200px) {
+  /* line 391, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left;
+  }
+
+  /* line 394, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-1 {
+    width: 8.33%;
+  }
+
+  /* line 397, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-2 {
+    width: 16.66%;
+  }
+
+  /* line 400, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-3 {
+    width: 25%;
+  }
+
+  /* line 403, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-4 {
+    width: 33%;
+  }
+
+  /* line 406, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-5 {
+    width: 41.66%;
+  }
+
+  /* line 409, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-6 {
+    width: 50%;
+  }
+
+  /* line 412, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-7 {
+    width: 58.33%;
+  }
+
+  /* line 415, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-8 {
+    width: 66.66%;
+  }
+
+  /* line 418, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-9 {
+    width: 74.99%;
+  }
+
+  /* line 421, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-10 {
+    width: 83.33%;
+  }
+
+  /* line 424, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-11 {
+    width: 91.66%;
+  }
+
+  /* line 427, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-12 {
+    width: 100%;
+  }
+}
+/********* Medium Devices Only ***********/
+@media (min-width: 950px) and (max-width: 1199px) {
+  /* line 436, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+  }
+
+  /* line 439, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-1 {
+    width: 8.33%;
+  }
+
+  /* line 442, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-2 {
+    width: 16.66%;
+  }
+
+  /* line 445, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-3 {
+    width: 25%;
+  }
+
+  /* line 448, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-4 {
+    width: 33%;
+  }
+
+  /* line 451, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-5 {
+    width: 41.66%;
+  }
+
+  /* line 454, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-6 {
+    width: 50%;
+  }
+
+  /* line 457, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-7 {
+    width: 58.33%;
+  }
+
+  /* line 460, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-8 {
+    width: 66.66%;
+  }
+
+  /* line 463, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-9 {
+    width: 74.99%;
+  }
+
+  /* line 466, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-10 {
+    width: 83.33%;
+  }
+
+  /* line 469, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-11 {
+    width: 91.66%;
+  }
+
+  /* line 472, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-12 {
+    width: 100%;
+  }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
