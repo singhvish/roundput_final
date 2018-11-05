@@ -14,10 +14,7 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= form.label :rating %>
-    <%= form.number_field :rating, id: :review_rating, class: "form-control" %>
-  </div>
+  <div id="star-rating"></div>
 
   <div class="form-group">
     <%= form.label :comment %>
@@ -28,3 +25,10 @@
     <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
+
+<script>
+      $('#star-rating').raty({
+        path: "https://s3.ap-south-1.amazonaws.com/roundputfinal/stars/",
+        scoreName: "review[rating]"
+        });
+    </script>

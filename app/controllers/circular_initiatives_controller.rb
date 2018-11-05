@@ -17,13 +17,14 @@ end
       args[:Country] = params[:Country] if params[:Country].present?
       args[:Organization_type] = params[:Organization_type] if params[:Organization_type].present?
       args[:sector_id] = params[:sector_id] if params[:sector_id].present?
-      @circular_initiatives = CircularInitiative.search query, where: args, aggs: {Region: {}, Country: {}, Organization_type: {}, sector_id: {} }
+      args[:Primary_strategy] = params[:Primary_strategy] if params[:Primary_strategy].present?
+      @circular_initiatives = CircularInitiative.search query, where: args, aggs: {Region: {}, Country: {}, Organization_type: {}, sector_id: {}, Primary_strategy: {} }, page: params[:page], per_page: 3
   end
 
   # GET /circular_initiatives/1
   # GET /circular_initiatives/1.json
   def show
-    @reviews = Review.where(circular_initiative_id: @circular_initiative.id)
+    @reviews = Review.where(circular_initiative_id: @circular_initiative.id).order("created_at DESC")
   end
 
   # GET /circular_initiatives/new
