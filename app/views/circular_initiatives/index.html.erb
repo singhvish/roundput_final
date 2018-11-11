@@ -1,12 +1,15 @@
-<div class="container">
-  <div class ="jumbotron">
-    <div class = "container justify content center">
-      <h2><B>Search for organizations or innovations below</B><h2>
-    </div>
+<div id="jumbotron-index" class ="jumbotron">
+  <div class = "container center">
+    <h2><B>Search for organizations or innovations below</B></h2>
   </div>
+</div>
 
+<div class="container">
   <div class = "row">
-    <div class="filter col-sm-3">
+    <div id="index-filter" class="filter col-sm-12 col-md-2 col-lg-2 col-xl-2">
+      <h5>Advanced Search</h5>
+      <Br>
+      <Br>
       <h6> Region </h6>
       <% @circular_initiatives.aggs["Region"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
         <div>
@@ -55,7 +58,7 @@
         </div>
       <% end %>
 
-       <h6> Strategy </h6>
+      <h6> Strategy </h6>
       <% @circular_initiatives.aggs["Primary_strategy"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
         <div>
           <% if params[:Primary_strategy] == bucket["key"].to_s %>
@@ -65,25 +68,27 @@
           <% end %>
           (<%= bucket["doc_count"] %>)
         </div>
-      <% end %>
-      
+      <% end %>  
     </div>
 
 
+    
 
-    <div class="index col-sm-9">
-      <table class="table table-hover table-condensed table-responsive">
+
+    <div class="index col-sm-10 col-md-10 col-lg-10">
+      <div id="index-button" class="new initiative button">
+    <%= link_to new_circular_initiative_path, class: "btn btn-default btn-md", data: {no_turbolink: true} do %>
+    New Circular Initiative
+    <% end %>
+  </div>
+      <table id="index-table" class="table table-hover table-condensed table-responsive">
         <thead>
           <tr>
             <th class="center">Innovation</th>
             <th class="center">Organization</th>
             <th class="center">Sector</th>
-            <th class="center">Org Type</th>
             <th class="center">Website</th>
-            <th class="center">Primary Strategy</th>
-            <th class="center">Region</th>
-            <th class="center">Country</th>
-            <th class="center">City</th>
+            <th class="center">Address</th>
             <th colspan="3"></th>
           </tr>
         </thead>
@@ -91,15 +96,11 @@
         <tbody>
           <% @circular_initiatives.each do |circular_initiative| %>
             <tr>
-              <td ><%= link_to circular_initiative.Name_of_the_initiative, circular_initiative %></td>
+              <td class><%= link_to circular_initiative.Name_of_the_initiative, circular_initiative %></td>
               <td class="center" ><%= circular_initiative.Leading_organization %></td>
               <td class="center" ><%= circular_initiative.sector.name %></td>
-              <td class="center" ><%= circular_initiative.Organization_type %></td>
               <td class="center" ><%= link_to circular_initiative.Website, circular_initiative.Website, target: :_blank %></td>
-              <td class="center" ><%= circular_initiative.Primary_strategy %></td>
-              <td class="center" ><%= circular_initiative.Region %></td>
-              <td class="center" ><%= circular_initiative.Country %></td>
-              <td class="center" ><%= circular_initiative.City %></td>
+              <td class="center" ><%= circular_initiative.address %></td>
               <td class="center" ><%= link_to 'Learn more', circular_initiative %></td>
             </tr>
           <% end %>
@@ -108,11 +109,6 @@
       <%= will_paginate @circular_initiatives %>
     </div>
   </div>
-
-
-  <%= link_to new_circular_initiative_path, class: "btn btn-default", data: {no_turbolink: true} do %>
-    <span class="glyphicon glyphicon-plus"></span> New Circular Initiative
-  <% end %>
 </div>
 
 

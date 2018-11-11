@@ -1,6 +1,7 @@
 <div class ="container">
   <div class="row">
-    <div class="col-md-4 basic-info">
+    <div class="column col-md-5">
+    <div id="basic-info">
       <div class="row row-header justify-content-center">
         <h2>
           <%= @circular_initiative.Leading_organization %>
@@ -53,6 +54,76 @@
       <div class ="row row-content align-items-center">
         <div class=" col-12 col-sm-3 col-md-3">
           <p>
+            <strong>LinkedIn</strong>
+          </p>
+        </div>
+
+        <div class=" col-12 col-sm-9 col-md-9">
+          <p>
+            <%= link_to 'Visit LinkedIn page', @circular_initiative.linkedin %>
+          </p>
+        </div>
+      </div>
+
+      <div class ="row row-content align-items-center">
+        <div class=" col-12 col-sm-3 col-md-3">
+          <p>
+            <strong>Twitter</strong>
+          </p>
+        </div>
+
+        <div class=" col-12 col-sm-9 col-md-9">
+          <p>
+            <%= link_to 'Visit Twitter page', @circular_initiative.twitter %>
+          </p>
+        </div>
+      </div>
+
+      <div class ="row row-content align-items-center">
+        <div class=" col-12 col-sm-3 col-md-3">
+          <p>
+            <strong>Facebook</strong>
+          </p>
+        </div>
+
+        <div class=" col-12 col-sm-9 col-md-9">
+          <p>
+            <%= link_to 'Visit Facebook page', @circular_initiative.facebook %>
+          </p>
+        </div>
+      </div>
+
+      <div class ="row row-content align-items-center">
+        <div class=" col-12 col-sm-3 col-md-3">
+          <p>
+            <strong>Instagram</strong>
+          </p>
+        </div>
+
+        <div class=" col-12 col-sm-9 col-md-9">
+          <p>
+            <%= link_to 'Visit Instagram page', @circular_initiative.instagram %>
+          </p>
+        </div>
+      </div>
+
+      <div class ="row row-content align-items-center">
+        <div class=" col-12 col-sm-3 col-md-3">
+          <p>
+            <strong>Email</strong>
+          </p>
+        </div>
+
+        <div class=" col-12 col-sm-9 col-md-9">
+          <p>
+            <%= link_to @circular_initiative.email %>
+          </p>
+        </div>
+      </div>
+
+      <div class ="row row-content align-items-center">
+        <div class=" col-12 col-sm-3 col-md-3">
+          <p>
             <strong>Address</strong>
           </p>
         </div>
@@ -64,16 +135,14 @@
         </div>
       </div>
 
-      
       <div class="map-responsive">
-      <iframe
-         frameborder="0" style="border:0"
-        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAUyUpRBMU9SZSISGgM8FyloppZ1Sh2mtc 
-        &q=<%= @circular_initiative.City.parameterize %>&region" allowfullscreen>
-      </iframe>
-  
-
+        <iframe
+           frameborder="0" style="border:0"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAUyUpRBMU9SZSISGgM8FyloppZ1Sh2mtc 
+          &q=<%= @circular_initiative.City.parameterize %>&region" allowfullscreen>
+        </iframe>
       </div>
+
       <p>
         <center>
           <%= link_to 'Edit', edit_circular_initiative_path(@circular_initiative), class: "btn btn-default btn-sm-block" %> |
@@ -81,9 +150,10 @@
         </center>
       </p>
     </div>
-
-    <div class="col-md-7">
-      <div class="initiative-info">
+  </div>
+    <div class="column col-md-7">
+    <div id="initiative-info">
+      
       <div class="row row-header justify-content-center">
         <h4>
           Innovation Description
@@ -119,6 +189,32 @@
       <div class ="row row-content align-items-center">
         <div class=" col-12 col-sm-3 col-md-3 topic">
           <p>
+           <B> Problem Addressed</B>
+          </p>
+        </div>
+        <div class=" col-12 col-sm-9 col-md-9 ">
+          <p>
+            <%= @circular_initiative.problem %>
+          </p>
+        </div>
+      </div>
+
+      <div class ="row row-content align-items-center">
+        <div class=" col-12 col-sm-3 col-md-3 topic">
+          <p>
+           <B> Partners</B>
+          </p>
+        </div>
+        <div class=" col-12 col-sm-9 col-md-9 ">
+          <p>
+            <%= @circular_initiative.partners %>
+          </p>
+        </div>
+      </div>
+
+      <div class ="row row-content align-items-center">
+        <div class=" col-12 col-sm-3 col-md-3 topic">
+          <p>
            <B> Primary strategy </B>
           </p>
         </div>
@@ -129,17 +225,47 @@
           </p>
         </div>
       </div>
+
+      <div class ="row row-content align-items-center">
+        <div class=" col-12 col-sm-3 col-md-3 topic">
+          <p>
+           <B> Awards </B>
+          </p>
+        </div>
+
+        <div class=" col-12 col-sm-9 col-md-9">
+          <p>
+            <%= @circular_initiative.awards %>
+          </p>
+        </div>
+      </div>
+
+
+      <div class ="row row-content align-items-center">
+        <div class=" col-12 col-sm-3 col-md-3 topic">
+          <p>
+           <B> Funding </B>
+          </p>
+        </div>
+
+        <div class=" col-12 col-sm-9 col-md-9">
+          <p>
+            <%= @circular_initiative.funding %>
+          </p>
+        </div>
+      </div>
     </div>
+  </div>
+  </div>
 
-    <div class="reviews">
-
+      <div class="reviews">
         <% if @reviews.blank? %>
           <div class="row row-reviews justify-content-center">
             <p>
-            <h6>
-              No reviews yet. Be the first to write one!
-            </h6>
-          </p>
+              <h6>
+                No reviews yet. Be the first to write one!
+              </h6>
+            </p>
           </div>
           <center>
             <%= link_to "Write a Review", new_circular_initiative_review_path(@circular_initiative), class: "btn btn-default" %>
@@ -176,7 +302,6 @@
       </center>
     <% end %>
     <br>
-  </div>
   </div>
 </div>
 

@@ -1,18 +1,57 @@
+/********* Global Styles ***********/
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
+img, embed, object, video {
+	max-width: 100%;
+}
+
+html { 
+	width: 100%; 
+	height: 100%; 
+}
+
+body {
+	background-color: #F8F9FA;
+	height: 100%; 
+}
+
+
+
+
+/********* Typography Styles ***********/
+
+a {
+	color: #118AEC;
+}
+
+/********* Structure Styles ***********/
+
+/********* Module Styles ***********/
+
+
+/* Site Navigation */
+
 .navbar-brand {
 	color: #3F882E !important;
     font-family: Ryman Eco;
-    font-size: 1.5em;
+    font-size: 2rem;
     font-weight: bold;
+    padding: 0;
 }
 
 .navbar button.navbar-toggler {
 	border: 1px solid #3F882E;
+}
+
+.navbar-nav a {
+	color: #3F882E;
+	text-align: center;
+	font-size: 1.1em;
 }
 
 .navbar-nav a:hover, .navbar-nav a:focus {
@@ -22,14 +61,9 @@
     text-decoration: none;
 }
 
-.navbar-nav a {
-	color: #3F882E;
-	text-align: center;
-	font-size: 1.1em;
-}
-
 .navbar-light .navbar-nav .nav-link {
     color: #3F882E;
+	font-size: 1.1rem;
 }
 
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
@@ -43,36 +77,130 @@ li.nav-item {
 	list-style: none;
 }
 
-.btn-link {
-	color: #3F882E;
-	text-decoration: none;
-}
-
 .nav-item .btn-link:hover {
 	color: #020401;
 	text-decoration: none;
 }
 
-.jumbotron-home {
+/********* Component Styles ***********/
+
+.pagination {
+ 	text-align: center;
+  	cursor: default; 
+    font-size: 16px;
+}
+.pagination a, .pagination span, .pagination em {
+    padding: 0.2em 0.5em;
+}
+.pagination .disabled {
+    color: #aaaaaa; 
+}
+.pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    color: #1E313E; 
+}
+.pagination a {
+    border: 1px solid #dddddd;
+    color: #3F882E;
+    text-decoration: none; 
+}
+.pagination a:hover, .pagination a:focus {
+    border-color: #003366;
+    background: #3F882E;
+    color: white; 
+}
+
+#jumbotron-index {
 	background-color: #9F9F9D;
-	height: 400px;
-	padding: 75px 0 75px 0;
+	height: 40%;
+	padding: 7.5% 0 7.5% 0;
+	border-radius: 0;
+		h2 {
+	font-weight: bold;
+	color: #FFF;
+	text-shadow: 0px 2px 3px #555;
+	font-size: 1.75rem;
+
+	}
+
+	}
+
+	#jumbotron-about {
+	background-color: #9F9F9D;
+	height: 40%;
+	padding: 7.5% 0 7.5% 0;
+	border-radius: 0;
+		h2 {
+	font-weight: bold;
+	color: #FFF;
+	text-shadow: 0px 2px 3px #555;
+	font-size: 1.75rem;
+
+	}
+
+}
+
+/********* Page Styles ***********/
+
+/* Home Page */
+
+.container-home {
+	padding: 4rem 0 4rem 0;
+}
+
+#jumbotron-home {
+	background-color: #9F9F9D;
+	height: 40%;
+	padding: 5% 0 5% 0;
+	border-radius: 0;
 		h1 {
 	font-weight: bold;
 	color: #134F3C;
 	text-shadow: 0px 2px 3px #555;
 	font-family: Ryman Eco;
-	font-size: 4rem;
-	text-align: center;
+	font-size: 2em;
+
 	}
 
 		h2 {
 	font-weight: bold;
 	color: #FFF;
 	text-shadow: 0px 2px 3px #555;
-	font-size: 1.5rem;
-	text-align: center;
+	font-size: 1em;
+
 	}
+}
+
+input#search {
+	width: 60%;
+	height: 35px;
+
+	border-radius: 0.25rem;
+
+}
+
+input.btn.btn-default {
+
+	display: inline;
+	border: 6px;
+}
+
+#index-table{
+	margin-top: 1rem;
+}
+
+#index-filter {
+	
+}
+
+#index-button {
+	text-align: right;
+}
+
+.btn-link {
+	color: #3F882E;
+	text-decoration: none;
 }
 
 .btn-default {
@@ -80,17 +208,11 @@ li.nav-item {
 	color: #FFF !important;
 }
 
-.form-inline {
-    padding-top: 10px;
- }
-
 .row-home-sectors {
-	padding: 60px 0px 0px 0px;
 	background-color: #F8F9FA;
 }
 
 .row-home-countries {
-	padding: 60px 0px 60px 0px;
 	background-color: #F8F9FA;
 }
 
@@ -106,8 +228,7 @@ li.nav-item {
 	h4	{
 	font-weight: 400;
 	font-color: light-gray;
-	padding-left: 30px;
-	padding-right: 30px;
+
 	font-size: 1rem;
 	line-height: 1.2;
 	}
@@ -132,17 +253,149 @@ li.nav-item {
 	}
 }
 
-.card-deck {
-	padding-top: 10px;
-	text-align: center;
-	padding-left: 30px;
-	padding-right: 30px;
+#cities, #foodandbeverages, #consumerproducts, #fashion {
+  height: 200px;
+  width: 100%;
+  margin-top: 1.5em;
+  margin-bottom: 1rem;
+  position: relative;
+  border: 1px solid rgba(0,0,0,.125);
+  overflow: hidden;
+  border-radius: 0.25rem;
 }
 
-.card {
-	margin: 15px;
+#unitedkingdom, #sweden, #germany, #canada {
+  height: 200px;
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 1.5em;
+  position: relative;
+  border: 1px solid rgba(0,0,0,.125);
+  overflow: hidden;
+  border-radius: 0.25rem;
 }
 
+#cities span, #foodandbeverages span, #consumerproducts span, #fashion span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 2;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .7;
+}
+
+#unitedkingdom span, #sweden span, #germany span, #canada span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 2;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .7;
+}
+
+
+#cities:hover, #foodandbeverages:hover, #consumerproducts:hover, #fashion:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#unitedkingdom:hover, #sweden:hover, #germany:hover, #canada:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+
+#cities {
+  background: url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Sectors/Cities_resized.jpeg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#foodandbeverages {
+  background: url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Sectors/Food+and+Beverages_resized.jpeg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#consumerproducts {
+  background: url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Sectors/Consumer+Products_resized.jpeg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#fashion {
+  background: url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Sectors/Fashion_resized.jpeg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#unitedkingdom {
+  background: url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Cities/United+Kingdom_resized.jpeg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#sweden {
+  background: url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Cities/Sweden_resized.jpeg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#germany {
+  background: url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Cities/Germany_resized.jpeg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#canada {
+  background: url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Cities/Canada_resized.jpeg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.row-sectors {
+	h3	{
+	line-height: 1.2;
+	font-weight: 500;
+	font-color: dark-gray;
+	font-size: 1.5rem;
+	margin-top: 2rem;
+	}
+	h4	{
+	font-weight: 400;
+	font-color: light-gray;
+	font-size: 1rem;
+	line-height: 1.2;
+	}
+}
+
+.row-countries {
+	h3	{
+	line-height: 1.2;
+	font-weight: 500;
+	font-color: dark-gray;
+	font-size: 1.5rem;
+	margin-top: 1rem;
+	}
+	h4	{
+	font-weight: 400;
+	font-color: light-gray;
+	font-size: 1rem;
+	line-height: 1.2;
+	}
+}
+
+.container-footer-home {
+	margin-top: 2rem;
+}
 
 input[type="checkbox"] {
     width: 14px;
@@ -152,27 +405,12 @@ input[type="checkbox"] {
 
 }
 
-
-.jumbotron-index{
-	height: 200px;
-	background-color: #2ACCA5;
-}
-
 .page-footer{
 	background-color: #F8F9FA;
 	color:#dark gray;
 	}
 
-#row-footer {
-	padding-left: 30px;
-}
 
-body {
-	background-color: #F8F9FA;
-	color: dark gray;
-	margin: 0;
-	body: 0;
-}
 
 body .form-inline {
 	text-align: center;
@@ -182,9 +420,7 @@ iframe {
 	overflow: hidden;
 }
 
-a {
-	color: #118AEC;
-}
+
 
 .table-hover tbody tr:hover {
 	background-color: #e3e3e3;
@@ -199,13 +435,6 @@ a {
     width: 100%;
  }
 
-
-
-.card-img-top {
-    width: 100%;
-    height: 10vw;
-    object-fit: cover;
-}
 
 #jumbotron-about {
 	background-color: #3F882E;
@@ -239,28 +468,55 @@ a {
 	font-weight: 420;
 	line-height: 1.2;
 	font-size: 1.5rem;
+	color: gray;
+	}
+}
+
+#new-review {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	h1 {
+	text-align: center;
+	font-weight: 420;
+	line-height: 1.2;
+	font-size: 1.5rem;
+	color: gray;
+	}
+}
+
+#edit-review {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	h1 {
+	text-align: center;
+	font-weight: 420;
+	line-height: 1.2;
+	font-size: 1.5rem;
+	color: gray;
 	}
 }
 
 #new-circular-initiative {
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	h1 {
 	text-align: center;
 	font-weight: 420;
 	line-height: 1.2;
 	font-size: 1.5rem;
+	color: gray;
 	}
 }
 
 #edit-circular-initiative {
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	h1 {
 	text-align: center;
 	font-weight: 420;
 	line-height: 1.2;
 	font-size: 1.5rem;
+	color: gray;
 	}
 }
 
@@ -269,10 +525,6 @@ a {
 	color: #3F882E;
 }
 
-html {
-    position: relative;
-    min-height: 100%;
-}
 
 .row-content{
 	margin: 0px auto;
@@ -292,12 +544,12 @@ html {
 	border-botton: 1px;
 }
 
-.initiative-info {
+#initiative-info {
 	background-color: #FFFFFF;
 	border: 1px solid #D8D8D8;
 	border-radius: 5px;
 	padding: 20px;
-	margin: 30px 0;
+	margin: 15px 0 0 0;
 	font-size: 16px;
 	color: #18450A;
 	line-height: 1.4m;
@@ -311,12 +563,12 @@ html {
 
 }
 
-.basic-info {
+#basic-info {
 	background-color: #FFFFFF;
 	border: 1px solid #D8D8D8;
 	border-radius: 5px;
 	padding: 20px;
-	margin: 30px;
+	margin: 15px 0 0 0;
 	color: #18450A;
 	h2{
 	color: #118AEC;
@@ -353,41 +605,10 @@ html {
 	}
 }
 
-.pagination {
- 	text-align: center;
-  	cursor: default; 
-    font-size: 16px;
-}
-.pagination a, .pagination span, .pagination em {
-    padding: 0.2em 0.5em;
-}
-.pagination .disabled {
-    color: #aaaaaa; 
-}
-.pagination .current {
-    font-style: normal;
-    font-weight: bold;
-    color: #1E313E; 
-}
-.pagination a {
-    border: 1px solid #dddddd;
-    color: #3F882E;
-    text-decoration: none; 
-}
-.pagination a:hover, .pagination a:focus {
-    border-color: #003366;
-    background: #3F882E;
-    color: white; 
-}
-
-
-.card-title {
-	color: #118AEC !important;
-}
   
+/********* Extra Large Devices Only ***********/
 
-
-@media (min-width: 1200px) {
+@media (min-width: 1199px) {
 	.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
 	float: left;
 	}
@@ -427,12 +648,110 @@ html {
 	.col-lg-12 {
 	width: 100%;
 	}
-}
 
+
+#jumbotron-home {
+	background-color: #9F9F9D;
+	height: 40%;
+	padding: 3.5% 0 3.5% 0;
+	border-radius: 0;
+	
+		h1 {
+	font-weight: bold;
+	color: #134F3C;
+	text-shadow: 0px 2px 3px #555;
+	font-family: Ryman Eco;
+	font-size: 3em;
+
+	}
+
+		h2 {
+	font-weight: bold;
+	color: #FFF;
+	text-shadow: 0px 2px 3px #555;
+	font-size: 1.5em;
+
+	}
+
+	}
+
+	}
+
+/********* Large Devices Only ***********/
+
+@media (min-width: 991px) and (max-width: 1199px) {
+	.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+	float: left;
+	}
+	.col-lg-1 {
+	width: 8.33%;
+	}
+	.col-lg-2 {
+	width: 16.66%;
+	}
+	.col-lg-3 {
+	width: 25%;
+	}
+	.col-lg-4 {
+	width: 33%;
+	}
+	.col-lg-5 {
+	width: 41.66%;
+	}
+	.col-lg-6 {
+	width: 50%;
+	}
+	.col-lg-7 {
+	width: 58.33%;
+	}
+	.col-lg-8 {
+	width: 66.66%;
+	}
+	.col-lg-9 {
+	width: 74.99%;
+	}
+	.col-lg-10 {
+	width: 83.33%;
+	}
+	.col-lg-11 {
+	width: 91.66%;
+	}
+	.col-lg-12 {
+	width: 100%;
+	}
+
+
+#jumbotron-home {
+	background-color: #9F9F9D;
+	height: 40%;
+	padding: 5% 0 5% 0;
+	border-radius: 0;
+	
+		h1 {
+	font-weight: bold;
+	color: #134F3C;
+	text-shadow: 0px 2px 3px #555;
+	font-family: Ryman Eco;
+	font-size: 3em;
+
+	}
+
+		h2 {
+	font-weight: bold;
+	color: #FFF;
+	text-shadow: 0px 2px 3px #555;
+	font-size: 1.5em;
+
+	}
+
+	}
+
+	
+	}
 
 /********* Medium Devices Only ***********/
 
-@media (min-width: 950px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 991px) {
 	.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
 	float: left;
 	}
@@ -472,4 +791,96 @@ html {
 	.col-md-12 {
 	width: 100%;
 	}
+
+
+#jumbotron-home {
+	background-color: #9F9F9D;
+	height: 40%;
+	padding: 5% 0 5% 0;
+	border-radius: 0;
+		h1 {
+	font-weight: bold;
+	color: #134F3C;
+	text-shadow: 0px 2px 3px #555;
+	font-family: Ryman Eco;
+	font-size: 3em;
+
+	}
+
+		h2 {
+	font-weight: bold;
+	color: #FFF;
+	text-shadow: 0px 2px 3px #555;
+	font-size: 1.5em;
+
+	}
+
+	}
+}
+/********* Small Devices Only ***********/
+
+@media (min-width: 576px) and (max-width: 767px) {
+	.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+	float: left;
+	}
+	.col-sm-1 {
+	width: 8.33%;
+	}
+	.col-sm-2 {
+	width: 16.66%;
+	}
+	.col-sm-3 {
+	width: 25%;
+	}
+	.col-sm-4 {
+	width: 33%;
+	}
+	.col-sm-5 {
+	width: 41.66%;
+	}
+	.col-sm-6 {
+	width: 50%;
+	}
+	.col-sm-7 {
+	width: 58.33%;
+	}
+	.col-sm-8 {
+	width: 66.66%;
+	}
+	.col-sm-9 {
+	width: 74.99%;
+	}
+	.col-sm-10 {
+	width: 83.33%;
+	}
+	.col-sm-11 {
+	width: 91.66%;
+	}
+	.col-sm-12 {
+	width: 100%;
+	}
+
+	#jumbotron-home {
+	background-color: #9F9F9D;
+	height: 40%;
+	padding: 5% 0 5% 0;
+		h1 {
+	font-weight: bold;
+	color: #134F3C;
+	text-shadow: 0px 2px 3px #555;
+	font-family: Ryman Eco;
+	font-size: 3em;
+
+	}
+
+		h2 {
+	font-weight: bold;
+	color: #FFF;
+	text-shadow: 0px 2px 3px #555;
+	font-size: 1.5em;
+
+	}
+
+	}
+
 }

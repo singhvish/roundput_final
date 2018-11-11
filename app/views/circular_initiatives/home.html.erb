@@ -1,108 +1,66 @@
-<div class="jumbotron-home">
-  <div class="jumbotron-home-text">
-    <h1> Roundput </h1>
-    <h2> Find, review and learn more about circular economy innovations in your city </h2>
-  </div>
- 
-  <div class="form-inline justify-content-center">
+<div id="jumbotron-home" class="jumbotron">
+  <div class="container center">
+    <div class="jumbotron-home-text">
+      <h1> Roundput </h1>
+      <h2> Find, review and learn more about circular economy innovations in your city </h2>
+    </div>
+
     <%= form_tag circular_initiatives_path, method: :get do %>
-      <%= text_field_tag :search, params[:search], size:60, placeholder:'Search for organizations or innovations...', class: "form-control" %>
+      <%= text_field_tag :search, params[:search], placeholder:'Search for organizations or innovations...' %>
       <%= submit_tag "Search", name: nil, class: "btn btn-default" %>
     <% end %>
   </div>
 </div>
 
-
-<div class="container">
-  <div class="row row-home-sectors">
-    <div class="col-12 sectors">
+<div class = "container">
+  <div class ="row row-sectors">
+    <div class="col-sm-12 com-md-12 col-lg-12">
       <h3> Popular Sectors </h3>
       <h4> Discover organizations or innovations by popular sectors </h4>
+    </div>    
+  </div>
 
+  <div id="sector-tiles" class="row">
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <a href="/circular_initiatives?utf8=✓&Region=&Country=&Organization_type=&sector_id=1"><div id="cities"><span>Cities</span></div></a>
+    </div>
 
-      <div class="card-deck">
-        <a href="/circular_initiatives?utf8=✓&Region=&Country=&Organization_type=&sector_id=1">
-          <div class="card" style="width:15rem;">
-            <img class="card-img-top" src="https://s3.ap-south-1.amazonaws.com/roundputfinal/Homepage/Cities.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Cities</h5>
-            </div>
-          </div>
-        </a>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <a href="/circular_initiatives?utf8=✓&Region=&Country=&Organization_type=&sector_id=4"><div id="foodandbeverages"><span>Food and Beverages</span></div></a>
+    </div>
 
-        <a href="/circular_initiatives?utf8=✓&Region=&Country=&Organization_type=&sector_id=4">
-          <div class="card" style="width:15rem;">
-            <img class="card-img-top" src="https://s3.ap-south-1.amazonaws.com/roundputfinal/Homepage/Food+and+Beverages.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Food and Beverages</h5>
-            </div>
-          </div>
-        </a>
-      
-        <a href="/circular_initiatives?utf8=✓&Region=&Country=&Organization_type=&sector_id=2"> 
-          <div class="card" style="width:15rem;">
-            <img class="card-img-top" src="https://s3.ap-south-1.amazonaws.com/roundputfinal/Homepage/Consumer+Products+and+Electronics.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Consumer Products</h5>
-            </div>
-          </div>
-        </a>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <a href="/circular_initiatives?utf8=✓&Region=&Country=&Organization_type=&sector_id=2"><div id="consumerproducts"><span>Consumer Products</span></div></a>
+    </div>
 
-        <a href="/circular_initiatives?utf8=✓&Region=&Country=&Organization_type=&sector_id=3">
-          <div class="card" style="width:15rem;">
-            <img class="card-img-top" src="https://s3.ap-south-1.amazonaws.com/roundputfinal/Homepage/Fashion.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Fashion</h5>
-            </div>
-          </div>
-        </a>
-      </div>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <a href="/circular_initiatives?utf8=✓&Region=&Country=&Organization_type=&sector_id=3"><div id="fashion"><span>Fashion</span></div></a>
     </div>
   </div>
 
-
-  <div class="row row-home-countries">
-    <div class="col-12 countries">
+  <div class="row row-countries">
+    <div class= "col-sm-12 com-md-12 col-lg-12">
       <h3> Leading countries </h3>
       <h4> Discover organizations or innovations by leading countries </h4>
-
-      <div class ="card-deck">
-        <a href="/circular_initiatives?Country=United+Kingdom&search=&utf8=✓">
-          <div class="card" style="width:15rem;">
-            <img class="card-img-top" src="https://s3.ap-south-1.amazonaws.com/roundputfinal/Homepage/United+Kingdom.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">United Kingdom</h5>
-            </div>
-          </div>
-        </a>
-
-        <a href="/circular_initiatives?utf8=%E2%9C%93&Region=&Country=Sweden&Organization_type=&sector_id=">
-          <div class="card" style="width:15rem;">
-            <img class="card-img-top" src="https://s3.ap-south-1.amazonaws.com/roundputfinal/Homepage/Sweden.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Sweden</h5>
-            </div>
-          </div>
-        </a>
+    </div>
+  </div>
     
-        <a href="/circular_initiatives?utf8=%E2%9C%93&Region=&Country=Germany&Organization_type=&sector_id="> 
-          <div class="card" style="width:15rem;">
-            <img class="card-img-top" src="https://s3.ap-south-1.amazonaws.com/roundputfinal/Homepage/Germany.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Germany</h5>
-            </div>
-          </div>
-        </a>
+  <div id="country-tiles" class="row">
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <a href="/circular_initiatives?Country=United+Kingdom&search=&utf8=✓"><div id="unitedkingdom"><span>United Kingdom</span></div></a>
+    </div>
 
-        <a href= "/circular_initiatives?utf8=%E2%9C%93&Region=&Country=Canada&Organization_type=&sector_id=">
-          <div class="card" style="width:15rem;">
-            <img class="card-img-top" src="https://s3.ap-south-1.amazonaws.com/roundputfinal/Homepage/Canada.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Canada</h5>
-            </div>
-          </div>
-        </a>
-      </div>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <a href="/circular_initiatives?utf8=%E2%9C%93&Region=&Country=Sweden&Organization_type=&sector_id="><div id="sweden"><span>Sweden</span></div></a>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <a href="/circular_initiatives?utf8=%E2%9C%93&Region=&Country=Germany&Organization_type=&sector_id="><div id="germany"><span>Germany</span></div></a>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <a href="/circular_initiatives?utf8=%E2%9C%93&Region=&Country=Canada&Organization_type=&sector_id="><div id="canada"><span>Canada</span></div></a>
     </div>
   </div>
 </div>
+   
