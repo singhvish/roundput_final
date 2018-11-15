@@ -51,12 +51,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'will_paginate', '~> 3.1.1'
 gem 'searchkick'
-gem 'countries'
 gem 'pg', group: :production
 gem 'carrierwave'
-gem "fog-aws"
+gem 'fog-aws'
 gem "figaro"
 gem 'rails-ujs'
 gem 'coffee-script-source', '~> 1.12', '>= 1.12.2'
 gem "loofah", ">= 2.2.3"
-gem 'jquery-rails'
+gem "fog-google"
+gem "google-api-client", "> 0.8.5", "< 0.9"
+gem "mime-types"
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'

@@ -153,12 +153,16 @@
   </div>
     <div class="column col-md-7">
     <div id="initiative-info">
+
+
       
       <div class="row row-header justify-content-center">
         <h4>
           Innovation Description
         </h4>
       </div>
+
+        <%= video_tag @circular_initiative.video_url, :controls => true unless @circular_initiative.video.blank? %>
 
       <div class="row row-content align-items-center">
         <div class="col-12 col-sm-3 col-md-3 topic">

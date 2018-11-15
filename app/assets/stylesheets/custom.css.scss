@@ -16,7 +16,7 @@ html {
 }
 
 body {
-	background-color: #F8F9FA;
+	background-color: #FAFAFA;
 	height: 100%; 
 }
 
@@ -26,7 +26,14 @@ body {
 /********* Typography Styles ***********/
 
 a {
-	color: #118AEC;
+	color: #003399;
+}
+
+h2 {
+	font-size: 32px;
+	line-height: 40px;
+	color: #282828;
+	font-weight: normal;
 }
 
 /********* Structure Styles ***********/
@@ -37,7 +44,7 @@ a {
 /* Site Navigation */
 
 .navbar-brand {
-	color: #3F882E !important;
+	color: #295200 !important;
     font-family: Ryman Eco;
     font-size: 2rem;
     font-weight: bold;
@@ -45,31 +52,31 @@ a {
 }
 
 .navbar button.navbar-toggler {
-	border: 1px solid #3F882E;
+	border: 1px solid #295200;
 }
 
 .navbar-nav a {
-	color: #3F882E;
+	color: #295200;
 	text-align: center;
 	font-size: 1.1em;
 }
 
 .navbar-nav a:hover, .navbar-nav a:focus {
-    background: #3F882E;
+    background: #295200;
     color: white; 
-    border-color: #387929;
+    border-color: #295200;
     text-decoration: none;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #3F882E;
+    color: #295200;
 	font-size: 1.1rem;
 }
 
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
-   background: #3F882E;
+   background: #295200;
    color: white; 
-   border-color: #387929;
+   border-color: #295200;
    text-decoration: none;
 }
 
@@ -93,7 +100,7 @@ li.nav-item {
     padding: 0.2em 0.5em;
 }
 .pagination .disabled {
-    color: #aaaaaa; 
+    color: #474747; 
 }
 .pagination .current {
     font-style: normal;
@@ -102,26 +109,24 @@ li.nav-item {
 }
 .pagination a {
     border: 1px solid #dddddd;
-    color: #3F882E;
+    color: #295200;
     text-decoration: none; 
 }
 .pagination a:hover, .pagination a:focus {
     border-color: #003366;
-    background: #3F882E;
+    background: #295200;
     color: white; 
 }
 
 #jumbotron-index {
-	background-color: #9F9F9D;
+	background-color: #E6E6E6;
 	height: 40%;
 	padding: 7.5% 0 7.5% 0;
 	border-radius: 0;
 		h2 {
-	font-weight: bold;
-	color: #FFF;
-	text-shadow: 0px 2px 3px #555;
-	font-size: 1.75rem;
-
+	color: #295200;
+	font-size: 2rem;	
+	line-height: 3rem;
 	}
 
 	}
@@ -150,7 +155,7 @@ li.nav-item {
 }
 
 #jumbotron-home {
-	background-color: #9F9F9D;
+	background-color: #F0F0F0;
 	height: 40%;
 	padding: 5% 0 5% 0;
 	border-radius: 0;
@@ -165,8 +170,8 @@ li.nav-item {
 
 		h2 {
 	font-weight: bold;
-	color: #FFF;
-	text-shadow: 0px 2px 3px #555;
+	color: #134F3C;
+
 	font-size: 1em;
 
 	}
@@ -199,13 +204,23 @@ input.btn.btn-default {
 }
 
 .btn-link {
-	color: #3F882E;
+	color: #297e00;
 	text-decoration: none;
 }
 
 .btn-default {
-	background-color: #118AEC;
-	color: #FFF !important;
+	background-color: #004D99;
+	color: #FFF;
+}
+
+.btn-primary {
+	background-color: #0066CC;
+	color: #FFF;
+}
+
+.btn-outline-success {
+	background-color: #008200;
+	color: #FFF;
 }
 
 .row-home-sectors {
@@ -314,49 +329,49 @@ input.btn.btn-default {
 
 
 #cities {
-  background: url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Sectors/Cities_resized.jpeg') no-repeat;
+  background: url('https://storage.googleapis.com/roundput/Sectors/Cities_resized.jpeg') no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 #foodandbeverages {
-  background: url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Sectors/Food+and+Beverages_resized.jpeg') no-repeat;
+  background: url('https://storage.googleapis.com/roundput/Sectors/Food%20and%20Beverages_resized.jpeg') no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 #consumerproducts {
-  background: url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Sectors/Consumer+Products_resized.jpeg') no-repeat;
+  background: url('https://storage.googleapis.com/roundput/Sectors/Consumer%20Products_resized.jpeg') no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 #fashion {
-  background: url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Sectors/Fashion_resized.jpeg') no-repeat;
+  background: url('https://storage.googleapis.com/roundput/Sectors/Fashion_resized.jpeg') no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 #unitedkingdom {
-  background: url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Cities/United+Kingdom_resized.jpeg') no-repeat;
+  background: url('https://storage.googleapis.com/roundput/Cities/United%20Kingdom_resized.jpeg') no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 #sweden {
-  background: url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Cities/Sweden_resized.jpeg') no-repeat;
+  background: url('https://storage.googleapis.com/roundput/Cities/Sweden_resized.jpeg') no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 #germany {
-  background: url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Cities/Germany_resized.jpeg') no-repeat;
+  background: url('https://storage.googleapis.com/roundput/Cities/Germany_resized.jpeg') no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 #canada {
-  background: url('https://s3.ap-south-1.amazonaws.com/roundputfinal/Cities/Canada_resized.jpeg') no-repeat;
+  background: url('https://storage.googleapis.com/roundput/Cities/Canada_resized.jpeg') no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -406,7 +421,7 @@ input[type="checkbox"] {
 }
 
 .page-footer{
-	background-color: #F8F9FA;
+	background-color: #FAFAFA;
 	color:#dark gray;
 	}
 
@@ -420,7 +435,27 @@ iframe {
 	overflow: hidden;
 }
 
+.frame-header {
+	background-color: rgba(241,238,234,0.2);
+    border-bottom: 1px solid #F1EEEA;
+    padding: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #3D3D66;
+}
 
+.rounded-content-frame_footer {
+    color: #282828;
+}
+
+.rounded-content-frame_footer {
+    background-color: rgba(241,238,234,0.2);
+    border-top: 1px solid #F1EEEA;
+    padding: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #3D3D66;
+}
 
 .table-hover tbody tr:hover {
 	background-color: #e3e3e3;
@@ -434,6 +469,25 @@ iframe {
     display: inline-block;
     width: 100%;
  }
+
+ .rounded-content-frame--white {
+    background-color: #FFFFFF;
+    border-color: #F1EEEA;
+}
+
+.rounded-content-frame {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.rounded-content-frame .title {
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+.rounded-content-frame_content {
+    padding: 20px;
+}
 
 
 #jumbotron-about {
@@ -454,7 +508,7 @@ iframe {
 #container-about {
 	padding-top: 55px;
 	padding-bottom: 20px;
-	background-color: #F8F9FA;
+	background-color: #FAFAFA;
 	font-size: 1.1rem;
 	line-height: 1.1;
 	font-weight: 400;
@@ -468,7 +522,7 @@ iframe {
 	font-weight: 420;
 	line-height: 1.2;
 	font-size: 1.5rem;
-	color: gray;
+	color: #474747;
 	}
 }
 
@@ -521,8 +575,8 @@ iframe {
 }
 
 .page-footer a {
-	font-size:16px;
-	color: #3F882E;
+	font-size: 1rem;
+	color: #295200;
 }
 
 
@@ -555,10 +609,10 @@ iframe {
 	line-height: 1.4m;
 	overflow: hidden;
 	h4{
-	color: #118AEC;
+	color: #0A4E85;
 	}
 	.topic{
-	color: #999999;
+	color: #474747;
 	}
 
 }
@@ -571,7 +625,7 @@ iframe {
 	margin: 15px 0 0 0;
 	color: #18450A;
 	h2{
-	color: #118AEC;
+	color: #0A4E85;
 	font-weight: bold;
 	
 	}
@@ -601,7 +655,7 @@ iframe {
 	font-size: 14px;
 	color: #18450A;
 	h6{
-	color: #118AEC;
+	color: #0A4E85;
 	}
 }
 
@@ -651,7 +705,7 @@ iframe {
 
 
 #jumbotron-home {
-	background-color: #9F9F9D;
+	background-color: #F0F0F0;
 	height: 40%;
 	padding: 3.5% 0 3.5% 0;
 	border-radius: 0;
@@ -667,8 +721,7 @@ iframe {
 
 		h2 {
 	font-weight: bold;
-	color: #FFF;
-	text-shadow: 0px 2px 3px #555;
+	color: #134F3C;
 	font-size: 1.5em;
 
 	}
@@ -722,7 +775,7 @@ iframe {
 
 
 #jumbotron-home {
-	background-color: #9F9F9D;
+	background-color: #F0F0F0;
 	height: 40%;
 	padding: 5% 0 5% 0;
 	border-radius: 0;
@@ -738,8 +791,8 @@ iframe {
 
 		h2 {
 	font-weight: bold;
-	color: #FFF;
-	text-shadow: 0px 2px 3px #555;
+	color: #134F3C;
+
 	font-size: 1.5em;
 
 	}
@@ -794,7 +847,7 @@ iframe {
 
 
 #jumbotron-home {
-	background-color: #9F9F9D;
+	background-color: #F0F0F0;
 	height: 40%;
 	padding: 5% 0 5% 0;
 	border-radius: 0;
@@ -809,8 +862,8 @@ iframe {
 
 		h2 {
 	font-weight: bold;
-	color: #FFF;
-	text-shadow: 0px 2px 3px #555;
+	color: #134F3C;
+
 	font-size: 1.5em;
 
 	}
@@ -861,7 +914,7 @@ iframe {
 	}
 
 	#jumbotron-home {
-	background-color: #9F9F9D;
+	background-color: #F0F0F0;
 	height: 40%;
 	padding: 5% 0 5% 0;
 		h1 {
@@ -875,8 +928,8 @@ iframe {
 
 		h2 {
 	font-weight: bold;
-	color: #FFF;
-	text-shadow: 0px 2px 3px #555;
+	color: #134F3C;
+
 	font-size: 1.5em;
 
 	}

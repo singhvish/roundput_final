@@ -1,4 +1,4 @@
-<%= form_with(model: circular_initiative, local: true) do |form| %>
+<%= form_with(model: circular_initiative, local: true, :html => {multipart: true}) do |form| %>
   <% if circular_initiative.errors.any? %>
     <div id="error_explanation" class="alert alert-danger alert-dismissable">
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -111,6 +111,11 @@
   <div class="form-group">
     <%= form.label :email %>
     <%= form.text_field :email, class: "form-control", id: :circular_initiative_email %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :video %>
+    <%= form.file_field :video, class: "form-control", id: :circular_initiative_video %>
   </div>
 
   <div class="actions">
