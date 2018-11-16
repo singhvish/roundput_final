@@ -281,26 +281,29 @@
               Reviews and Comments
             </h5>
           </div>
-          <div class="row row-reviews align-items-center">
-            <div class="col-12 col-md-3">
-              <% @reviews.each do |review| %>
-                <p><%="#{review.user.first_name.capitalize} #{review.user.last_name.capitalize[0]}." %></p>
-                <p><%= review.created_at.strftime("%-m/%-d/%y") %></p>
-              <% end %>
-            </div>
-            <div class="col-12 col-md-9">
-              <% @reviews.each do |review| %>
-                <p><div class="star-rating" data-score=<%= review.rating %> ></div></p>
-                <p><%= h(review.comment).gsub(/\n/, '<br/>').html_safe %></p>
-              <% if user_signed_in? %>
-                <% if (review.user == current_user) || (current_user.admin?) %>
-                  <%= link_to "Edit", edit_circular_initiative_review_path(@circular_initiative, review) %>
-                  <%= link_to "Delete", circular_initiative_review_path(@circular_initiative, review), method: :delete %>
+
+            <table class="table">
+              <tbody>
+                <% @reviews.each do |review| %>
+                <tr>
+                  <td>
+                    <p><%="#{review.user.first_name.capitalize} #{review.user.last_name.capitalize[0]}." %></p>
+                    <p><%= review.created_at.strftime("%-m/%-d/%y") %></p>
+                  </td>
+                  <td>
+                    <div class="star-rating" data-score=<%= review.rating %> ></div>
+                    <p><%= h(review.comment).gsub(/\n/, '<br/>').html_safe %></p>
+                  <% if user_signed_in? %>
+                    <% if (review.user == current_user) || (current_user.admin?) %>
+                      <%= link_to "Edit", edit_circular_initiative_review_path(@circular_initiative, review) %>
+                      <%= link_to "Delete", circular_initiative_review_path(@circular_initiative, review), method: :delete %>
+                    <% end %>
+                  <% end %>
+                  </td>
+                </tr>
                 <% end %>
-              <% end %>
-              <% end %>
-            </div>
-          </div>
+              </tbody>
+            </table>
       <center>
         <%= link_to "Write a Review", new_circular_initiative_review_path(@circular_initiative), class: "btn btn-default" %>
       </center>
