@@ -5,10 +5,12 @@
       <h2> Find, review and learn more about circular economy innovations in your city </h2>
     </div>
 
+    <div id="jumbotron-search" class="form-group col-md-8 offset-md-3 ">
     <%= form_tag circular_initiatives_path, method: :get do %>
-      <%= text_field_tag :search, params[:search], placeholder:'Search for organizations or innovations...' %>
+      <%= text_field_tag :search, params[:search], class: "form-control", placeholder:'Search for organizations or innovations...' %>
       <%= submit_tag "Search", name: nil, class: "btn btn-default" %>
     <% end %>
+  </div>
   </div>
 </div>
 
@@ -62,5 +64,21 @@
       <a href="/circular_initiatives?utf8=%E2%9C%93&Region=&Country=Canada&Organization_type=&sector_id="><div id="canada"><span>Canada</span></div></a>
     </div>
   </div>
-</div>
+  </div>
+
+  <div id="jumbotron-newsletter" class="jumbotron center">
+    <h4> Subscribe to our newsletter</h4>
+    <p>An update on new innovations, circular economy news and events that are on our radar.</p>
+    <% if cookies[:saved_newsletter] %>
+      You have successfully subscribed to our newsletter!
+    <% else %>
+      <%= form_for @newsletter do |f| %>
+        <div id="newsletter" class="form-group col-md-6 offset-md-3">
+          <%= f.email_field :email, class: "form-control", placeholder: "Enter email address" %>
+          <%= f.submit "Subscribe", class: "btn btn-success" %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
    

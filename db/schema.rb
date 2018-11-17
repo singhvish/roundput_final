@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181112201755) do
+ActiveRecord::Schema.define(version: 20181117065349) do
 
   create_table "circular_initiatives", force: :cascade do |t|
     t.string "Name_of_the_initiative"
@@ -37,6 +37,12 @@ ActiveRecord::Schema.define(version: 20181112201755) do
     t.string "instagram"
     t.string "email"
     t.string "video"
+  end
+
+  create_table "newsletters", force: :cascade do |t|
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|

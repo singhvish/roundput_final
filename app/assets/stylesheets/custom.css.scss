@@ -177,13 +177,6 @@ li.nav-item {
 	}
 }
 
-input#search {
-	width: 60%;
-	height: 35px;
-
-	border-radius: 0.25rem;
-
-}
 
 input.btn.btn-default {
 
@@ -426,7 +419,22 @@ input[type="checkbox"] {
 	color:#dark gray;
 	}
 
+#newsletter {
+	display: flex;
+}
 
+#jumbotron-search {
+	display: flex;
+	width: 100%;
+}
+
+#jumbotron-newsletter {
+	border-radius: 0;
+}
+
+.btn-success {
+	margin-left: 5px;
+}
 
 body .form-inline {
 	text-align: center;

@@ -4,6 +4,7 @@ class CircularInitiativesController < ApplicationController
   before_action :check_user, only: [:new]
 
 def home
+  @newsletter = Newsletter.new
 end
 
 
@@ -19,6 +20,7 @@ end
       args[:sector_id] = params[:sector_id] if params[:sector_id].present?
       args[:Primary_strategy] = params[:Primary_strategy] if params[:Primary_strategy].present?
       @circular_initiatives = CircularInitiative.search query, where: args, aggs: {Region: {}, Country: {}, Organization_type: {}, sector_id: {}, Primary_strategy: {} }, page: params[:page], per_page: 3
+  
   end
 
   # GET /circular_initiatives/1
