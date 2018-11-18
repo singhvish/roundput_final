@@ -178,11 +178,7 @@ li.nav-item {
 }
 
 
-input.btn.btn-default {
 
-	display: inline;
-	border: 6px;
-}
 
 #index-table{
 	margin-top: 1rem;
@@ -205,6 +201,10 @@ input.btn.btn-default {
 .btn-default {
 	background-color: #004D99;
 	color: #FFF;
+}
+
+.btn-search {
+		margin-left: 5px;
 }
 
 .btn-primary {
@@ -271,6 +271,10 @@ input.btn.btn-default {
   border: 1px solid rgba(0,0,0,.125);
   overflow: hidden;
   border-radius: 0.25rem;
+}
+
+#country-tiles {
+	margin-bottom: 1.5rem;
 }
 
 #unitedkingdom, #sweden, #germany, #canada {
@@ -376,7 +380,6 @@ input.btn.btn-default {
 	font-weight: 500;
 	font-color: dark-gray;
 	font-size: 1.5rem;
-	margin-top: 2rem;
 	}
 	h4	{
 	font-weight: 400;
@@ -423,10 +426,6 @@ input[type="checkbox"] {
 	display: flex;
 }
 
-#jumbotron-search {
-	display: flex;
-	width: 100%;
-}
 
 #jumbotron-newsletter {
 	border-radius: 0;
@@ -436,9 +435,11 @@ input[type="checkbox"] {
 	margin-left: 5px;
 }
 
+
 body .form-inline {
 	text-align: center;
 }
+
 
 iframe {
 	overflow: hidden;
