@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get 'pages/contact'
 
+  get 'pages/privacy'
+
   root 'circular_initiatives#home'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

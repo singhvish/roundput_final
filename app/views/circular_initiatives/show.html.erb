@@ -1,314 +1,337 @@
 <div class ="container">
   <div class="row">
     <div class="column col-md-5">
-    <div id="basic-info">
-      <div class="row row-header justify-content-center">
-        <h2>
-          <%= @circular_initiative.Leading_organization %>
-        </h2>
-      </div>
-
-      <div class ="row row-content align-items-center">
-        <div class=" col-12 col-sm-3 col-md-3">
-          <p>
-            <strong>Sector</strong>
-          </p>
+      <div id="basic-info">
+        <div class="row row-header justify-content-center">
+          <h2>
+            <%= @circular_initiative.Leading_organization %>
+          </h2>
         </div>
 
-        <div class=" col-12 col-sm-9 col-md-9">
-          <p>
-            <%= @circular_initiative.sector.name %>
-          </p>
-        </div>
-      </div>
-
-
-      <div class ="row row-content align-items-center">
-        <div class=" col-12 col-sm-3 col-md-3">
-          <p>
-            <strong>Org type</strong>
-          </p>
-        </div>
-
-        <div class=" col-12 col-sm-9 col-md-9">
-          <p>
-            <%= @circular_initiative.Organization_type %>
-          </p>
-        </div>
-      </div>
-
-      <div class ="row row-content align-items-center">
-        <div class=" col-12 col-sm-3 col-md-3">
-          <p>
-            <strong>Website</strong>
-          </p>
-        </div>
-
-        <div class=" col-12 col-sm-9 col-md-9">
-          <p>
-            <%= link_to @circular_initiative.Website %>
-          </p>
-        </div>
-      </div>
-
-      <div class ="row row-content align-items-center">
-        <div class=" col-12 col-sm-3 col-md-3">
-          <p>
-            <strong>LinkedIn</strong>
-          </p>
-        </div>
-
-        <div class=" col-12 col-sm-9 col-md-9">
-          <p>
-            <%= link_to 'Visit LinkedIn page', @circular_initiative.linkedin %>
-          </p>
-        </div>
-      </div>
-
-      <div class ="row row-content align-items-center">
-        <div class=" col-12 col-sm-3 col-md-3">
-          <p>
-            <strong>Twitter</strong>
-          </p>
-        </div>
-
-        <div class=" col-12 col-sm-9 col-md-9">
-          <p>
-            <%= link_to 'Visit Twitter page', @circular_initiative.twitter %>
-          </p>
-        </div>
-      </div>
-
-      <div class ="row row-content align-items-center">
-        <div class=" col-12 col-sm-3 col-md-3">
-          <p>
-            <strong>Facebook</strong>
-          </p>
-        </div>
-
-        <div class=" col-12 col-sm-9 col-md-9">
-          <p>
-            <%= link_to 'Visit Facebook page', @circular_initiative.facebook %>
-          </p>
-        </div>
-      </div>
-
-      <div class ="row row-content align-items-center">
-        <div class=" col-12 col-sm-3 col-md-3">
-          <p>
-            <strong>Instagram</strong>
-          </p>
-        </div>
-
-        <div class=" col-12 col-sm-9 col-md-9">
-          <p>
-            <%= link_to 'Visit Instagram page', @circular_initiative.instagram %>
-          </p>
-        </div>
-      </div>
-
-      <div class ="row row-content align-items-center">
-        <div class=" col-12 col-sm-3 col-md-3">
-          <p>
-            <strong>Email</strong>
-          </p>
-        </div>
-
-        <div class=" col-12 col-sm-9 col-md-9">
-          <p>
-            <%= link_to @circular_initiative.email %>
-          </p>
-        </div>
-      </div>
-
-      <div class ="row row-content align-items-center">
-        <div class=" col-12 col-sm-3 col-md-3">
-          <p>
-            <strong>Address</strong>
-          </p>
-        </div>
-
-        <div class=" col-12 col-sm-9 col-md-9">
-          <p>
-            <%= @circular_initiative.address %>
-          </p>
-        </div>
-      </div>
-
-      <div class="map-responsive">
-        <iframe
-           frameborder="0" style="border:0"
-          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAUyUpRBMU9SZSISGgM8FyloppZ1Sh2mtc 
-          &q=<%= @circular_initiative.City.parameterize %>&region" allowfullscreen>
-        </iframe>
-      </div>
-
-      <p>
-        <center>
-          <%= link_to 'Edit', edit_circular_initiative_path(@circular_initiative), class: "btn btn-default btn-sm-block" %> |
-          <%= link_to 'Back', circular_initiatives_path, class: "btn btn-default btn-sm-block" %>
-        </center>
-      </p>
-    </div>
-  </div>
-    <div class="column col-md-7">
-    <div id="initiative-info">
-
-
-      
-      <div class="row row-header justify-content-center">
-        <h4>
-          Innovation Description
-        </h4>
-      </div>
-
-        <%= video_tag @circular_initiative.video_url, :controls => true unless @circular_initiative.video.blank? %>
-
-      <div class="row row-content align-items-center">
-        <div class="col-12 col-sm-3 col-md-3 topic">
-          <p>
-           <B> Name of the initiative </B>
-          </p>
-        </div>
-        <div class="col-12 col-sm-3 col-md-9">
-          <p>
-            <%= @circular_initiative.Name_of_the_initiative %>
-          </p>
-        </div>
-      </div>
-
-      <div class ="row row-content align-items-center">
-        <div class=" col-12 col-sm-3 col-md-3 topic">
-          <p>
-           <B> Initiative description</B>
-          </p>
-        </div>
-        <div class=" col-12 col-sm-9 col-md-9 ">
-          <p>
-            <%= @circular_initiative.Initiative_description %>
-          </p>
-        </div>
-      </div>
-
-      <div class ="row row-content align-items-center">
-        <div class=" col-12 col-sm-3 col-md-3 topic">
-          <p>
-           <B> Problem Addressed</B>
-          </p>
-        </div>
-        <div class=" col-12 col-sm-9 col-md-9 ">
-          <p>
-            <%= @circular_initiative.problem %>
-          </p>
-        </div>
-      </div>
-
-      <div class ="row row-content align-items-center">
-        <div class=" col-12 col-sm-3 col-md-3 topic">
-          <p>
-           <B> Partners</B>
-          </p>
-        </div>
-        <div class=" col-12 col-sm-9 col-md-9 ">
-          <p>
-            <%= @circular_initiative.partners %>
-          </p>
-        </div>
-      </div>
-
-      <div class ="row row-content align-items-center">
-        <div class=" col-12 col-sm-3 col-md-3 topic">
-          <p>
-           <B> Primary strategy </B>
-          </p>
-        </div>
-
-        <div class=" col-12 col-sm-9 col-md-9">
-          <p>
-            <%= @circular_initiative.Primary_strategy %>
-          </p>
-        </div>
-      </div>
-
-      <div class ="row row-content align-items-center">
-        <div class=" col-12 col-sm-3 col-md-3 topic">
-          <p>
-           <B> Awards </B>
-          </p>
-        </div>
-
-        <div class=" col-12 col-sm-9 col-md-9">
-          <p>
-            <%= @circular_initiative.awards %>
-          </p>
-        </div>
-      </div>
-
-
-      <div class ="row row-content align-items-center">
-        <div class=" col-12 col-sm-3 col-md-3 topic">
-          <p>
-           <B> Funding </B>
-          </p>
-        </div>
-
-        <div class=" col-12 col-sm-9 col-md-9">
-          <p>
-            <%= @circular_initiative.funding %>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-
-      <div class="reviews">
-        <% if @reviews.blank? %>
-          <div class="row row-reviews justify-content-center">
+        <div class ="row row-content align-items-center">
+          <div class=" col-12 col-sm-3 col-md-3">
             <p>
-              <h6>
-                No reviews yet. Be the first to write one!
-              </h6>
+              <strong>Sector</strong>
             </p>
           </div>
-          <center>
-            <%= link_to "Write a Review", new_circular_initiative_review_path(@circular_initiative), class: "btn btn-default" %>
-          </center>
-        
-        <% else %>
-          <div class="row row-header justify-content-center">
-            <h5>
-              Reviews and Comments
-            </h5>
+
+          <div class=" col-12 col-sm-9 col-md-9">
+            <p>
+              <%= @circular_initiative.sector.name %>
+            </p>
+          </div>
+        </div>
+
+
+        <div class ="row row-content align-items-center">
+          <div class=" col-12 col-sm-3 col-md-3">
+            <p>
+              <strong>Org type</strong>
+            </p>
           </div>
 
-            <table class="table">
-              <tbody>
-                <% @reviews.each do |review| %>
-                <tr>
-                  <td>
-                    <p><%="#{review.user.first_name.capitalize} #{review.user.last_name.capitalize[0]}." %></p>
-                    <p><%= review.created_at.strftime("%-m/%-d/%y") %></p>
-                  </td>
-                  <td>
-                    <div class="star-rating" data-score=<%= review.rating %> ></div>
-                    <p><%= h(review.comment).gsub(/\n/, '<br/>').html_safe %></p>
-                  <% if user_signed_in? %>
-                    <% if (review.user == current_user) || (current_user.admin?) %>
-                      <%= link_to "Edit", edit_circular_initiative_review_path(@circular_initiative, review) %>
-                      <%= link_to "Delete", circular_initiative_review_path(@circular_initiative, review), method: :delete %>
+          <div class=" col-12 col-sm-9 col-md-9">
+            <p>
+              <%= @circular_initiative.Organization_type %>
+            </p>
+          </div>
+        </div>
+
+        <div class ="row row-content align-items-center">
+          <div class=" col-12 col-sm-3 col-md-3">
+            <p>
+              <strong>Website</strong>
+            </p>
+          </div>
+
+          <div class=" col-12 col-sm-9 col-md-9">
+            <p>
+              <%= link_to @circular_initiative.Website %>
+            </p>
+          </div>
+        </div>
+
+        
+
+        <div class ="row row-content align-items-center">
+          <div class=" col-12 col-sm-3 col-md-3">
+            <p>
+              <strong>Email</strong>
+            </p>
+          </div>
+
+          <div class=" col-12 col-sm-9 col-md-9">
+            <p>
+              <%= link_to @circular_initiative.email %>
+            </p>
+          </div>
+        </div>
+
+        <div class ="row row-content align-items-center">
+          <div class=" col-12 col-sm-3 col-md-3">
+            <p>
+              <strong>Address</strong>
+            </p>
+          </div>
+
+          <div class=" col-12 col-sm-9 col-md-9">
+            <p>
+              <%= @circular_initiative.address %>
+            </p>
+          </div>
+        </div>
+
+        <div class="map-responsive">
+          <iframe
+             frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAUyUpRBMU9SZSISGgM8FyloppZ1Sh2mtc 
+            &q=<%= @circular_initiative.City.parameterize %>&region" allowfullscreen>
+          </iframe>
+        </div>
+
+        <p>
+          <center>
+            <%= link_to 'Edit', edit_circular_initiative_path(@circular_initiative), class: "btn btn-default btn-sm-block" %> |
+            <%= link_to 'Back', circular_initiatives_path, class: "btn btn-default btn-sm-block" %>
+          </center>
+        </p>
+      </div>
+    </div>
+    
+    <div class="column col-md-7">
+      <div id="initiative-info">
+        <div class="row row-header justify-content-center">
+          <h4>
+            Innovation Description
+          </h4>
+        </div>
+        <%= video_tag @circular_initiative.video_url, :controls => true unless @circular_initiative.video.blank? %>
+
+      
+        <div class="col-12">
+          <ul class="nav nav-tabs"> 
+            <li class="nav-item">
+              <a class="nav-link active" href="#info" role="tab" data-toggle="tab">Info</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#social" role="tab" data-toggle="tab">Social</a>
+            </li>
+              
+            <li class="nav-item">
+              <a class="nav-link" href="#review"role="tab" data-toggle="tab">Reviews</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade show active" id="info">
+            <div class="row row-content align-items-center">
+              <div class="col-12 col-sm-3 col-md-3 topic">
+                <p>
+                   <B> Name of the initiative </B>
+                </p>
+              </div>
+              <div class="col-12 col-sm-3 col-md-9">
+                <p>
+                  <%= @circular_initiative.Name_of_the_initiative %>
+                </p>
+              </div>
+            </div>
+
+            <div class ="row row-content align-items-center">
+              <div class=" col-12 col-sm-3 col-md-3 topic">
+                <p>
+                 <B> Initiative description</B>
+                </p>
+              </div>
+              <div class=" col-12 col-sm-9 col-md-9 ">
+                <p>
+                  <%= @circular_initiative.Initiative_description %>
+                </p>
+              </div>
+            </div>
+
+            <div class ="row row-content align-items-center">
+              <div class=" col-12 col-sm-3 col-md-3 topic">
+                <p>
+                 <B> Problem Addressed</B>
+                </p>
+              </div>
+              <div class=" col-12 col-sm-9 col-md-9 ">
+                <p>
+                  <%= @circular_initiative.problem %>
+                </p>
+              </div>
+            </div>
+
+            <div class ="row row-content align-items-center">
+              <div class=" col-12 col-sm-3 col-md-3 topic">
+                <p>
+                 <B> Partners</B>
+                </p>
+              </div>
+              <div class=" col-12 col-sm-9 col-md-9 ">
+                <p>
+                  <%= @circular_initiative.partners %>
+                </p>
+              </div>
+            </div>
+
+            <div class ="row row-content align-items-center">
+              <div class=" col-12 col-sm-3 col-md-3 topic">
+                <p>
+                 <B> Primary strategy </B>
+                </p>
+              </div>
+
+              <div class=" col-12 col-sm-9 col-md-9">
+                <p>
+                  <%= @circular_initiative.Primary_strategy %>
+                </p>
+              </div>
+            </div>
+
+            <div class ="row row-content align-items-center">
+              <div class=" col-12 col-sm-3 col-md-3 topic">
+                <p>
+                 <B> Awards </B>
+                </p>
+              </div>
+
+              <div class=" col-12 col-sm-9 col-md-9">
+                <p>
+                  <%= @circular_initiative.awards %>
+                </p>
+              </div>
+            </div>
+
+            <div class ="row row-content align-items-center">
+              <div class=" col-12 col-sm-3 col-md-3 topic">
+                <p>
+                 <B> Funding </B>
+                </p>
+              </div>
+
+              <div class=" col-12 col-sm-9 col-md-9">
+                <p>
+                  <%= @circular_initiative.funding %>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div role="tabpanel" class="tab-pane fade" id="review">
+            <div class="reviews">
+              <% if @reviews.blank? %>
+                <div class="row row-reviews justify-content-center">
+                  <p>
+                    <h6>
+                      No reviews yet. Be the first to write one!
+                    </h6>
+                  </p>
+                </div>
+                <center>
+                  <%= link_to "Write a Review", new_circular_initiative_review_path(@circular_initiative), class: "btn btn-default" %>
+                </center>
+              
+              <% else %>
+                <div class="row row-header justify-content-center">
+                  <h5>
+                    Reviews and Comments
+                  </h5>
+                </div>
+
+                <table class="table">
+                  <tbody>
+                    <% @reviews.each do |review| %>
+                      <tr>
+                        <td>
+                          <p><%="#{review.user.first_name.capitalize} #{review.user.last_name.capitalize[0]}." %></p>
+                          <p><%= review.created_at.strftime("%-m/%-d/%y") %></p>
+                        </td>
+                        <td>
+                          <div class="star-rating" data-score=<%= review.rating %> ></div>
+                          <p><%= h(review.comment).gsub(/\n/, '<br/>').html_safe %></p>
+                          <% if user_signed_in? %>
+                            <% if (review.user == current_user) || (current_user.admin?) %>
+                              <%= link_to "Edit", edit_circular_initiative_review_path(@circular_initiative, review) %>
+                              <%= link_to "Delete", circular_initiative_review_path(@circular_initiative, review), method: :delete %>
+                            <% end %>
+                          <% end %>
+                        </td>
+                      </tr>
                     <% end %>
-                  <% end %>
-                  </td>
-                </tr>
-                <% end %>
-              </tbody>
-            </table>
-      <center>
-        <%= link_to "Write a Review", new_circular_initiative_review_path(@circular_initiative), class: "btn btn-default" %>
-      </center>
-    <% end %>
-    <br>
+                  </tbody>
+                </table>
+                <center>
+                  <%= link_to "Write a Review", new_circular_initiative_review_path(@circular_initiative), class: "btn btn-default" %>
+                </center>
+              <% end %>
+              <br>
+            </div>
+          </div>
+          
+          <div role="tabpanel" class="tab-pane fade" id="social">
+            <div class ="row row-content align-items-center">
+              <div class=" col-12 col-sm-3 col-md-3">
+                <p>
+                  <strong>LinkedIn</strong>
+                </p>
+              </div>
+
+              <div class=" col-12 col-sm-9 col-md-9">
+                <p>
+                  <%= link_to 'Visit LinkedIn page', @circular_initiative.linkedin %>
+                </p>
+              </div>
+            </div>
+
+            <div class ="row row-content align-items-center">
+              <div class=" col-12 col-sm-3 col-md-3">
+                <p>
+                  <strong>Twitter</strong>
+                </p>
+              </div>
+
+              <div class=" col-12 col-sm-9 col-md-9">
+                <p>
+                  <%= link_to 'Visit Twitter page', @circular_initiative.twitter %>
+                </p>
+              </div>
+            </div>
+
+            <div class ="row row-content align-items-center">
+              <div class=" col-12 col-sm-3 col-md-3">
+                <p>
+                  <strong>Facebook</strong>
+                </p>
+              </div>
+
+              <div class=" col-12 col-sm-9 col-md-9">
+                <p>
+                  <%= link_to 'Visit Facebook page', @circular_initiative.facebook %>
+                </p>
+              </div>
+            </div>
+
+            <div class ="row row-content align-items-center">
+              <div class=" col-12 col-sm-3 col-md-3">
+                <p>
+                  <strong>Instagram</strong>
+                </p>
+              </div>
+
+              <div class=" col-12 col-sm-9 col-md-9">
+                <p>
+                  <%= link_to 'Visit Instagram page', @circular_initiative.instagram %>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
