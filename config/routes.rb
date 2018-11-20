@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :circular_initiatives do
     resources :reviews, except: [:show, :index]
+    member { post :vote }
   end
 
   get 'pages/about'

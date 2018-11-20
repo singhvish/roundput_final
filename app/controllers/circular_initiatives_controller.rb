@@ -1,13 +1,18 @@
 class CircularInitiativesController < ApplicationController
   before_action :set_circular_initiative, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new]
+  before_action :authenticate_user!, only: [:new, :vote]
   before_action :check_user, only: [:new]
 
 def home
   @newsletter = Newsletter.new
 end
 
-
+def vote
+  value = params[:type] == "up" ? 1 : -1
+  @circular_initiative = CircularInitiative.find(params[:id])
+  @circular_initiative.add_or_update_evaluation(:votes, value, current_user)
+  redirect_to circular_initiative_path(@circular_initiative), notice: "Thank you for voting"
+end
 
   # GET /circular_initiatives
   # GET /circular_initiatives.json

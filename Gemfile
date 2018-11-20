@@ -63,3 +63,4 @@ gem "google-api-client", "> 0.8.5", "< 0.9"
 gem "mime-types"
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem "rack", ">= 2.0.6"
+gem 'activerecord-reputation-system'
