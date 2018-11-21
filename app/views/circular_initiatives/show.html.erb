@@ -7,13 +7,6 @@
             <%= @circular_initiative.Leading_organization %>
           </h2>
         </div>
-
-        <Br>
-
-        <div class="vote-icons center">  
-          Upvote <%= link_to vote_circular_initiative_path(@circular_initiative, type: "up"), method: "post" do %><i class="far fa-thumbs-up fa-lg"></i> <% end %> 
-        </div>
-
         <Br>
 
         <div class ="row row-content align-items-center">
@@ -114,7 +107,11 @@
           </h4>
         </div>
         <%= video_tag @circular_initiative.video_url, :controls => true unless @circular_initiative.video.blank? %> 
-      
+        <div class="vote-icons"> 
+           <%= pluralize @circular_initiative.reputation_for(:votes).to_i, "vote" %> 
+            <h6 class="text-muted mr-1 col-offset-4"></h6> <%= link_to vote_circular_initiative_path(@circular_initiative, type: "up"), method: "post" do %><i class="far fa-thumbs-up fa-lg"></i> <% end %> 
+        </div>
+        <br>
         <div class="col-12">
           <ul class="nav nav-tabs"> 
             <li class="nav-item">

@@ -6,71 +6,84 @@
 
 <div class="container">
   <div class = "row">
-    <div id="index-filter" class="filter col-sm-12 col-md-2 col-lg-2 col-xl-2">
-      <h5>Advanced Search</h5>
-      <Br>
-      <Br>
-      <h6> Region </h6>
-      <% @circular_initiatives.aggs["Region"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
-        <div>
-          <% if params[:Region] == bucket["key"].to_s %>
-            <strong><%= link_to bucket["key"], request.params.except(:Region) %></strong>
-          <% else %>
-            <%= link_to bucket["key"], request.params.merge(Region: bucket["key"]) %>
-          <% end %>
-          (<%= bucket["doc_count"] %>)
-        </div>
-      <% end %>
+    <div class="filter col-sm-12 col-md-2 col-lg-2 col-xl-2">
+      <h5>Search Filters</h5>
+      <h6 class="text-muted mt-4">Region</h6>
 
-      <h6> Organization Type </h6>
-      <% @circular_initiatives.aggs["Organization_type"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
-        <div>
-          <% if params[:Organization_type] == bucket["key"].to_s %>
-            <strong><%= link_to bucket["key"], request.params.except(:Organization_type) %></strong>
-          <% else %>
-            <%= link_to bucket["key"], request.params.merge(Organization_type: bucket["key"]) %>
-          <% end %>
-          (<%= bucket["doc_count"] %>)
-        </div>
-      <% end %>
+            <% @circular_initiatives.aggs["Region"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
+              <div>
+                <% if params[:Region] == bucket["key"].to_s %>
+                  <strong><%= link_to bucket["key"], request.params.except(:Region) %></strong>
+                <% else %>
+                  <%= link_to bucket["key"], request.params.merge(Region: bucket["key"]) %>
+                <% end %>
+                (<%= bucket["doc_count"] %>)
 
-      <h6> Sector </h6>
-      <% @circular_initiatives.aggs["sector_id"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
-        <div>
-          <% if params[:sector_id] == bucket["key"].to_s %>
-            <strong><%= link_to bucket["key"], request.params.except(:sector_id) %></strong>
-          <% else %>
-            <%= link_to bucket["key"], request.params.merge(sector_id: bucket["key"]) %>
-          <% end %>
-          (<%= bucket["doc_count"] %>)
-        </div>
-      <% end %>
+              </div>
+            <% end %>
+ 
 
-      <h6> Country </h6>
-      <% @circular_initiatives.aggs["Country"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
-        <div>
-          <% if params[:Country] == bucket["key"].to_s %>
-            <strong><%= link_to bucket["key"], request.params.except(:Country) %></strong>
-          <% else %>
-            <%= link_to bucket["key"], request.params.merge(Country: bucket["key"]) %>
-          <% end %>
-          (<%= bucket["doc_count"] %>)
-        </div>
-      <% end %>
+      <h6 class="text-muted mt-4"> Organization Type </h6>
+      
+            <% @circular_initiatives.aggs["Organization_type"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
+              <div>
+                <% if params[:Organization_type] == bucket["key"].to_s %>
+                  <strong><%= link_to bucket["key"], request.params.except(:Organization_type) %></strong>
+                <% else %>
+                  <%= link_to bucket["key"], request.params.merge(Organization_type: bucket["key"]) %>
+                <% end %>
+                (<%= bucket["doc_count"] %>)
 
-      <h6> Strategy </h6>
-      <% @circular_initiatives.aggs["Primary_strategy"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
-        <div>
-          <% if params[:Primary_strategy] == bucket["key"].to_s %>
-            <strong><%= link_to bucket["key"], request.params.except(:Primary_strategy) %></strong>
-          <% else %>
-            <%= link_to bucket["key"], request.params.merge(Primary_strategy: bucket["key"]) %>
-          <% end %>
-          (<%= bucket["doc_count"] %>)
-        </div>
-      <% end %>  
+              </div>
+
+            <% end %>
+          
+
+      <h6 class="text-muted mt-4"> Sector </h6>
+      
+            <% @circular_initiatives.aggs["sector_id"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
+              <div>
+                <% if params[:sector_id] == bucket["key"].to_s %>
+                  <strong><%= link_to bucket["key"], request.params.except(:sector_id) %></strong>
+                <% else %>
+                  <%= link_to bucket["key"], request.params.merge(sector_id: bucket["key"]) %>
+                <% end %>
+                (<%= bucket["doc_count"] %>)
+
+              </div>
+            <% end %>
+          
+      <h6 class="text-muted mt-4"> Country </h6>
+      
+            <% @circular_initiatives.aggs["Country"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
+              <div>
+                <% if params[:Country] == bucket["key"].to_s %>
+                  <strong><%= link_to bucket["key"], request.params.except(:Country) %></strong>
+                <% else %>
+                  <%= link_to bucket["key"], request.params.merge(Country: bucket["key"]) %>
+                <% end %>
+                (<%= bucket["doc_count"] %>)
+
+              </div>
+            <% end %>
+         
+
+      <h6 class="text-muted mt-4"> Strategy </h6>
+      
+            <% @circular_initiatives.aggs["Primary_strategy"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
+              <div>
+                <% if params[:Primary_strategy] == bucket["key"].to_s %>
+                  <strong><%= link_to bucket["key"], request.params.except(:Primary_strategy) %></strong>
+                <% else %>
+                  <%= link_to bucket["key"], request.params.merge(Primary_strategy: bucket["key"]) %>
+                <% end %>
+                (<%= bucket["doc_count"] %>)
+
+              </div>
+            <% end %>  
+          
     </div>
-
+  
 
     
 
