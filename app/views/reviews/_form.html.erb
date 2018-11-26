@@ -2,14 +2,14 @@
   <% if review.errors.any? %>
     <div id="error_explanation" class="alert alert-danger alert-dismissable">
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
+        <span aria-hidden="true">&times;</span>
+      </button>
       <h4><%= pluralize(review.errors.count, "error") %> prohibited this review from being saved:</h4>
 
       <ul>
-      <% review.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% review.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -27,8 +27,8 @@
 <% end %>
 
 <script>
-      $('#star-rating').raty({
-        path: "https://s3.ap-south-1.amazonaws.com/roundputfinal/stars/",
-        scoreName: "review[rating]"
-        });
-    </script>
+  $('#star-rating').raty({
+    path: "https://s3.ap-south-1.amazonaws.com/roundputfinal/stars/",
+    scoreName: "review[rating]"
+  });
+</script>
