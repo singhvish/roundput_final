@@ -26,11 +26,18 @@
   <div class="form-group">
     <%= form.label :Initiative_description %>
     <%= form.text_field :Initiative_description, class: "form-control", id: :circular_initiative_Initiative_description %>
+    <trix-editor input="circular_initiative_Initiative_description"> </trix-editor>
   </div>
 
   <div class="form-group">
     <%= form.label :Leading_organization %>
     <%= form.text_field :Leading_organization, class: "form-control", id: :circular_initiative_Leading_organization %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :Organization_description %>
+    <%= form.text_field :Organization_description, class: "form-control", id: :circular_initiative_Organization_description %>
+    <trix-editor input="circular_initiative_Organization_description"> </trix-editor>
   </div>
 
   <div class="form-group">
@@ -71,21 +78,25 @@
   <div class="form-group">
     <%= form.label :partners %>
     <%= form.text_field :partners, class: "form-control", id: :circular_initiative_partners %>
+    <trix-editor input="circular_initiative_partners"> </trix-editor>
   </div>
 
   <div class="form-group">
     <%= form.label :problem %>
     <%= form.text_field :problem, class: "form-control", id: :circular_initiative_problem %>
+    <trix-editor input="circular_initiative_problem"> </trix-editor>
   </div>
 
   <div class="form-group">
     <%= form.label :awards %>
     <%= form.text_field :awards, class: "form-control", id: :circular_initiative_awards %>
+    <trix-editor input="circular_initiative_awards"> </trix-editor>
   </div>
 
   <div class="form-group">
     <%= form.label :funding %>
     <%= form.text_field :funding, class: "form-control", id: :circular_initiative_funding %>
+    <trix-editor input="circular_initiative_funding"> </trix-editor>
   </div>
 
   <div class="form-group">

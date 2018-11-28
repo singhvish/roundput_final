@@ -64,3 +64,4 @@ gem "mime-types"
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem "rack", ">= 2.0.6"
 gem 'activerecord-reputation-system'
+gem 'trix'

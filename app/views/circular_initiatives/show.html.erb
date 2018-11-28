@@ -38,7 +38,7 @@
           </div>
         </div>
 
-        <div class ="row row-content align-items-center">
+        <div class ="row row-content align-items-center text-truncate">
           <div class=" col-12 col-sm-3 col-md-3">
             <p>
               <strong>Website</strong>
@@ -57,7 +57,7 @@
         <div class ="row row-content align-items-center">
           <div class=" col-12 col-sm-3 col-md-3">
             <p>
-              <strong>Email</strong>
+              <strong><%= "Email" unless @circular_initiative.email.blank? %></strong>
             </p>
           </div>
 
@@ -101,21 +101,16 @@
     
     <div class="column col-md-7">
       <div id="initiative-info">
-        <div class="row row-header justify-content-center">
-          <h4>
-            Innovation Description
-          </h4>
-        </div>
         <%= video_tag @circular_initiative.video_url, :controls => true unless @circular_initiative.video.blank? %> 
         <div class="vote-icons"> 
            <%= pluralize @circular_initiative.reputation_for(:votes).to_i, "vote" %> 
             <h6 class="text-muted mr-1 col-offset-4"></h6> <%= link_to vote_circular_initiative_path(@circular_initiative, type: "up"), method: "post" do %><i class="far fa-thumbs-up fa-lg"></i> <% end %> 
         </div>
         <br>
-        <div class="col-12">
+     
           <ul class="nav nav-tabs"> 
             <li class="nav-item">
-              <a class="nav-link active" href="#info" role="tab" data-toggle="tab">Info</a>
+              <a class="nav-link active" href="#info" role="tab" data-toggle="tab">About</a>
             </li>
             
             <li class="nav-item">
@@ -126,66 +121,57 @@
               <a class="nav-link" href="#review"role="tab" data-toggle="tab">Reviews</a>
             </li>
           </ul>
-        </div>
+   
 
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane fade show active" id="info">
-            <div class="row row-content align-items-center">
-              <div class="col-12 col-sm-3 col-md-3 topic">
+            <Br>
+            <div class="row align-items-center">
+              <div class="col-12 col-sm-12 col-md-12 topic">
                 <p>
-                   <B> Name of the initiative </B>
-                </p>
-              </div>
-              <div class="col-12 col-sm-3 col-md-9">
-                <p>
-                  <%= @circular_initiative.Name_of_the_initiative %>
+                   <B> Innovation </B>
                 </p>
               </div>
             </div>
 
-            <div class ="row row-content align-items-center">
+            <div class ="row align-items-center">
+              <div class=" col-12 col-sm-12 col-md-12 ">
+                <p>
+                  <%= sanitize @circular_initiative.Initiative_description %>
+                </p>
+              </div>
+            </div>
+
+            <div class ="row align-items-center">
+              <div class=" col-12 col-sm-12 col-md-12 topic">
+                <p>
+                 <B> <%= "Problem Addressed" unless @circular_initiative.problem.blank? %></B> 
+                </p>
+              </div>
+              <div class=" col-12 col-sm-12 col-md-12 ">
+                <p>
+                  <%= sanitize @circular_initiative.problem  %>
+                </p>
+              </div>
+            </div>
+
+            <div class ="row align-items-center">
               <div class=" col-12 col-sm-3 col-md-3 topic">
                 <p>
-                 <B> Initiative description</B>
+                 <B> <%= "Partners" unless @circular_initiative.partners.blank? %></B>
                 </p>
               </div>
               <div class=" col-12 col-sm-9 col-md-9 ">
                 <p>
-                  <%= @circular_initiative.Initiative_description %>
+                  <%= sanitize @circular_initiative.partners %>
                 </p>
               </div>
             </div>
 
-            <div class ="row row-content align-items-center">
+            <div class ="row align-items-center">
               <div class=" col-12 col-sm-3 col-md-3 topic">
                 <p>
-                 <B> Problem Addressed</B>
-                </p>
-              </div>
-              <div class=" col-12 col-sm-9 col-md-9 ">
-                <p>
-                  <%= @circular_initiative.problem %>
-                </p>
-              </div>
-            </div>
-
-            <div class ="row row-content align-items-center">
-              <div class=" col-12 col-sm-3 col-md-3 topic">
-                <p>
-                 <B> Partners</B>
-                </p>
-              </div>
-              <div class=" col-12 col-sm-9 col-md-9 ">
-                <p>
-                  <%= @circular_initiative.partners %>
-                </p>
-              </div>
-            </div>
-
-            <div class ="row row-content align-items-center">
-              <div class=" col-12 col-sm-3 col-md-3 topic">
-                <p>
-                 <B> Primary strategy </B>
+                 <B> <%= "Primary strategy" unless @circular_initiative.Primary_strategy.blank? %> </B>
                 </p>
               </div>
 
@@ -196,30 +182,30 @@
               </div>
             </div>
 
-            <div class ="row row-content align-items-center">
+            <div class ="row align-items-center">
               <div class=" col-12 col-sm-3 col-md-3 topic">
                 <p>
-                 <B> Awards </B>
+                 <B> <%= "Awards" unless @circular_initiative.awards.blank? %> </B>
                 </p>
               </div>
 
               <div class=" col-12 col-sm-9 col-md-9">
                 <p>
-                  <%= @circular_initiative.awards %>
+                  <%= sanitize @circular_initiative.awards %>
                 </p>
               </div>
             </div>
 
-            <div class ="row row-content align-items-center">
+            <div class ="row align-items-center">
               <div class=" col-12 col-sm-3 col-md-3 topic">
                 <p>
-                 <B> Funding </B>
+                 <B> <%= "Funding" unless @circular_initiative.funding.blank? %></B>
                 </p>
               </div>
 
               <div class=" col-12 col-sm-9 col-md-9">
                 <p>
-                  <%= @circular_initiative.funding %>
+                  <%= sanitize @circular_initiative.funding %>
                 </p>
               </div>
             </div>
@@ -228,7 +214,7 @@
           <div role="tabpanel" class="tab-pane fade" id="review">
             <div class="reviews">
               <% if @reviews.blank? %>
-                <div class="row row-reviews justify-content-center">
+                <div class="row justify-content-center">
                   <p>
                     <h6>
                       No reviews yet. Be the first to write one!
@@ -240,7 +226,7 @@
                 </center>
               
               <% else %>
-                <div class="row row-header justify-content-center">
+                <div class="row justify-content-center">
                   <h5>
                     Reviews and Comments
                   </h5>
@@ -277,7 +263,8 @@
           </div>
           
           <div role="tabpanel" class="tab-pane fade" id="social">
-            <div class ="row row-content align-items-center">
+            <br>
+            <div class ="row align-items-center">
               <div class=" col-12 col-sm-3 col-md-3">
                 <p>
                   <strong>LinkedIn</strong>
@@ -291,7 +278,7 @@
               </div>
             </div>
 
-            <div class ="row row-content align-items-center">
+            <div class ="row align-items-center">
               <div class=" col-12 col-sm-3 col-md-3">
                 <p>
                   <strong>Twitter</strong>
@@ -305,7 +292,7 @@
               </div>
             </div>
 
-            <div class ="row row-content align-items-center">
+            <div class ="row align-items-center">
               <div class=" col-12 col-sm-3 col-md-3">
                 <p>
                   <strong>Facebook</strong>
@@ -319,7 +306,7 @@
               </div>
             </div>
 
-            <div class ="row row-content align-items-center">
+            <div class ="row align-items-center">
               <div class=" col-12 col-sm-3 col-md-3">
                 <p>
                   <strong>Instagram</strong>

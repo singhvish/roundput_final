@@ -17,7 +17,7 @@
                 <% else %>
                   <%= link_to bucket["key"], request.params.merge(Region: bucket["key"]) %>
                 <% end %>
-                (<%= bucket["doc_count"] %>)
+            
 
               </div>
             <% end %>
@@ -32,7 +32,7 @@
                 <% else %>
                   <%= link_to bucket["key"], request.params.merge(Organization_type: bucket["key"]) %>
                 <% end %>
-                (<%= bucket["doc_count"] %>)
+                
 
               </div>
 
@@ -48,7 +48,7 @@
                 <% else %>
                   <%= link_to bucket["key"], request.params.merge(sector_id: bucket["key"]) %>
                 <% end %>
-                (<%= bucket["doc_count"] %>)
+                
 
               </div>
             <% end %>
@@ -62,8 +62,7 @@
                 <% else %>
                   <%= link_to bucket["key"], request.params.merge(Country: bucket["key"]) %>
                 <% end %>
-                (<%= bucket["doc_count"] %>)
-
+                
               </div>
             <% end %>
          
@@ -77,8 +76,7 @@
                 <% else %>
                   <%= link_to bucket["key"], request.params.merge(Primary_strategy: bucket["key"]) %>
                 <% end %>
-                (<%= bucket["doc_count"] %>)
-
+                
               </div>
             <% end %>  
           
@@ -89,36 +87,23 @@
 
 
     <div class="index col-sm-10 col-md-10 col-lg-10">
-      <div id="index-button" class="new initiative button">
-    <%= link_to new_circular_initiative_path, class: "btn btn-default btn-md", data: {no_turbolink: true} do %>
-    New Circular Initiative
-    <% end %>
-  </div>
-      <table id="index-table" class="table table-hover table-condensed table-responsive">
-        <thead>
-          <tr>
-            <th class="center">Innovation</th>
-            <th class="center">Organization</th>
-            <th class="center">Sector</th>
-            <th class="center">Website</th>
-            <th class="center">Address</th>
-            <th colspan="3"></th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @circular_initiatives.each do |circular_initiative| %>
-            <tr>
-              <td class><%= link_to circular_initiative.Name_of_the_initiative, circular_initiative %></td>
-              <td class="center" ><%= circular_initiative.Leading_organization %></td>
-              <td class="center" ><%= circular_initiative.sector.name %></td>
-              <td class="center" ><%= link_to circular_initiative.Website, circular_initiative.Website, target: :_blank %></td>
-              <td class="center" ><%= circular_initiative.address %></td>
-              <td class="center" ><%= link_to 'Learn more', circular_initiative %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+      <div class="card-deck">
+        <% @circular_initiatives.each do |circular_initiative| %>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to circular_initiative.Leading_organization, circular_initiative %></h5>
+              <%= link_to circular_initiative.Name_of_the_initiative, circular_initiative %>
+              <p class="card-text"><%= sanitize circular_initiative.Organization_description %></p>
+              <p>Sector: <%= circular_initiative.sector.name %></p>
+              <%= link_to 'Learn more', circular_initiative , class: "btn btn-primary" %>
+            </div>
+            <div class="card-footer">
+              <i class="fas fa-map-marker-alt"> &nbsp </i><%= link_to circular_initiative.address %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <br>
       <%= will_paginate @circular_initiatives %>
     </div>
   </div>
