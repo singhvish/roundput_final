@@ -22,9 +22,9 @@ end
       args[:Region] = params[:Region] if params[:Region].present?
       args[:Country] = params[:Country] if params[:Country].present?
       args[:Organization_type] = params[:Organization_type] if params[:Organization_type].present?
-      args[:sector_id] = params[:sector_id] if params[:sector_id].present?
+      args[:Organization_sector] = params[:Organization_sector] if params[:Organization_sector].present?
       args[:Primary_strategy] = params[:Primary_strategy] if params[:Primary_strategy].present?
-      @circular_initiatives = CircularInitiative.search query, where: args, aggs: {Region: {}, Country: {}, Organization_type: {}, sector_id: {}, Primary_strategy: {} }, page: params[:page], per_page: 3
+      @circular_initiatives = CircularInitiative.search query, where: args, aggs: {Region: {}, Country: {}, Organization_type: {}, Organization_sector: {}, Primary_strategy: {} }, page: params[:page], per_page: 4
   
   end
 
@@ -98,6 +98,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def circular_initiative_params
-      params.require(:circular_initiative).permit(:Name_of_the_initiative, :sector_id, :Initiative_description, :Leading_organization, :Organization_type, :Organization_description, :Website, :Primary_strategy, :Region, :Country, :City, :address, :partners, :problem, :awards, :funding, :linkedin, :twitter, :facebook, :instagram, :video, :email)
+      params.require(:circular_initiative).permit(:Name_of_the_initiative, :Organization_sector, :Initiative_description, :Leading_organization, :Organization_type, :Organization_description, :Website, :Primary_strategy, :Region, :Country, :City, :address, :partners, :problem, :awards, :funding, :linkedin, :twitter, :facebook, :instagram, :video, :email)
     end
 end

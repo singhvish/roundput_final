@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   
   resources :newsletters
-  resources :sectors
   devise_for :users
   resources :circular_initiatives do
     resources :reviews, except: [:show, :index]

@@ -19,13 +19,13 @@
   </div>
 
   <div class="form-group">
-    <%= form.label :sector_id %><br>
-    <%= form.collection_select :sector_id, Sector.all, :id, :name, {prompt: "Choose a sector"}, {class: "btn-btn-default dropdown-toggle"} %>
+    <%= form.label :Organization_sector %><br>
+    <%= form.select :Organization_sector, ['Cities','Consumer Products', 'Fashion', 'Food and Beverages', 'Manufacturing', 'Other'], {prompt: "Choose a sector"}, class: "form-control", id: :circular_initiative_Organization_sector %>
   </div>
 
   <div class="form-group">
     <%= form.label :Initiative_description %>
-    <%= form.text_field :Initiative_description, class: "form-control", id: :circular_initiative_Initiative_description %>
+    <%= form.hidden_field :Initiative_description, class: "form-control", id: :circular_initiative_Initiative_description %>
     <trix-editor input="circular_initiative_Initiative_description"> </trix-editor>
   </div>
 
@@ -36,13 +36,13 @@
 
   <div class="form-group">
     <%= form.label :Organization_description %>
-    <%= form.text_field :Organization_description, class: "form-control", id: :circular_initiative_Organization_description %>
+    <%= form.hidden_field :Organization_description, class: "form-control", id: :circular_initiative_Organization_description %>
     <trix-editor input="circular_initiative_Organization_description"> </trix-editor>
   </div>
 
   <div class="form-group">
     <%= form.label :Organization_type %>
-    <%= form.text_field :Organization_type, class: "form-control", id: :circular_initiative_Organization_type %>
+    <%= form.select :Organization_type, ['Multinational Corporation','National Corporation', 'Small and Medium-sized Enterprise (SME)', 'Startup','Support (investment, consulting, media)', 'Non-profit','Education', 'Government', 'Other' ], {prompt: "Choose an organization type"}, class: "form-control", id: :circular_initiative_Organization_type %>
   </div>
 
   <div class="form-group">
@@ -52,7 +52,7 @@
 
   <div class="form-group">
     <%= form.label :Primary_strategy %>
-    <%= form.text_field :Primary_strategy, class: "form-control", id: :circular_initiative_Primary_strategy %>
+    <%= form.select :Primary_strategy, ['Design', 'Resources', 'Business model', 'Product life extension','Waste as a resource', 'Other'], {prompt: "Choose an innovation strategy"},class: "form-control", id: :circular_initiative_Primary_strategy %>
   </div>
 
   <div class="form-group">
@@ -77,25 +77,25 @@
 
   <div class="form-group">
     <%= form.label :partners %>
-    <%= form.text_field :partners, class: "form-control", id: :circular_initiative_partners %>
+    <%= form.hidden_field :partners, class: "form-control", id: :circular_initiative_partners %>
     <trix-editor input="circular_initiative_partners"> </trix-editor>
   </div>
 
   <div class="form-group">
     <%= form.label :problem %>
-    <%= form.text_field :problem, class: "form-control", id: :circular_initiative_problem %>
+    <%= form.hidden_field :problem, class: "form-control", id: :circular_initiative_problem %>
     <trix-editor input="circular_initiative_problem"> </trix-editor>
   </div>
 
   <div class="form-group">
     <%= form.label :awards %>
-    <%= form.text_field :awards, class: "form-control", id: :circular_initiative_awards %>
+    <%= form.hidden_field :awards, class: "form-control", id: :circular_initiative_awards %>
     <trix-editor input="circular_initiative_awards"> </trix-editor>
   </div>
 
   <div class="form-group">
     <%= form.label :funding %>
-    <%= form.text_field :funding, class: "form-control", id: :circular_initiative_funding %>
+    <%= form.hidden_field :funding, class: "form-control", id: :circular_initiative_funding %>
     <trix-editor input="circular_initiative_funding"> </trix-editor>
   </div>
 

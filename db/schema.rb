@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(version: 2018_11_27_202505) do
     t.string "City"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "sector_id"
     t.string "address"
     t.text "partners"
     t.text "problem"
@@ -121,12 +120,6 @@ ActiveRecord::Schema.define(version: 2018_11_27_202505) do
     t.index ["reputation_name"], name: "index_rs_reputations_on_reputation_name"
     t.index ["target_id", "target_type"], name: "index_rs_reputations_on_target_id_and_target_type"
     t.index ["target_type", "target_id"], name: "index_rs_reputations_on_target_type_and_target_id"
-  end
-
-  create_table "sectors", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,6 +1,5 @@
 class CircularInitiative < ApplicationRecord
 	searchkick
-	belongs_to :sector
 	has_many :reviews
 	has_reputation :votes, source: :user, aggregated_by: :sum
 

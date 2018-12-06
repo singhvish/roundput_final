@@ -132,6 +132,7 @@ li.nav-item {
 }
 
 #jumbotron-index {
+	
 	background-color: #BDCAB4;
 	background: url('https://storage.googleapis.com/roundput/Jumbotron/art-close-up-ecology-886521.jpg') no-repeat center center;
 	background-size: cover;
@@ -997,3 +998,31 @@ iframe {
 	}
 
 }
+
+.card-title {
+	font-weight: 200;
+	font-size: 1.8rem;
+    line-height: 2.4rem;
+}
+
+.card-text {
+	font-size: 1.4rem;
+    line-height: 2.4rem;
+    overflow: hidden;
+}
+
+.card {
+        height: 100%;
+        display: flex;
+    }
+
+    .card-block {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .card.card-footer {
+        align-self: flex-end;
+        flex: 1 1 auto;
+    }

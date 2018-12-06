@@ -18,7 +18,7 @@
 
           <div class=" col-12 col-sm-9 col-md-9">
             <p>
-              <%= @circular_initiative.sector.name %>
+              <%= @circular_initiative.Organization_sector %>
             </p>
           </div>
         </div>
@@ -242,7 +242,7 @@
                         </td>
                         <td>
                           <div class="star-rating" data-score=<%= review.rating %> ></div>
-                          <p><%= h(review.comment).gsub(/\n/, '<br/>').html_safe %></p>
+                          <p><%= h(sanitize review.comment).gsub(/\n/, '<br/>').html_safe %></p>
                           <% if user_signed_in? %>
                             <% if (review.user == current_user) || (current_user.admin?) %>
                               <%= link_to "Edit", edit_circular_initiative_review_path(@circular_initiative, review) %>

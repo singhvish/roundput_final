@@ -41,12 +41,12 @@
 
       <h6 class="text-muted mt-4"> Sector </h6>
       
-            <% @circular_initiatives.aggs["sector_id"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
+            <% @circular_initiatives.aggs["Organization_sector"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
               <div>
-                <% if params[:sector_id] == bucket["key"].to_s %>
-                  <strong><%= link_to bucket["key"], request.params.except(:sector_id) %></strong>
+                <% if params[:Organization_sector] == bucket["key"].to_s %>
+                  <strong><%= link_to bucket["key"], request.params.except(:Organization_sector) %></strong>
                 <% else %>
-                  <%= link_to bucket["key"], request.params.merge(sector_id: bucket["key"]) %>
+                  <%= link_to bucket["key"], request.params.merge(Organization_sector: bucket["key"]) %>
                 <% end %>
                 
 
@@ -86,24 +86,25 @@
     
 
 
-    <div class="index col-sm-10 col-md-10 col-lg-10">
-      <div class="card-deck">
+    <div class="index col-sm-12 col-md-10 col-lg-10">
+      <div class="row">
         <% @circular_initiatives.each do |circular_initiative| %>
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"><%= link_to circular_initiative.Leading_organization, circular_initiative %></h5>
-              <%= link_to circular_initiative.Name_of_the_initiative, circular_initiative %>
-              <p class="card-text"><%= sanitize circular_initiative.Organization_description %></p>
-              <p>Sector: <%= circular_initiative.sector.name %></p>
-              <%= link_to 'Learn more', circular_initiative , class: "btn btn-primary" %>
-            </div>
-            <div class="card-footer">
-              <i class="fas fa-map-marker-alt"> &nbsp </i><%= link_to circular_initiative.address %>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><%= link_to circular_initiative.Leading_organization, circular_initiative %></h5>
+                <%= link_to circular_initiative.Name_of_the_initiative, circular_initiative %>
+                <p class="card-text"><%= sanitize circular_initiative.Organization_description %></p>
+                <p>Sector: <%= circular_initiative.Organization_sector %></p>
+                <%= link_to 'Learn more', circular_initiative , class: "btn btn-primary" %>
+              </div>
+              <div class="card-footer">
+                <i class="fas fa-map-marker-alt"> &nbsp </i><%= link_to circular_initiative.address %>
+              </div>
             </div>
           </div>
         <% end %>
       </div>
-      <br>
       <%= will_paginate @circular_initiatives %>
     </div>
   </div>
