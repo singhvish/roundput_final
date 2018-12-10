@@ -1,3 +1,4 @@
+<%= render 'layouts/navbarall' %>
 <div id="jumbotron-index" class ="jumbotron">
   <div class = "container center">
     <h2><B>Search for organizations or innovations below</B></h2>
@@ -21,7 +22,6 @@
 
               </div>
             <% end %>
- 
 
       <h6 class="text-muted mt-4"> Organization Type </h6>
       
@@ -87,16 +87,16 @@
 
 
     <div class="index col-sm-12 col-md-10 col-lg-10">
+      
       <div class="row">
         <% @circular_initiatives.each do |circular_initiative| %>
-          <div class="col-sm-6">
+          <div class="col-sm-6 mb-5">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title"><%= link_to circular_initiative.Leading_organization, circular_initiative %></h5>
                 <%= link_to circular_initiative.Name_of_the_initiative, circular_initiative %>
                 <p class="card-text"><%= sanitize circular_initiative.Organization_description %></p>
                 <p>Sector: <%= circular_initiative.Organization_sector %></p>
-                <%= link_to 'Learn more', circular_initiative , class: "btn btn-primary" %>
               </div>
               <div class="card-footer">
                 <i class="fas fa-map-marker-alt"> &nbsp </i><%= link_to circular_initiative.address %>
@@ -104,8 +104,10 @@
             </div>
           </div>
         <% end %>
-      </div>
+      </div>  
+      <br>
       <%= will_paginate @circular_initiatives %>
+      <br>
     </div>
   </div>
 </div>

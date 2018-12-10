@@ -261,6 +261,9 @@ li.nav-item {
 		margin-left: 5px;
 }
 
+.search {
+	display: inline;
+}
 .btn-primary {
 	background-color: #0066CC;
 	color: #FFF;
@@ -1025,4 +1028,8 @@ iframe {
     .card.card-footer {
         align-self: flex-end;
         flex: 1 1 auto;
+    }
+
+    .search {
+    margin-left: 1rem;
     }

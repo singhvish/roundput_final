@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :newsletters
   devise_for :users
   resources :circular_initiatives do
+    collection { post :import }
     resources :reviews, except: [:show, :index]
     member { post :vote }
   end

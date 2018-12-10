@@ -7,6 +7,11 @@ def home
   @newsletter = Newsletter.new
 end
 
+def import
+  CircularInitiative.import(params[:file])
+  redirect_to root_url, notice: "Circular Initiatives imported successfully."
+end
+
 def vote
   value = params[:type] == "up" ? 1 : -1
   @circular_initiative = CircularInitiative.find(params[:id])
@@ -24,7 +29,7 @@ end
       args[:Organization_type] = params[:Organization_type] if params[:Organization_type].present?
       args[:Organization_sector] = params[:Organization_sector] if params[:Organization_sector].present?
       args[:Primary_strategy] = params[:Primary_strategy] if params[:Primary_strategy].present?
-      @circular_initiatives = CircularInitiative.search query, where: args, aggs: {Region: {}, Country: {}, Organization_type: {}, Organization_sector: {}, Primary_strategy: {} }, page: params[:page], per_page: 4
+      @circular_initiatives = CircularInitiative.search query, where: args, aggs: {Region: {}, Country: {}, Organization_type: {}, Organization_sector: {}, Primary_strategy: {} }, page: params[:page], per_page: 20
   
   end
 

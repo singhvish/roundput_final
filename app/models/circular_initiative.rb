@@ -6,5 +6,11 @@ class CircularInitiative < ApplicationRecord
 	mount_uploader :video, VideoUploader
 
 	validates :Name_of_the_initiative, :Leading_organization, presence: true
+
+	def self.import(file)
+  		CSV.foreach(file.path, headers: true) do |row|
+  			CircularInitiative.create! row.to_hash
+  		end
+	end
 	
 end

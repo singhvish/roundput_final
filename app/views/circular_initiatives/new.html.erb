@@ -1,5 +1,14 @@
+<%= render 'layouts/navbarall' %>
 <div id="new-circular-initiative" class="container">
 	<h1>Please use the form below to add a new circular initiative.</h1>
 	<%= render 'form', circular_initiative: @circular_initiative %>
+	<br>
+	<h6>Import Circular Initiatives</h6>
+      <div class="form-group">
+        <%= form_tag import_circular_initiatives_path, multipart: true do %>
+          <%= file_field_tag :file %>
+          <%= submit_tag "Import", class: "btn btn-sm" %>
+        <% end %>
+      </div>
 	<%= link_to 'Back', circular_initiatives_path, class: "btn btn-link" %>
 </div>
