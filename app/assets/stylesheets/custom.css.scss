@@ -226,6 +226,10 @@ li.nav-item {
 	margin-top: 1rem;
 }
 
+.filter {
+	font-size: 0.85rem;
+}
+
 #index-filter {
 	position: relative;
     display: block;
@@ -479,9 +483,7 @@ input[type="checkbox"] {
 	color:#dark gray;
 	}
 
-#newsletter {
-	display: flex;
-}
+
 
 
 #jumbotron-newsletter {

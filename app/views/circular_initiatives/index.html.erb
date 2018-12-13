@@ -23,6 +23,34 @@
               </div>
             <% end %>
 
+            <h6 class="text-muted mt-4"> Country </h6>
+      
+            <% @circular_initiatives.aggs["Country"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
+              <div>
+                <% if params[:Country] == bucket["key"].to_s %>
+                  <strong><%= link_to bucket["key"], request.params.except(:Country) %></strong>
+                <% else %>
+                  <%= link_to bucket["key"], request.params.merge(Country: bucket["key"]) %>
+                <% end %>
+                
+              </div>
+            <% end %>
+
+            <h6 class="text-muted mt-4"> Primary Sector </h6>
+      
+            <% @circular_initiatives.aggs["Organization_sector"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
+              <div>
+                <% if params[:Organization_sector] == bucket["key"].to_s %>
+                  <strong><%= link_to bucket["key"], request.params.except(:Organization_sector) %></strong>
+                <% else %>
+                  <%= link_to bucket["key"], request.params.merge(Organization_sector: bucket["key"]) %>
+                <% end %>
+                
+
+              </div>
+            <% end %>
+          
+
       <h6 class="text-muted mt-4"> Organization Type </h6>
       
             <% @circular_initiatives.aggs["Organization_type"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
@@ -39,35 +67,11 @@
             <% end %>
           
 
-      <h6 class="text-muted mt-4"> Sector </h6>
       
-            <% @circular_initiatives.aggs["Organization_sector"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
-              <div>
-                <% if params[:Organization_sector] == bucket["key"].to_s %>
-                  <strong><%= link_to bucket["key"], request.params.except(:Organization_sector) %></strong>
-                <% else %>
-                  <%= link_to bucket["key"], request.params.merge(Organization_sector: bucket["key"]) %>
-                <% end %>
-                
-
-              </div>
-            <% end %>
-          
-      <h6 class="text-muted mt-4"> Country </h6>
       
-            <% @circular_initiatives.aggs["Country"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
-              <div>
-                <% if params[:Country] == bucket["key"].to_s %>
-                  <strong><%= link_to bucket["key"], request.params.except(:Country) %></strong>
-                <% else %>
-                  <%= link_to bucket["key"], request.params.merge(Country: bucket["key"]) %>
-                <% end %>
-                
-              </div>
-            <% end %>
          
 
-      <h6 class="text-muted mt-4"> Strategy </h6>
+      <h6 class="text-muted mt-4"> Innovation Strategy </h6>
       
             <% @circular_initiatives.aggs["Primary_strategy"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
               <div>
@@ -93,19 +97,18 @@
           <div class="col-sm-6 mb-5">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title"><%= link_to circular_initiative.Leading_organization, circular_initiative %></h5>
+                <h5 class="card-title"><%= link_to circular_initiative.Leading_organization.capitalize, circular_initiative %></h5>
                 <%= link_to circular_initiative.Name_of_the_initiative, circular_initiative %>
                 <p class="card-text"><%= sanitize circular_initiative.Organization_description %></p>
                 <p>Sector: <%= circular_initiative.Organization_sector %></p>
               </div>
               <div class="card-footer">
-                <i class="fas fa-map-marker-alt"> &nbsp </i><%= link_to circular_initiative.address %>
+                <i class="fas fa-map-marker-alt"> &nbsp </i><%= link_to circular_initiative.address,circular_initiatives_path(:address => circular_initiative.address) %>
               </div>
             </div>
           </div>
         <% end %>
       </div>  
-      <br>
       <%= will_paginate @circular_initiatives %>
       <br>
     </div>

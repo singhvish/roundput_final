@@ -29,7 +29,8 @@ end
       args[:Organization_type] = params[:Organization_type] if params[:Organization_type].present?
       args[:Organization_sector] = params[:Organization_sector] if params[:Organization_sector].present?
       args[:Primary_strategy] = params[:Primary_strategy] if params[:Primary_strategy].present?
-      @circular_initiatives = CircularInitiative.search query, where: args, aggs: {Region: {}, Country: {}, Organization_type: {}, Organization_sector: {}, Primary_strategy: {} }, page: params[:page], per_page: 20
+      args[:address] = params[:address] if params[:address].present?
+      @circular_initiatives = CircularInitiative.search query, where: args, aggs: {Region: {}, Country: {}, Organization_type: {}, Organization_sector: {}, Primary_strategy: {}, address:{} }, page: params[:page], per_page: 30
   
   end
 

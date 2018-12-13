@@ -10,7 +10,8 @@
       <%= form_tag circular_initiatives_path, method: :get do %>
         <div class="row justify-content-center">
           <%= text_field_tag :search, params[:search], class: "form-control col-8 col-md-6", placeholder:'Search for organizations or innovations...' %>
-          <%= submit_tag "Search", name: nil, class: "btn btn-default btn-search" %>
+          
+          <%= button_tag "Search", name: nil, data: {disable_with:"<i class='fa fa-spinner fa-spin'></i>"}, class: "btn btn-default btn-search" %>
         </div>
       <% end %>
     </div>
@@ -27,19 +28,19 @@
 
   <div id="sector-tiles" class="row">
     <div class="col-sm-12 col-md-6 col-lg-3">
-      <a href="/"><div id="cities"><span>Cities</span></div></a>
+      <a href="/circular_initiatives?Organization_sector=Cities&search=&utf8=✓"><div id="cities"><span>Cities</span></div></a>
     </div>
 
     <div class="col-sm-12 col-md-6 col-lg-3">
-      <a href="/"><div id="foodandbeverages"><span>Food and Beverages</span></div></a>
+      <a href="/circular_initiatives?Organization_sector=Food+and+Beverages&search=&utf8=✓"><div id="foodandbeverages"><span>Food and Beverages</span></div></a>
     </div>
 
     <div class="col-sm-12 col-md-6 col-lg-3">
-      <a href="/"><div id="consumerproducts"><span>Consumer Products</span></div></a>
+      <a href="/circular_initiatives?Organization_sector=Consumer+Products&search=&utf8=✓"><div id="consumerproducts"><span>Consumer Products</span></div></a>
     </div>
 
     <div class="col-sm-12 col-md-6 col-lg-3">
-      <a href="/"><div id="fashion"><span>Fashion</span></div></a>
+      <a href="/circular_initiatives?Organization_sector=Fashion&search=&utf8=✓"><div id="fashion"><span>Fashion</span></div></a>
     </div>
   </div>
 
@@ -76,10 +77,10 @@
     You have successfully subscribed to our newsletter!
   <% else %>
     <%= form_for @newsletter do |f| %>
-      <div id="newsletter" class="form-group col-md-6 offset-md-3">
-        <%= f.email_field :email, class: "form-control", placeholder: "Enter email address" %>
+      <div class="row justify-content-center">
+        <%= f.email_field :email, class: "form-control col-8 col-md-4", placeholder: "Enter email address" %>
         <%= f.button "Subscribe", class: "btn btn-success", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Subscribing..."} %>
-      </div>
+      </div> 
     <% end %>
   <% end %>
 </div>

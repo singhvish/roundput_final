@@ -5,7 +5,7 @@ class NewslettersController < ApplicationController
   		cookies[:saved_newsletter] = true
   		redirect_to root_path
   	else
-  		redirect_to root_path, alert: "Failed to subscribe"
+  		redirect_to root_path, alert: "Failed to subscribe. Email address can't be blank."
   	end
   end
 
