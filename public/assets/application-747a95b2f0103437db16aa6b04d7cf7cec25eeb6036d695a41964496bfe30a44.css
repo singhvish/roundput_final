@@ -1,0 +1,1508 @@
+/********* Global Styles ***********/
+/* line 4, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 10, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+img, embed, object, video {
+  max-width: 100%;
+}
+
+/* line 14, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+html {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 19, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+body {
+  background-color: #FAFAFA;
+  height: 100%;
+}
+
+/* line 24, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+ul {
+  list-style-position: inside;
+}
+
+/* line 28, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.vote-icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/********* Typography Styles ***********/
+/* line 35, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+a {
+  color: #003399;
+}
+
+/* line 39, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+h2 {
+  font-size: 32px;
+  line-height: 40px;
+  color: #282828;
+  font-weight: normal;
+}
+
+/* line 46, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.text-muted {
+  color: #6c7686 !important;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+/********* Structure Styles ***********/
+/********* Module Styles ***********/
+/* Site Navigation */
+/* line 60, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar-brand {
+  color: #295200 !important;
+  font-family: Ryman Eco;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0;
+}
+
+/* line 68, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar button.navbar-toggler {
+  border: 1px solid #295200;
+}
+
+/* line 72, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar-nav a {
+  color: #295200;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+/* line 78, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar-nav a:hover, .navbar-nav a:focus {
+  background: #295200;
+  color: white;
+  border-color: #295200;
+  text-decoration: none;
+}
+
+/* line 85, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar-light .navbar-nav .nav-link {
+  color: #295200;
+  font-size: 1.1rem;
+}
+
+/* line 90, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+  background: #295200;
+  color: white;
+  border-color: #295200;
+  text-decoration: none;
+}
+
+/* line 97, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+li.nav-item {
+  list-style: none;
+}
+
+/* line 101, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.nav-item .btn-link:hover {
+  color: #020401;
+  text-decoration: none;
+}
+
+/********* Component Styles ***********/
+/* line 108, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination {
+  text-align: center;
+  cursor: default;
+  font-size: 16px;
+}
+
+/* line 113, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination a, .pagination span, .pagination em {
+  padding: 0.2em 0.5em;
+}
+
+/* line 116, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination .disabled {
+  color: #474747;
+}
+
+/* line 119, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  color: #1E313E;
+}
+
+/* line 124, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination a {
+  border: 1px solid #dddddd;
+  color: #295200;
+  text-decoration: none;
+}
+
+/* line 129, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.pagination a:hover, .pagination a:focus {
+  border-color: #003366;
+  background: #295200;
+  color: white;
+}
+
+/* line 135, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#jumbotron-index {
+  background: url("https://storage.googleapis.com/roundput/Jumbotron/art-close-up-ecology-886521.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 7.5% 0 7.5% 0;
+  border-radius: 0;
+}
+/* line 140, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#jumbotron-index h2 {
+  color: #134F3C;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+/* line 148, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#jumbotron-about {
+  background-color: #BDCAB4;
+  height: 40%;
+  padding: 7.5% 0 7.5% 0;
+  border-radius: 0;
+}
+/* line 153, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#jumbotron-about h2 {
+  font-weight: bold;
+  color: #134F3C;
+  font-size: 1.75rem;
+}
+
+/********* Page Styles ***********/
+/* Home Page */
+/* line 166, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.container-home {
+  padding: 4rem 0 4rem 0;
+}
+
+/* line 170, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#jumbotron-home {
+  background-color: #F0F0F0;
+  height: 40%;
+  padding: 5% 0 5% 0;
+  border-radius: 0;
+}
+/* line 175, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#jumbotron-home h1 {
+  font-weight: bold;
+  color: #134F3C;
+  text-shadow: 0px 2px 3px #555;
+  font-family: Ryman Eco;
+  font-size: 2em;
+}
+/* line 184, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#jumbotron-home h2 {
+  font-weight: bold;
+  color: #134F3C;
+  font-size: 1em;
+}
+
+/* line 194, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.container-privacy {
+  margin-top: 0;
+  background-color: #FFF;
+  border-radius: .25rem;
+  font-color: light-gray;
+  font-size: 14px;
+  line-height: 1.3em;
+}
+/* line 202, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.container-privacy h1 {
+  color: dark-gray;
+  line-height: 1.5em;
+  font-size: 1.6em;
+  font-weight: 500;
+}
+/* line 209, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.container-privacy h2 {
+  font-size: 1.3em;
+}
+/* line 213, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.container-privacy h3 {
+  font-size: 1.2em;
+}
+/* line 217, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.container-privacy h4 {
+  font-size: 1.1em;
+}
+
+/* line 224, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#index-table {
+  margin-top: 1rem;
+}
+
+/* line 228, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.filter {
+  font-size: 0.85rem;
+}
+
+/* line 232, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#index-filter {
+  position: relative;
+  display: block;
+  padding: 1rem 1.25rem;
+  margin-bottom: -0.0625rem;
+  background-color: #fff;
+  border: 0.0625rem solid #e9ecef;
+}
+/* line 239, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#index-filter h5 {
+  font-size: 1rem;
+  line-height: 1.3;
+}
+/* line 243, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#index-filter h6 {
+  font-size: 0.875rem;
+}
+
+/* line 248, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#index-button {
+  text-align: right;
+}
+
+/* line 252, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.btn-link {
+  color: #295200;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+/* line 258, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.btn-default {
+  background-color: #004D99;
+  color: #FFF;
+}
+
+/* line 263, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.btn-search {
+  margin-left: 5px;
+}
+
+/* line 267, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.search {
+  display: inline;
+}
+
+/* line 270, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.btn-primary {
+  background-color: #0066CC;
+  color: #FFF;
+}
+
+/* line 275, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.btn-outline-success {
+  background-color: #008200;
+  color: #FFF;
+}
+
+/* line 280, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-home-sectors {
+  background-color: #F8F9FA;
+}
+
+/* line 284, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-home-countries {
+  background-color: #F8F9FA;
+}
+
+/* line 289, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-home-sectors h3 {
+  line-height: 1.2;
+  font-weight: 500;
+  font-color: dark-gray;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 1.5rem;
+}
+/* line 297, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-home-sectors h4 {
+  font-weight: 400;
+  font-color: light-gray;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+/* line 307, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-home-countries h3 {
+  line-height: 1.2;
+  font-weight: 500;
+  font-color: dark-gray;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 1.5rem;
+}
+/* line 315, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-home-countries h4 {
+  font-weight: 400;
+  font-color: light-gray;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+/* line 325, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#cities, #foodandbeverages, #consumerproducts, #fashion {
+  height: 200px;
+  width: 100%;
+  margin-top: 1.5em;
+  margin-bottom: 1rem;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+
+/* line 336, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#country-tiles {
+  margin-bottom: 1.5rem;
+}
+
+/* line 340, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#unitedkingdom, #sweden, #germany, #canada {
+  height: 200px;
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 1.5em;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+
+/* line 351, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#cities span, #foodandbeverages span, #consumerproducts span, #fashion span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 2;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .7;
+}
+
+/* line 365, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#unitedkingdom span, #sweden span, #germany span, #canada span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 2;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .7;
+}
+
+/* line 380, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#cities:hover, #foodandbeverages:hover, #consumerproducts:hover, #fashion:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+/* line 384, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#unitedkingdom:hover, #sweden:hover, #germany:hover, #canada:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+/* line 389, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#cities {
+  background: url("https://storage.googleapis.com/roundput/Sectors/Cities_resized.jpeg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* line 395, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#foodandbeverages {
+  background: url("https://storage.googleapis.com/roundput/Sectors/Food%20and%20Beverages_resized.jpeg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* line 401, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#consumerproducts {
+  background: url("https://storage.googleapis.com/roundput/Sectors/Consumer%20Products_resized.jpeg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* line 407, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#fashion {
+  background: url("https://storage.googleapis.com/roundput/Sectors/Fashion_resized.jpeg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* line 413, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#unitedkingdom {
+  background: url("https://storage.googleapis.com/roundput/Cities/United%20Kingdom_resized.jpeg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* line 419, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#sweden {
+  background: url("https://storage.googleapis.com/roundput/Cities/Sweden_resized.jpeg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* line 425, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#germany {
+  background: url("https://storage.googleapis.com/roundput/Cities/Germany_resized.jpeg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* line 431, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#canada {
+  background: url("https://storage.googleapis.com/roundput/Cities/Canada_resized.jpeg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* line 438, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-sectors h3 {
+  line-height: 1.2;
+  font-weight: 500;
+  font-color: dark-gray;
+  font-size: 1.5rem;
+}
+/* line 444, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-sectors h4 {
+  font-weight: 400;
+  font-color: light-gray;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+/* line 453, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-countries h3 {
+  line-height: 1.2;
+  font-weight: 500;
+  font-color: dark-gray;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+/* line 460, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-countries h4 {
+  font-weight: 400;
+  font-color: light-gray;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+/* line 468, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.container-footer-home {
+  margin-top: 2rem;
+}
+
+/* line 472, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  float: left;
+}
+
+/* line 480, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.page-footer {
+  background-color: #FAFAFA;
+  color: #dark gray;
+}
+
+/* line 488, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#jumbotron-newsletter {
+  border-radius: 0;
+  background-color: #dce3d7;
+}
+
+/* line 493, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.btn-success {
+  margin-left: 5px;
+}
+
+/* line 498, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+body .form-inline {
+  text-align: center;
+}
+
+/* line 503, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+iframe {
+  overflow: hidden;
+}
+
+/* line 507, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.frame-header {
+  background-color: rgba(241, 238, 234, 0.2);
+  border-bottom: 1px solid #F1EEEA;
+  padding: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: #3D3D66;
+}
+
+/* line 516, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.rounded-content-frame_footer {
+  color: #282828;
+}
+
+/* line 520, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.rounded-content-frame_footer {
+  background-color: rgba(241, 238, 234, 0.2);
+  border-top: 1px solid #F1EEEA;
+  padding: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: #3D3D66;
+}
+
+/* line 529, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.table-hover tbody tr:hover {
+  background-color: #e3e3e3;
+}
+
+/* line 533, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.center {
+  text-align: center;
+}
+
+/* line 537, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.alert-danger {
+  display: inline-block;
+  width: 100%;
+}
+
+/* line 542, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.rounded-content-frame--white {
+  background-color: #FFFFFF;
+  border-color: #F1EEEA;
+}
+
+/* line 547, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.rounded-content-frame {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+}
+
+/* line 553, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.rounded-content-frame .title {
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+/* line 557, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.rounded-content-frame_content {
+  padding: 20px;
+}
+
+/* line 562, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#jumbotron-about {
+  background-color: #BDCAB4;
+  height: 40%;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+/* line 567, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#jumbotron-about h2 {
+  font-weight: bold;
+  color: #134F3C;
+}
+
+/* line 573, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#container-about {
+  padding-top: 55px;
+  padding-bottom: 20px;
+  background-color: #FAFAFA;
+  font-size: 1.1rem;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+/* line 582, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#row-contact-us {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/* line 585, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#row-contact-us h1 {
+  text-align: center;
+  font-weight: 420;
+  line-height: 1.2;
+  font-size: 1.5rem;
+  color: #474747;
+}
+
+/* line 594, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#new-review {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/* line 597, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#new-review h1 {
+  text-align: center;
+  font-weight: 420;
+  line-height: 1.2;
+  font-size: 1.5rem;
+  color: gray;
+}
+
+/* line 606, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#edit-review {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/* line 609, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#edit-review h1 {
+  text-align: center;
+  font-weight: 420;
+  line-height: 1.2;
+  font-size: 1.5rem;
+  color: gray;
+}
+
+/* line 618, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#new-circular-initiative {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* line 621, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#new-circular-initiative h1 {
+  text-align: center;
+  font-weight: 420;
+  line-height: 1.2;
+  font-size: 1.5rem;
+  color: gray;
+}
+
+/* line 630, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#edit-circular-initiative {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* line 633, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#edit-circular-initiative h1 {
+  text-align: center;
+  font-weight: 420;
+  line-height: 1.2;
+  font-size: 1.5rem;
+  color: gray;
+}
+
+/* line 642, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.page-footer a {
+  font-size: 1rem;
+  color: #295200;
+}
+
+/* line 648, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-content {
+  margin: 0px auto;
+  padding: 10px 0px 10px 0px;
+  border-bottom: 1px ridge;
+}
+
+/* line 654, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-header {
+  margin: 0px auto;
+  padding: 25px 0px 25px 0px;
+  border-bottom: 1px ridge;
+}
+
+/* line 660, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.row-reviews {
+  padding: 25px 0px 25px 0px;
+  margin: 0px auto;
+  border-botton: 1px;
+}
+
+/* line 666, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#initiative-info {
+  background-color: #FFFFFF;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 15px 0 0 0;
+  font-size: 16px;
+  color: #18450A;
+  line-height: 1.4m;
+  overflow: hidden;
+}
+/* line 676, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#initiative-info h4 {
+  color: #0A4E85;
+}
+/* line 679, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#initiative-info .topic {
+  color: #474747;
+}
+
+/* line 685, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#basic-info {
+  background-color: #FFFFFF;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 15px 0 0 0;
+  color: #18450A;
+}
+/* line 692, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+#basic-info h2 {
+  color: #0A4E85;
+  font-weight: bold;
+}
+
+/* line 701, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 50%;
+  position: relative;
+  height: 0;
+}
+
+/* line 707, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* line 714, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.reviews {
+  background-color: #FFFFFF;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 30px 0px;
+  font-size: 14px;
+  color: #18450A;
+}
+/* line 722, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.reviews h6 {
+  color: #0A4E85;
+}
+
+/********* Extra Large Devices Only ***********/
+@media (min-width: 1199px) {
+  /* line 731, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left;
+  }
+
+  /* line 734, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-1 {
+    width: 8.33%;
+  }
+
+  /* line 737, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-2 {
+    width: 16.66%;
+  }
+
+  /* line 740, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-3 {
+    width: 25%;
+  }
+
+  /* line 743, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-4 {
+    width: 33%;
+  }
+
+  /* line 746, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-5 {
+    width: 41.66%;
+  }
+
+  /* line 749, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-6 {
+    width: 50%;
+  }
+
+  /* line 752, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-7 {
+    width: 58.33%;
+  }
+
+  /* line 755, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-8 {
+    width: 66.66%;
+  }
+
+  /* line 758, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-9 {
+    width: 74.99%;
+  }
+
+  /* line 761, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-10 {
+    width: 83.33%;
+  }
+
+  /* line 764, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-11 {
+    width: 91.66%;
+  }
+
+  /* line 767, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-12 {
+    width: 100%;
+  }
+
+  /* line 772, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  #jumbotron-home {
+    background-color: #bdcab4;
+    height: 40%;
+    padding: 3.5% 0 3.5% 0;
+    border-radius: 0;
+  }
+  /* line 778, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  #jumbotron-home h1 {
+    font-weight: bold;
+    color: #0F3E30;
+    text-shadow: 0px 2px 3px #555;
+    font-family: Ryman Eco;
+    font-size: 3em;
+  }
+  /* line 787, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  #jumbotron-home h2 {
+    font-weight: bold;
+    color: #0F3E30;
+    font-size: 1.5em;
+  }
+}
+/********* Large Devices Only ***********/
+@media (min-width: 991px) and (max-width: 1199px) {
+  /* line 801, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left;
+  }
+
+  /* line 804, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-1 {
+    width: 8.33%;
+  }
+
+  /* line 807, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-2 {
+    width: 16.66%;
+  }
+
+  /* line 810, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-3 {
+    width: 25%;
+  }
+
+  /* line 813, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-4 {
+    width: 33%;
+  }
+
+  /* line 816, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-5 {
+    width: 41.66%;
+  }
+
+  /* line 819, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-6 {
+    width: 50%;
+  }
+
+  /* line 822, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-7 {
+    width: 58.33%;
+  }
+
+  /* line 825, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-8 {
+    width: 66.66%;
+  }
+
+  /* line 828, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-9 {
+    width: 74.99%;
+  }
+
+  /* line 831, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-10 {
+    width: 83.33%;
+  }
+
+  /* line 834, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-11 {
+    width: 91.66%;
+  }
+
+  /* line 837, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-lg-12 {
+    width: 100%;
+  }
+
+  /* line 842, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  #jumbotron-home {
+    background-color: #F0F0F0;
+    height: 40%;
+    padding: 5% 0 5% 0;
+    border-radius: 0;
+  }
+  /* line 848, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  #jumbotron-home h1 {
+    font-weight: bold;
+    color: #134F3C;
+    text-shadow: 0px 2px 3px #555;
+    font-family: Ryman Eco;
+    font-size: 3em;
+  }
+  /* line 857, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  #jumbotron-home h2 {
+    font-weight: bold;
+    color: #134F3C;
+    font-size: 1.5em;
+  }
+}
+/********* Medium Devices Only ***********/
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 873, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+  }
+
+  /* line 876, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-1 {
+    width: 8.33%;
+  }
+
+  /* line 879, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-2 {
+    width: 16.66%;
+  }
+
+  /* line 882, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-3 {
+    width: 25%;
+  }
+
+  /* line 885, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-4 {
+    width: 33%;
+  }
+
+  /* line 888, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-5 {
+    width: 41.66%;
+  }
+
+  /* line 891, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-6 {
+    width: 50%;
+  }
+
+  /* line 894, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-7 {
+    width: 58.33%;
+  }
+
+  /* line 897, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-8 {
+    width: 66.66%;
+  }
+
+  /* line 900, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-9 {
+    width: 74.99%;
+  }
+
+  /* line 903, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-10 {
+    width: 83.33%;
+  }
+
+  /* line 906, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-11 {
+    width: 91.66%;
+  }
+
+  /* line 909, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-md-12 {
+    width: 100%;
+  }
+
+  /* line 914, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  #jumbotron-home {
+    background-color: #F0F0F0;
+    height: 40%;
+    padding: 5% 0 5% 0;
+    border-radius: 0;
+  }
+  /* line 919, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  #jumbotron-home h1 {
+    font-weight: bold;
+    color: #134F3C;
+    text-shadow: 0px 2px 3px #555;
+    font-family: Ryman Eco;
+    font-size: 3em;
+  }
+  /* line 928, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  #jumbotron-home h2 {
+    font-weight: bold;
+    color: #134F3C;
+    font-size: 1.5em;
+  }
+}
+/********* Small Devices Only ***********/
+@media (min-width: 576px) and (max-width: 767px) {
+  /* line 941, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: left;
+  }
+
+  /* line 944, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-sm-1 {
+    width: 8.33%;
+  }
+
+  /* line 947, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-sm-2 {
+    width: 16.66%;
+  }
+
+  /* line 950, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-sm-3 {
+    width: 25%;
+  }
+
+  /* line 953, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-sm-4 {
+    width: 33%;
+  }
+
+  /* line 956, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-sm-5 {
+    width: 41.66%;
+  }
+
+  /* line 959, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-sm-6 {
+    width: 50%;
+  }
+
+  /* line 962, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-sm-7 {
+    width: 58.33%;
+  }
+
+  /* line 965, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-sm-8 {
+    width: 66.66%;
+  }
+
+  /* line 968, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-sm-9 {
+    width: 74.99%;
+  }
+
+  /* line 971, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-sm-10 {
+    width: 83.33%;
+  }
+
+  /* line 974, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-sm-11 {
+    width: 91.66%;
+  }
+
+  /* line 977, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  .col-sm-12 {
+    width: 100%;
+  }
+
+  /* line 981, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  #jumbotron-home {
+    background-color: #F0F0F0;
+    height: 40%;
+    padding: 5% 0 5% 0;
+  }
+  /* line 985, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  #jumbotron-home h1 {
+    font-weight: bold;
+    color: #134F3C;
+    text-shadow: 0px 2px 3px #555;
+    font-family: Ryman Eco;
+    font-size: 3em;
+  }
+  /* line 994, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+  #jumbotron-home h2 {
+    font-weight: bold;
+    color: #134F3C;
+    font-size: 1.5em;
+  }
+}
+/* line 1006, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.card-title {
+  font-weight: 200;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+/* line 1012, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.card-text {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  overflow: hidden;
+}
+
+/* line 1018, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.card {
+  height: 100%;
+  display: flex;
+}
+
+/* line 1023, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.card-block {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+/* line 1030, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.card-footer a {
+  color: #656969;
+}
+
+/* line 1036, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.search {
+  margin-left: 1rem;
+}
+
+/* line 1040, C:/Sites/roundputfinal/app/assets/stylesheets/custom.css.scss */
+.list-group-item-action {
+  color: #6c7686;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  border: 0.0625rem solid #e9ecef;
+  border-radius: 0;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+
+ */
+
+
+/*
+Trix 0.10.1
+Copyright © 2017 Basecamp, LLC
+http://trix-editor.org/*/
+
+trix-editor {
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  margin: 0;
+  padding: 0.4em 0.6em;
+  min-height: 5em;
+  outline: none; }
+trix-toolbar * {
+  box-sizing: border-box; }
+trix-toolbar .button_row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between; }
+trix-toolbar .button_group {
+  display: flex;
+  margin-bottom: 10px;
+  border: 1px solid #bbb;
+  border-top-color: #ccc;
+  border-bottom-color: #888;
+  border-radius: 3px; }
+  trix-toolbar .button_group button, trix-toolbar .button_group input[type=button] {
+    position: relative;
+    float: left;
+    font-size: inherit;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    background: transparent; }
+    trix-toolbar .button_group button:not(:first-child), trix-toolbar .button_group input[type=button]:not(:first-child) {
+      border-left: 1px solid #ccc; }
+    trix-toolbar .button_group button:not(:disabled), trix-toolbar .button_group input[type=button]:not(:disabled) {
+      cursor: pointer; }
+    trix-toolbar .button_group button.active, trix-toolbar .button_group input[type=button].active {
+      background: #cbeefa; }
+    trix-toolbar .button_group button.icon, trix-toolbar .button_group input[type=button].icon {
+      width: 2.6em;
+      height: 1.6em;
+      max-width: calc(0.8em + 4vw);
+      text-indent: -9999px; }
+      @media (max-device-width: 768px) {
+        trix-toolbar .button_group button.icon, trix-toolbar .button_group input[type=button].icon {
+          height: 2em;
+          max-width: calc(0.8em + 3.5vw); } }
+      trix-toolbar .button_group button.icon::before, trix-toolbar .button_group input[type=button].icon::before {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0.6;
+        content: "";
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain; }
+        @media (max-device-width: 768px) {
+          trix-toolbar .button_group button.icon::before, trix-toolbar .button_group input[type=button].icon::before {
+            right: 6%;
+            left: 6%; } }
+      trix-toolbar .button_group button.icon.bold::before, trix-toolbar .button_group input[type=button].icon.bold::before {
+        background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M15.6%2011.8c1-.7%201.6-1.8%201.6-2.8a4%204%200%200%200-4-4H7v14h7c2.1%200%203.7-1.7%203.7-3.8%200-1.5-.8-2.8-2.1-3.4zM10%207.5h3a1.5%201.5%200%201%201%200%203h-3v-3zm3.5%209H10v-3h3.5a1.5%201.5%200%201%201%200%203z%22%2F%3E%3C%2Fsvg%3E); }
+      trix-toolbar .button_group button.icon.italic::before, trix-toolbar .button_group input[type=button].icon.italic::before {
+        background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M10%205v3h2.2l-3.4%208H6v3h8v-3h-2.2l3.4-8H18V5h-8z%22%2F%3E%3C%2Fsvg%3E); }
+      trix-toolbar .button_group button.icon.link::before, trix-toolbar .button_group input[type=button].icon.link::before {
+        background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M9.88%2013.7a4.3%204.3%200%200%201%200-6.07l3.37-3.37a4.26%204.26%200%200%201%206.07%200%204.3%204.3%200%200%201%200%206.06l-1.96%201.72a.91.91%200%201%201-1.3-1.3l1.97-1.71a2.46%202.46%200%200%200-3.48-3.48l-3.38%203.37a2.46%202.46%200%200%200%200%203.48.91.91%200%201%201-1.3%201.3z%22%2F%3E%3Cpath%20d%3D%22M4.25%2019.46a4.3%204.3%200%200%201%200-6.07l1.93-1.9a.91.91%200%201%201%201.3%201.3l-1.93%201.9a2.46%202.46%200%200%200%203.48%203.48l3.37-3.38c.96-.96.96-2.52%200-3.48a.91.91%200%201%201%201.3-1.3%204.3%204.3%200%200%201%200%206.07l-3.38%203.38a4.26%204.26%200%200%201-6.07%200z%22%2F%3E%3C%2Fsvg%3E); }
+      trix-toolbar .button_group button.icon.strike::before, trix-toolbar .button_group input[type=button].icon.strike::before {
+        background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M12.73%2014l.28.14c.26.15.45.3.57.44.12.14.18.3.18.5%200%20.3-.15.56-.44.75-.3.2-.76.3-1.39.3A13.52%2013.52%200%200%201%207%2014.95v3.37a10.64%2010.64%200%200%200%204.84.88c1.26%200%202.35-.19%203.28-.56.93-.37%201.64-.9%202.14-1.57s.74-1.45.74-2.32c0-.26-.02-.51-.06-.75h-5.21zm-5.5-4c-.08-.34-.12-.7-.12-1.1%200-1.29.52-2.3%201.58-3.02%201.05-.72%202.5-1.08%204.34-1.08%201.62%200%203.28.34%204.97%201l-1.3%202.93c-1.47-.6-2.73-.9-3.8-.9-.55%200-.96.08-1.2.26-.26.17-.38.38-.38.64%200%20.27.16.52.48.74.17.12.53.3%201.05.53H7.23zM3%2013h18v-2H3v2z%22%2F%3E%3C%2Fsvg%3E); }
+      trix-toolbar .button_group button.icon.quote::before, trix-toolbar .button_group input[type=button].icon.quote::before {
+        background-image: url(data:image/svg+xml,%3Csvg%20version%3D%221%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M6%2017h3l2-4V7H5v6h3zm8%200h3l2-4V7h-6v6h3z%22%2F%3E%3C%2Fsvg%3E); }
+      trix-toolbar .button_group button.icon.heading-1::before, trix-toolbar .button_group input[type=button].icon.heading-1::before {
+        background-image: url(data:image/svg+xml,%3Csvg%20version%3D%221%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M12%209v3H9v7H6v-7H3V9h9zM8%204h14v3h-6v12h-3V7H8V4z%22%2F%3E%3C%2Fsvg%3E); }
+      trix-toolbar .button_group button.icon.code::before, trix-toolbar .button_group input[type=button].icon.code::before {
+        background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M18.2%2012L15%2015.2l1.4%201.4L21%2012l-4.6-4.6L15%208.8l3.2%203.2zM5.8%2012L9%208.8%207.6%207.4%203%2012l4.6%204.6L9%2015.2%205.8%2012z%22%2F%3E%3C%2Fsvg%3E); }
+      trix-toolbar .button_group button.icon.bullets::before, trix-toolbar .button_group input[type=button].icon.bullets::before {
+        background-image: url(data:image/svg+xml,%3Csvg%20version%3D%221%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M4%204a2%202%200%201%200%200%204%202%202%200%200%200%200-4zm0%206a2%202%200%201%200%200%204%202%202%200%200%200%200-4zm0%206a2%202%200%201%200%200%204%202%202%200%200%200%200-4zm4%203h14v-2H8v2zm0-6h14v-2H8v2zm0-8v2h14V5H8z%22%2F%3E%3C%2Fsvg%3E); }
+      trix-toolbar .button_group button.icon.numbers::before, trix-toolbar .button_group input[type=button].icon.numbers::before {
+        background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M2%2017h2v.5H3v1h1v.5H2v1h3v-4H2v1zm1-9h1V4H2v1h1v3zm-1%203h1.8L2%2013.1v.9h3v-1H3.2L5%2010.9V10H2v1zm5-6v2h14V5H7zm0%2014h14v-2H7v2zm0-6h14v-2H7v2z%22%2F%3E%3C%2Fsvg%3E); }
+      trix-toolbar .button_group button.icon.undo::before, trix-toolbar .button_group input[type=button].icon.undo::before {
+        background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M12.5%208c-2.6%200-5%201-6.9%202.6L2%207v9h9l-3.6-3.6A8%208%200%200%201%2020%2016l2.4-.8a10.5%2010.5%200%200%200-10-7.2z%22%2F%3E%3C%2Fsvg%3E); }
+      trix-toolbar .button_group button.icon.redo::before, trix-toolbar .button_group input[type=button].icon.redo::before {
+        background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M18.4%2010.6a10.5%2010.5%200%200%200-16.9%204.6L4%2016a8%208%200%200%201%2012.7-3.6L13%2016h9V7l-3.6%203.6z%22%2F%3E%3C%2Fsvg%3E); }
+      trix-toolbar .button_group button.icon.nesting-level.decrease::before, trix-toolbar .button_group input[type=button].icon.nesting-level.decrease::before {
+        background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M3%2019h19v-2H3v2zm7-6h12v-2H10v2zm-8.3-.3l2.8%202.9L6%2014.2%204%2012l2-2-1.4-1.5L1%2012l.7.7zM3%205v2h19V5H3z%22%2F%3E%3C%2Fsvg%3E); }
+      trix-toolbar .button_group button.icon.nesting-level.increase::before, trix-toolbar .button_group input[type=button].icon.nesting-level.increase::before {
+        background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M3%2019h19v-2H3v2zm7-6h12v-2H10v2zm-6.9-1L1%2014.2l1.4%201.4L6%2012l-.7-.7-2.8-2.8L1%209.9%203.1%2012zM3%205v2h19V5H3z%22%2F%3E%3C%2Fsvg%3E); }
+      trix-toolbar .button_group button.icon.active::before, trix-toolbar .button_group input[type=button].icon.active::before {
+        opacity: 1; }
+      trix-toolbar .button_group button.icon:disabled::before, trix-toolbar .button_group input[type=button].icon:disabled::before {
+        opacity: 0.125; }
+    trix-toolbar .button_group button:not(.icon), trix-toolbar .button_group input[type=button]:not(.icon) {
+      font-size: 0.75em;
+      font-weight: 600;
+      white-space: nowrap;
+      padding: 0 0.5em;
+      color: rgba(0, 0, 0, 0.6); }
+      @media (max-device-width: 768px) {
+        trix-toolbar .button_group button:not(.icon), trix-toolbar .button_group input[type=button]:not(.icon) {
+          letter-spacing: -0.01em;
+          padding: 0 0.3em; } }
+      trix-toolbar .button_group button:not(.icon).active, trix-toolbar .button_group input[type=button]:not(.icon).active {
+        color: black; }
+      trix-toolbar .button_group button:not(.icon):disabled, trix-toolbar .button_group input[type=button]:not(.icon):disabled {
+        color: rgba(0, 0, 0, 0.125); }
+trix-toolbar .dialogs {
+  position: relative; }
+  trix-toolbar .dialogs .dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 0.75em;
+    padding: 15px 10px;
+    background: #fff;
+    box-shadow: 0 0.3em 1em #ccc;
+    border-top: 2px solid #888;
+    border-radius: 5px;
+    z-index: 5; }
+    trix-toolbar .dialogs .dialog input {
+      font-size: inherit;
+      font-weight: normal; }
+    trix-toolbar .dialogs .dialog input[type=url], trix-toolbar .dialogs .dialog input[type=text] {
+      padding: 0.5em 0.8em;
+      margin: 0 10px 0 0;
+      border-radius: 3px;
+      border: 1px solid #bbb;
+      background-color: #fff;
+      box-shadow: none;
+      outline: none;
+      -webkit-appearance: none;
+      -moz-appearance: none; }
+      trix-toolbar .dialogs .dialog input[type=url].validate:invalid, trix-toolbar .dialogs .dialog input[type=text].validate:invalid {
+        box-shadow: #F00 0px 0px 1.5px 1px; }
+    trix-toolbar .dialogs .dialog .button_group input[type=button] {
+      font-size: inherit;
+      padding: 0.5em;
+      border-bottom: none; }
+    trix-toolbar .dialogs .dialog.link_dialog {
+      max-width: 600px; }
+      trix-toolbar .dialogs .dialog.link_dialog .link_url_fields {
+        display: flex;
+        align-items: baseline; }
+        trix-toolbar .dialogs .dialog.link_dialog .link_url_fields input[type=url] {
+          flex: 1; }
+        trix-toolbar .dialogs .dialog.link_dialog .link_url_fields .button_group {
+          flex: 0 0 content;
+          margin: 0; }
+trix-editor [data-trix-mutable=true] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  trix-editor [data-trix-mutable=true] ::-moz-selection {
+    background: none; }
+  trix-editor [data-trix-mutable=true] img {
+    box-shadow: 0 0 0 2px highlight; }
+  trix-editor [data-trix-mutable=true].attachment.attachment-file {
+    box-shadow: 0 0 0 2px highlight;
+    border-color: transparent; }
+trix-editor .attachment:hover {
+  cursor: default; }
+trix-editor .attachment.attachment-preview .caption:hover {
+  cursor: text; }
+trix-editor .attachment button.remove {
+  cursor: pointer; }
+  trix-editor .attachment button.remove.icon {
+    text-indent: -9999px;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    top: -1.1em;
+    left: calc(50% - 0.8em);
+    width: 1.8em;
+    height: 1.8em;
+    line-height: 1.8em;
+    border-radius: 50%;
+    text-indent: -9999px;
+    background-color: #fff;
+    border: 2px solid highlight;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25); }
+    trix-editor .attachment button.remove.icon::before {
+      display: inline-block;
+      position: absolute;
+      top: 0.1em;
+      right: 0.1em;
+      bottom: 0.1em;
+      left: 0.1em;
+      opacity: 0.75;
+      content: "";
+      background-image: url(data:image/svg+xml,%3Csvg%20height%3D%2224%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M19%206.4L17.6%205%2012%2010.6%206.4%205%205%206.4l5.6%205.6L5%2017.6%206.4%2019l5.6-5.6%205.6%205.6%201.4-1.4-5.6-5.6z%22%2F%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain; }
+  trix-editor .attachment button.remove:hover {
+    border-color: #333; }
+    trix-editor .attachment button.remove:hover::before {
+      opacity: 1; }
+trix-editor .attachment .caption.caption-editing textarea {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+  text-align: center;
+  vertical-align: top;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+trix-editor .attachment progress {
+  position: absolute;
+  z-index: 1;
+  height: 20px;
+  top: calc(50% - 10px);
+  left: 5%;
+  width: 90%;
+  opacity: 0.9; }
+@charset "UTF-8";
+.trix-content {
+  line-height: 1.5; }
+  .trix-content h1 {
+    font-size: 1.2em;
+    line-height: 1.2;
+    margin: 0; }
+  .trix-content blockquote {
+    margin: 0 0 0 0.3em;
+    padding: 0 0 0 0.6em;
+    border-left: 0.3em solid #ccc; }
+  .trix-content pre {
+    font-family: monospace;
+    font-size: 0.9em;
+    margin: 0;
+    padding: 0.5em;
+    white-space: pre;
+    background-color: #eee;
+    overflow-x: auto; }
+  .trix-content ul, .trix-content ol, .trix-content li {
+    margin: 0;
+    padding: 0; }
+    .trix-content ul li, .trix-content ol li, .trix-content li li {
+      margin-left: 1em; }
+  .trix-content img {
+    max-width: 100%;
+    height: auto; }
+  .trix-content a[data-trix-attachment] {
+    color: inherit;
+    text-decoration: none; }
+    .trix-content a[data-trix-attachment]:hover, .trix-content a[data-trix-attachment]:visited:hover {
+      color: inherit; }
+  .trix-content .attachment {
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    padding: 0; }
+    .trix-content .attachment .caption {
+      padding: 0;
+      text-align: center; }
+      .trix-content .attachment .caption .size:before {
+        content: ' · '; }
+    .trix-content .attachment.attachment-preview {
+      width: 100%;
+      text-align: center; }
+      .trix-content .attachment.attachment-preview .caption {
+        color: #666;
+        font-size: 0.9em;
+        line-height: 1.2; }
+    .trix-content .attachment.attachment-file {
+      color: #333;
+      line-height: 1;
+      margin: 0 2px 2px 0;
+      padding: 0.4em 1em;
+      border: 1px solid #bbb;
+      border-radius: 5px; }

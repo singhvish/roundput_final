@@ -1,109 +1,103 @@
 <%= render 'layouts/navbarall' %>
 <div id="jumbotron-index" class ="jumbotron">
   <div class = "container center">
-    <h2><B>Search for organizations or innovations below</B></h2>
+    <h2><B>Explore circular economy innovations below</B></h2>
   </div>
 </div>
 
 <div class="container">
   <div class = "row">
     <div class="filter col-sm-12 col-md-2 col-lg-2 col-xl-2">
-      <h5>Search Filters</h5>
+      <h6 class="text-muted">Filter By</h6>
       <h6 class="text-muted mt-4">Region</h6>
+      <div class="list-group">
+        <% @circular_initiatives.aggs["Region"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
+          <% if params[:Region] == bucket["key"].to_s %>
+            <strong><%= link_to bucket["key"], request.params.except(:Region), class: "list-group-item list-group-item-action" %></strong>
+          <% else %>
+            <%= link_to bucket["key"], request.params.merge(Region: bucket["key"]), class: "list-group-item list-group-item-action" %>
+          <% end %>
+        <% end %>
+      </div>
 
-            <% @circular_initiatives.aggs["Region"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
-              <div>
-                <% if params[:Region] == bucket["key"].to_s %>
-                  <strong><%= link_to bucket["key"], request.params.except(:Region) %></strong>
-                <% else %>
-                  <%= link_to bucket["key"], request.params.merge(Region: bucket["key"]) %>
-                <% end %>
-            
+      <h6 class="text-muted mt-4"> Country </h6>
+      <div class="list-group">    
+        <% @circular_initiatives.aggs["Country"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
+          <% if params[:Country] == bucket["key"].to_s %>
+            <strong><%= link_to bucket["key"], request.params.except(:Country), class: "list-group-item list-group-item-action" %></strong>
+          <% else %>
+            <%= link_to bucket["key"], request.params.merge(Country: bucket["key"]), class: "list-group-item list-group-item-action" %>
+          <% end %>                
+        <% end %>
+      </div>
 
-              </div>
-            <% end %>
-
-            <h6 class="text-muted mt-4"> Country </h6>
-      
-            <% @circular_initiatives.aggs["Country"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
-              <div>
-                <% if params[:Country] == bucket["key"].to_s %>
-                  <strong><%= link_to bucket["key"], request.params.except(:Country) %></strong>
-                <% else %>
-                  <%= link_to bucket["key"], request.params.merge(Country: bucket["key"]) %>
-                <% end %>
-                
-              </div>
-            <% end %>
-
-            <h6 class="text-muted mt-4"> Primary Sector </h6>
-      
-            <% @circular_initiatives.aggs["Organization_sector"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
-              <div>
-                <% if params[:Organization_sector] == bucket["key"].to_s %>
-                  <strong><%= link_to bucket["key"], request.params.except(:Organization_sector) %></strong>
-                <% else %>
-                  <%= link_to bucket["key"], request.params.merge(Organization_sector: bucket["key"]) %>
-                <% end %>
-                
-
-              </div>
-            <% end %>
+      <h6 class="text-muted mt-4"> Primary Sector </h6>
+      <div class="list-group">
+        <% @circular_initiatives.aggs["Organization_sector"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
+          <% if params[:Organization_sector] == bucket["key"].to_s %>
+            <strong><%= link_to bucket["key"], request.params.except(:Organization_sector), class: "list-group-item list-group-item-action" %></strong>
+          <% else %>
+            <%= link_to bucket["key"], request.params.merge(Organization_sector: bucket["key"]), class: "list-group-item list-group-item-action" %>
+          <% end %>    
+        <% end %>
+      </div>
           
 
       <h6 class="text-muted mt-4"> Organization Type </h6>
-      
-            <% @circular_initiatives.aggs["Organization_type"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
-              <div>
-                <% if params[:Organization_type] == bucket["key"].to_s %>
-                  <strong><%= link_to bucket["key"], request.params.except(:Organization_type) %></strong>
-                <% else %>
-                  <%= link_to bucket["key"], request.params.merge(Organization_type: bucket["key"]) %>
-                <% end %>
-                
-
-              </div>
-
-            <% end %>
+      <div class="list-group">
+        <% @circular_initiatives.aggs["Organization_type"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
+          <% if params[:Organization_type] == bucket["key"].to_s %>
+            <strong><%= link_to bucket["key"], request.params.except(:Organization_type), class: "list-group-item list-group-item-action" %></strong>
+          <% else %>
+            <%= link_to bucket["key"], request.params.merge(Organization_type: bucket["key"]), class: "list-group-item list-group-item-action" %>
+          <% end %>              
+        <% end %>
+      </div>
           
-
-      
-      
-         
-
       <h6 class="text-muted mt-4"> Innovation Strategy </h6>
-      
-            <% @circular_initiatives.aggs["Primary_strategy"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
-              <div>
-                <% if params[:Primary_strategy] == bucket["key"].to_s %>
-                  <strong><%= link_to bucket["key"], request.params.except(:Primary_strategy) %></strong>
-                <% else %>
-                  <%= link_to bucket["key"], request.params.merge(Primary_strategy: bucket["key"]) %>
-                <% end %>
-                
-              </div>
-            <% end %>  
-          
+      <div class="list-group">  
+        <% @circular_initiatives.aggs["Primary_strategy"]["buckets"].sort_by{ |b| b["key"] }.each do |bucket| %>
+          <% if params[:Primary_strategy] == bucket["key"].to_s %>
+            <strong><%= link_to bucket["key"], request.params.except(:Primary_strategy), class: "list-group-item list-group-item-action" %></strong>
+          <% else %>
+            <%= link_to bucket["key"], request.params.merge(Primary_strategy: bucket["key"]), class: "list-group-item list-group-item-action" %>
+          <% end %>
+        <% end %>  
+      </div>
     </div>
+    <br>
+    <br>
   
-
-    
-
-
     <div class="index col-sm-12 col-md-10 col-lg-10">
-      
+      <h5>Explore <%= CircularInitiative.count %> innovations below</h5>
+      <br>
+
       <div class="row">
         <% @circular_initiatives.each do |circular_initiative| %>
           <div class="col-sm-6 mb-5">
+
             <div class="card">
+              <% if circular_initiative.Organization_sector == "Food and Beverages" %>
+              <img class="card-img-top" src="https://storage.googleapis.com/roundput/Sectors/Food%20and%20Beverages_resized.jpeg" alt="Card image cap">
+              <% elsif circular_initiative.Organization_sector == "Cities" %>
+              <img class="card-img-top" src="https://storage.googleapis.com/roundput/Sectors/Cities_resized.jpeg" alt="Card image cap">
+              <% elsif circular_initiative.Organization_sector == "Fashion" %>
+              <img class="card-img-top" src="https://storage.googleapis.com/roundput/Sectors/Fashion_resized.jpeg" alt="Card image cap">
+              <% else %>
+              <img class="card-img-top" src="https://storage.googleapis.com/roundput/Sectors/Consumer%20Products_resized.jpeg" alt="Card image cap">
+              <% end %>
               <div class="card-body">
                 <h5 class="card-title"><%= link_to circular_initiative.Leading_organization.capitalize, circular_initiative %></h5>
                 <%= link_to circular_initiative.Name_of_the_initiative, circular_initiative %>
                 <p class="card-text"><%= sanitize circular_initiative.Organization_description %></p>
-                <p>Sector: <%= circular_initiative.Organization_sector %></p>
               </div>
               <div class="card-footer">
-                <i class="fas fa-map-marker-alt"> &nbsp </i><%= link_to circular_initiative.address,circular_initiatives_path(:address => circular_initiative.address) %>
+                <div class="d-flex">
+                  <div class="flex-grow-1">
+                    <i class="fas fa-map-marker-alt"> &nbsp </i><%= link_to circular_initiative.address,circular_initiatives_path(:address => circular_initiative.address) %>
+                  </div>
+                  <%= link_to circular_initiative.Organization_sector, circular_initiatives_path(:Organization_sector => circular_initiative.Organization_sector) %> 
+                </div>
               </div>
             </div>
           </div>

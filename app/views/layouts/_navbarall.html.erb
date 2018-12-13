@@ -22,11 +22,10 @@
           <li class="nav-item search">
             <%= form_tag circular_initiatives_path, method: :get, class: "form-inline my-2 my-lg-0" do %>
                 <%= text_field_tag :search, params[:search], class: "form-control", placeholder:'Search...' %>
-                <button class="btn btn-outline btn-search" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>             
+                <button name="button" type="submit" class="btn btn-outline-secondary"><i class="fas fa-search"></i></button>           
             <% end %>
           </li>
+
         </ul>
         <% if user_signed_in? %>
           <ul class="navbar-nav right">
