@@ -108,6 +108,7 @@ li.nav-item {
  	text-align: center;
   	cursor: default; 
     font-size: 16px;
+    flex-wrap: wrap;
 }
 .pagination a, .pagination span, .pagination em {
     padding: 0.2em 0.5em;
@@ -225,7 +226,8 @@ li.nav-item {
 }
 
 .filter {
-	font-size: 0.85rem;
+	font-size: 0.875rem;
+	margin-bottom: 2rem;
 }
 
 #index-filter {
@@ -260,6 +262,10 @@ li.nav-item {
 }
 
 .btn-search {
+		margin-left: 5px;
+}
+
+.btn-outline-secondary {
 		margin-left: 5px;
 }
 

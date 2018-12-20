@@ -71,7 +71,6 @@
     <div class="index col-sm-12 col-md-10 col-lg-10">
       <h5>Explore <%= CircularInitiative.count %> innovations below</h5>
       <br>
-
       <div class="row">
         <% @circular_initiatives.each do |circular_initiative| %>
           <div class="col-sm-6 mb-5">
@@ -102,11 +101,26 @@
             </div>
           </div>
         <% end %>
-      </div>  
+      </div> 
       <%= will_paginate @circular_initiatives %>
-      <br>
     </div>
   </div>
+</div>
+<br>
+
+<div id="jumbotron-newsletter" class="jumbotron center">
+  <h3> Subscribe to our newsletter</h3>
+  <p>An update on new innovations, circular economy news and events that are on our radar.</p>
+  <% if cookies[:saved_newsletter] %>
+    You have successfully subscribed to our newsletter!
+  <% else %>
+    <%= form_for @newsletter do |f| %>
+      <div class="row justify-content-center">
+        <%= f.email_field :email, class: "form-control col-8 col-md-4", placeholder: "Enter email address" %>
+        <%= f.button "Subscribe", class: "btn btn-success", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Subscribing..."} %>
+      </div> 
+    <% end %>
+  <% end %>
 </div>
 
 

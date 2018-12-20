@@ -30,8 +30,8 @@ end
       args[:Organization_sector] = params[:Organization_sector] if params[:Organization_sector].present?
       args[:Primary_strategy] = params[:Primary_strategy] if params[:Primary_strategy].present?
       args[:address] = params[:address] if params[:address].present?
-      @circular_initiatives = CircularInitiative.search query, where: args, aggs: {Region: {}, Country: {}, Organization_type: {}, Organization_sector: {}, Primary_strategy: {}, address:{} }, page: params[:page], per_page: 30
-  
+      @circular_initiatives = CircularInitiative.search query, where: args, aggs: {Region: {}, Country: {}, Organization_type: {}, Organization_sector: {}, Primary_strategy: {}, address:{} }, page: params[:page], per_page: 20
+      @newsletter = Newsletter.new
   end
 
   # GET /circular_initiatives/1
